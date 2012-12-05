@@ -1,6 +1,6 @@
 ---
-layout: default
-title: My Github Blog
+layout: template
+title: LIBER
 ---
 <h2>{{ page.title }}</h2>
 <p>最新文章</p>
