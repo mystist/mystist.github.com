@@ -1,6 +1,5 @@
 ---
 layout: template
-title: LIBER
 ---
 <ul>
 	{% for post in site.categories.work %}
