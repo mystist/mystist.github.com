@@ -138,9 +138,14 @@ a {
 	text-align: left;
 }
 
+.main .main-wrapper .main-text ul {
+
+	list-style-type: square;
+}
+
 .main .main-wrapper .main-text ul li span {
 
-	text-align: right;
+	float: right;
 }
 
 .main .main-wrapper .main-text p {
