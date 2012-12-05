@@ -1,6 +1,6 @@
 baseurl /
+pygments: true
 categories:
 - work
 - plugin
 - life
-pygments: true

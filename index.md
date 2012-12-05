@@ -3,4 +3,4 @@ layout: template
 title: Welcome
 text: 欢迎访问Liber的博客，这是前端技术里面最新的一篇文章。
 ---
-sss
+{{ site.categories.work | first.content }}
