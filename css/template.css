@@ -135,6 +135,12 @@ a {
 
 	font-size: 14px;
 	line-height: 28px;
+	text-align: left;
+}
+
+.main .main-wrapper .main-text p {
+
+	margin: 3px 0;
 }
 
 .main .main-wrapper .main-foot {
