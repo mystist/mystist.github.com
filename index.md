@@ -3,8 +3,8 @@ layout: template
 title: LIBER
 ---
 <ul>
-	{% for post in site.posts %}
-	<li>{{ post.date | date_to_string }}
+	{% for post in site.categories.work %}
+	<li>{{ post.date | date: "%Y-%m-%d %H:%M" }}
 	<a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
 	</li>
 	{% endfor %}

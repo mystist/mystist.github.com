@@ -1,5 +1,5 @@
 baseurl /
-classifications: 
-  - projects
-  - customers
-  - layouts
+categories:
+- work
+- plugin
+- life
