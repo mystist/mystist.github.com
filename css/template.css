@@ -65,7 +65,7 @@ a {
 	padding: 12px 34px 0;
 }
 
-.header .header-logo span {
+.header .header-logo span a {
 
 	font-family: "Georgia";
 	font-size: 26px;

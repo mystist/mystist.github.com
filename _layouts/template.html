@@ -13,13 +13,13 @@
 	<div class="header shadow">	
 		<div class="header-wrapper">
 			<div class="header-logo">
-				<span>LIBER</span>
+				<span><a href="/">LIBER</a></span>
 			</div>
 			<div class="header-nav">
 				<ul>
-					<li><a href="javascript:;"><span>前端技术</span></a></li>
-					<li><a href="javascript:;"><span>插件</span></a></li>
-					<li><a href="javascript:;"><span>生活</span></a></li>
+					<li><a href="/work.html"><span>前端技术</span></a></li>
+					<li><a href="/plugin.html"><span>插件</span></a></li>
+					<li><a href="/work.html"><span>生活</span></a></li>
 				</ul>
 			</div>
 		</div>
@@ -30,7 +30,7 @@
 			<div class="main-title">{{ page.title }}</div>
 			
 			<div class="main-foot">
-				<span>Liber, {{ page.date | date: "%Y-%m-%d %H:%M"  }}</span>
+				<span>{{ page.text }} {{ page.date | date: "%Y-%m-%d %H:%M"  }}</span>
 			</div>
 		
 			<div class="main-text">
