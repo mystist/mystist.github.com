@@ -13,7 +13,7 @@ title: LIBER
 </ul>
 <h2>Projects</h2>
 <ul>
-{% for project in site.projects %}
-  <li>{{ project | first }}</li>
+{% for customer in site.customers %}
+  <li>{{ customer | first }}</li>
 {% endfor %}
 </ul>
