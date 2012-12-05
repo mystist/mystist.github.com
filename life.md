@@ -4,10 +4,10 @@ title: 生活
 text: 充满见证，充满爱
 ---
 <ul>
-	{% for lifepage in site.categories.life %}
+	{% for post in site.categories.life %}
 	<li>
-	<a href="{{ site.baseurl }}{{ lifepage.url }}">{{ lifepage.title }}</a>
-	<span>{{ lifepage.date | date: "%Y-%m-%d %H:%M" }}</span>
+	<a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+	<span>{{ post.date | date: "%Y-%m-%d %H:%M" }}</span>
 	</li>
 	{% endfor %}
 </ul>
