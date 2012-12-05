@@ -1,1 +1,5 @@
 baseurl /
+classifications: 
+  - projects
+  - customers
+  - layouts

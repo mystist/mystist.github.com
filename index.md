@@ -11,3 +11,9 @@ title: LIBER
 	</li>
 	{% endfor %}
 </ul>
+<h2>Projects</h2>
+<ul>
+{% for project in site.projects %}
+  <li>{{ project | first }}</li>
+{% endfor %}
+</ul>
