@@ -138,6 +138,11 @@ a {
 	text-align: left;
 }
 
+.main .main-wrapper .main-text ul li span {
+
+	text-align: right;
+}
+
 .main .main-wrapper .main-text p {
 
 	margin: 12px 0 0;

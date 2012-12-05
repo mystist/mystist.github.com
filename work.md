@@ -7,7 +7,7 @@ text: 从未被模仿，一直被超越
 	{% for post in site.categories.work %}
 	<li>
 	<a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-	{{ post.date | date: "%Y-%m-%d %H:%M" }}
+	<span>{{ post.date | date: "%Y-%m-%d %H:%M" }}</span>
 	</li>
 	{% endfor %}
 </ul>
