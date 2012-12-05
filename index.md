@@ -1,11 +1,6 @@
 ---
 layout: template
 title: LIBER
+text: 欢迎访问Liber的博客，这是前端技术里面最新的一篇文章。
 ---
-<ul>
-	{% for post in site.categories.work %}
-	<li>{{ post.date | date: "%Y-%m-%d %H:%M" }}
-	<a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-	</li>
-	{% endfor %}
-</ul>
+{{ site.categories.work | first.content }}
