@@ -1,6 +1,5 @@
 baseurl /
 pygments: true
-auto: true
 categories:
 - work
 - plugin
