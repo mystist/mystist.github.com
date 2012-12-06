@@ -25,9 +25,10 @@ a {
 
 pre {
 	
-  background:#F8f8ff;
-  border: 1px solid #DEDEDE;
-  padding:5px;
+	border: 1px solid #DEDEDE;
+	padding:5px;
+	background: #202020;
+	color: #D0D0D0;
 }
 
 .shadow {
