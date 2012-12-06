@@ -150,6 +150,13 @@ pre {
 	margin-left: 20px;
 }
 
+.main .main-wrapper .main-text ul li {
+
+	width: 840px;
+	height: 28px;
+}
+
+
 .main .main-wrapper .main-text ul li a {
 
 	float: left;
