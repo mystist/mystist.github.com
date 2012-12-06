@@ -145,14 +145,14 @@ pre {
 	text-align: left;
 }
 
-.main .main-wrapper .main-text ul, .main .main-wrapper .main-text li {
-
-	list-style-type: disc;
-}
-
 .main .main-wrapper .main-text ul {
 
 	margin-left: 20px;
+}
+
+.main .main-wrapper .main-text ul li a {
+
+	float: left;
 }
 
 .main .main-wrapper .main-text ul li span {
