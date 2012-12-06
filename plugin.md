@@ -1,4 +1,4 @@
-﻿---
+---
 layout: template
 title: 插件
 text: 分享您的心得，让我们一起将它完善。QQ:315633881
