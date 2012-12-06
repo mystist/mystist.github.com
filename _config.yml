@@ -1,6 +1,6 @@
 baseurl /
 pygments: true
-markdown: redcloth
+markdown: rdiscount
 auto: true
 categories:
 - work
