@@ -1,7 +1,7 @@
 ﻿---
 layout: template
 title: 插件
-text: 欢迎沟通关于插件的一切问题。QQ:315633881
+text: 分享您的心得，让我们一起将它完善。QQ:315633881
 ---
 <ul>
 	{% for post in site.categories.plugin %}
