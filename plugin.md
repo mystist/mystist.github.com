@@ -1,6 +1,6 @@
 ---
 layout: template
-title: 插件
+title: jQuery插件
 text: 没有您的参与和完善，一切插件都是浮云。
 ---
 <ul>
