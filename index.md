@@ -1,9 +1,9 @@
 ---
 layout: template
 title: Welcome
-text: 欢迎访问Liber的博客，这是前端技术里面最新的一篇文章。
+text: 欢迎访问Liber的博客，这是最新的一篇技术文章。
 ---
-{% for item in site.categories.work %}
+{% for item in (site.categories.work || site.categories.work_ruby) %}
 {% if forloop.first == true %}
 《{{ item.title }}》  
   

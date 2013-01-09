@@ -1,10 +1,10 @@
 ---
 layout: template
-title: 插件
-text: 没有您的参与和完善，一切插件都是浮云。
+title: 所有文章
+text: 我的联系方式：gjl87910lq@gmail.com 
 ---
 <ul>
-	{% for post in site.categories.plugin %}
+	{% for post in site.categories %}
 	<li>
 	<a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
 	<span>{{ post.date | date: "%Y-%m-%d %H:%M" }}</span>
