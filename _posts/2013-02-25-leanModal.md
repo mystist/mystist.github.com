@@ -14,6 +14,6 @@ leanModal的作者是Ray Stone，其官方网站是[http://finelysliced.com.au][
 <img src="/images/leanmodal.png" />  
 　
 
-我在这里提供了<a href="javascript:;" src="/images/leanModal.rar">demo下载</a>
+我在这里提供了<a href="/images/leanModal.rar">demo下载</a>
 
 [0]: http://finelysliced.com.au
