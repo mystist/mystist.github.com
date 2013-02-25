@@ -8,7 +8,7 @@ categories:
 ---
 leanModal是一个超轻量级的模态遮罩js插件，主要用于显示弹出层。
 
-leanModal的作者是Ray Stone，其官方网站是[http://finelysliced.com.au][0]
+leanModal的作者是Ray Stone，其官方网站是[http://leanmodal.finelysliced.com.au][0]
 
 官方截图：  
 <img src="/images/leanmodal.png" />  
