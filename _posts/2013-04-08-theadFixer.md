@@ -12,7 +12,7 @@ Demo截图：
 <img src="/images/theadFixer.png" />  
 
 实际项目截图：  
-<img src="/images/theadFixer2.png" />  
+<img src="/images/theadFixer2.png" style="width:100%;" />  
 　
 下载和使用插件，请访问插件的[github地址][0]。
 
