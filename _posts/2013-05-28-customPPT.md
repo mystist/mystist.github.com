@@ -9,7 +9,7 @@ categories:
 customPPT可以让你的幻灯片动起来，前提是你的拥有你设计好的静态的页面。
 
 Demo截图：  
-<img src="/images/customPPT.png" />  
+<img style="width: 100%;" src="/images/customPPT.png" />  
 　
 
 下载和使用插件，请访问插件的[github地址][0]。
