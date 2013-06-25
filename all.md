@@ -7,7 +7,7 @@ text: 欢迎大家和我沟通关于生活、技术以及信仰的任何问题�
 
 	{% for post in site.posts %}
 	<li>
-	<a href="{{ post.url }}">{{ post.title }}</a>
+	<a href="{{ post.baseurl }}{{ post.url }}">{{ post.title }}</a>
 	<span>{{ post.date | date: "%Y-%m-%d %H:%M" }}</span>
 	
 	{% assign category_str = '' %}
