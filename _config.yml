@@ -1,4 +1,5 @@
-pygments: true
+pygments: false
+markdown: redcarpet
 categories:
 - work
 - plugin

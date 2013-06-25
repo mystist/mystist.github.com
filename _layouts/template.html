@@ -1,59 +1,60 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-	<meta http-equiv="X-UA-Compatible" content="IE=7" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title>{{ page.title }}</title>
-	<link rel="stylesheet" type="text/css" href="/css/syntax.css" />
-	<link rel="stylesheet" type="text/css" href="/css/template.css" />
+  <meta http-equiv="X-UA-Compatible" content="IE=7" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>{{ page.title }}</title>
+  <link rel="stylesheet" type="text/css" href="/css/tricolore.css" />
+  <link rel="stylesheet" type="text/css" href="/css/template.css" />
+  <script type="text/javascript" src="/js/rainbow-custom.min.js"></script>
 </head>
 <body>
 
 <div class="wrapper">
 
-	<div class="header shadow">	
-		<div class="header-wrapper">
-			<div class="header-logo">
-				<span><a href="/">LIBER</a></span>
-			</div>
-			<div class="header-nav">
-				<ul>
-					<li><a href="/"><span>首页</span></a></li>
-					<li><a href="/work.html"><span>前端技术</span></a></li>
-					<li><a href="/plugin.html"><span>jQuery插件</span></a></li>
-					<li><a href="/work_ruby.html"><span>Ruby</span></a></li>
-					<li><a href="/life.html"><span>生活</span></a></li>
-					<li><a href="/all.html"><span>所有文章</span></a></li>
-				</ul>
-			</div>
-		</div>
-	</div>
+  <div class="header shadow">	
+    <div class="header-wrapper">
+      <div class="header-logo">
+        <span><a href="/">LIBER</a></span>
+      </div>
+      <div class="header-nav">
+        <ul>
+          <li><a href="/"><span>首页</span></a></li>
+          <li><a href="/work.html"><span>前端技术</span></a></li>
+          <li><a href="/plugin.html"><span>jQuery插件</span></a></li>
+          <li><a href="/work_ruby.html"><span>Ruby</span></a></li>
+          <li><a href="/life.html"><span>生活</span></a></li>
+          <li><a href="/all.html"><span>所有文章</span></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
 
-	<div class="main shadow-sides">
-	
-		<div class="main-wrapper">
-		
-			<div class="main-title">{{ page.title }}</div>
-			
-			<div class="main-foot">
-				<span>{{ page.text }} {{ page.date | date: "%Y-%m-%d %H:%M"  }}</span>
-			</div>
-		
-			<div class="main-text">
-				{{ content }}
-			</div>
-			
+  <div class="main shadow-sides">
+  
+    <div class="main-wrapper">
+    
+      <div class="main-title">{{ page.title }}</div>
+      
+      <div class="main-foot">
+        <span>{{ page.text }} {{ page.date | date: "%Y-%m-%d %H:%M"  }}</span>
+      </div>
+    
+      <div class="main-text">
+        {{ content }}
+      </div>
+      
 
-		</div>
+    </div>
 
-	</div>
+  </div>
 
-	<div class="footer shadow-sides">
-		<div class="footer-wrapper">
-			<span>Liber</span> | 
-			<a href="http://mystist.github.com">mystist.github.com</a>
-		</div>
-	</div>
+  <div class="footer shadow-sides">
+    <div class="footer-wrapper">
+      <span>Liber</span> | 
+      <a href="http://mystist.github.com">mystist.github.com</a>
+    </div>
+  </div>
 
 </div>
 
