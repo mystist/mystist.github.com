@@ -8,6 +8,7 @@ body {
 
   font-size: 12px;
   font-family: "Lucida Grande", Tahoma, Verdana, Lucida, Arial, sans-serif, Helvetica, "宋体";
+  background: url("images/bg.png") 0 0 repeat;
 }
 
 ul, li {
@@ -51,16 +52,11 @@ pre {
   box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
 }
 
-.body-wrapper {
-
-  background: url("images/bg.png") 0 0 repeat;
-}
-
 .wrapper {
 
   width: 960px;
   margin: 0 auto;
-  padding: 10px;
+  padding: 8px;
 }
 
 
