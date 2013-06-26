@@ -46,7 +46,7 @@ pre code {
   border: none;
 }
 
-pre code {
+pre, code {
 
   font-family: Consolas, "Liberation Mono", Courier, monospace, "宋体";
 }
