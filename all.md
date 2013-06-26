@@ -1,7 +1,7 @@
 ---
 layout: template
 title: 所有文章
-text: 欢迎大家和我沟通关于生活、技术以及信仰的任何问题，我的联系方式：gjl87910lq@hotmail.com 
+text: 欢迎大家和我沟通关于生活、技术以及信仰的任何问题，我的联系方式：gjl87910lq@gmail.com 
 ---
 <ul>
 
