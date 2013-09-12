@@ -171,7 +171,7 @@ code {
 
 .main .main-wrapper .main-text {
 
-  font-size: 14px;
+  font-size: 16px;
   line-height: 28px;
   text-align: left;
 }
@@ -200,7 +200,7 @@ code {
 
 .main .main-wrapper .main-text p {
 
-  margin: 12px 0 0;
+  margin: 0 0 29px 0;
 }
 
 .main .main-wrapper .main-foot {
