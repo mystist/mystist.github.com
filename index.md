@@ -11,7 +11,9 @@ text: 欢迎访问Liber的博客，这是最新的一篇技术文章。
 
 {% if had_shown == false %}
 
-<p><h2> {{post.title}} </h2></p>
+## {{post.title}}
+
+&bnsp;
 
 {{post.content}}
 
