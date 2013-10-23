@@ -11,7 +11,7 @@ text: 欢迎访问Liber的博客，这是最新的一篇技术文章。
 
 {% if had_shown == false %}
 
-<h2 style="margin-bottom: 10px;"> {{post.title}} </h2>
+<h2 style="margin-bottom: 15px;"> {{post.title}} </h2>
 
 {{post.content}}
 
