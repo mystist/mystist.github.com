@@ -11,7 +11,8 @@ text: 欢迎访问Liber的博客，这是最新的一篇技术文章。
 
 {% if had_shown == false %}
 
-## {{post.title <br />}}
+## {{post.title}}
+{{<br />}}
 
 {{post.content}}
 
