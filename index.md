@@ -13,7 +13,7 @@ text: 欢迎访问Liber的博客，这是最新的一篇技术文章。
 
 ## {{post.title}}
 
-<br />
+&nbsp;
 
 {{post.content}}
 
