@@ -27,16 +27,16 @@ Education: `Bachelor Degree, Hulunbeir College & Harbin Normal University, 2006 
 Certifications: `Third Price in Northeast China, ACM/ICPC 2008`  
 English Level: `CET4`  
 Blog: [mystist.github.com][0]  
-Website: [1050.14201420.com][1]  
+Sites: [1050.14201420.com][1]  
 
 [0]: http://mystist.github.com
-[1]: http://1050.14201420.com
+[1]: http://1050.14201420.com/dev-blog
 
 #### Features:  
 `Smart:`  
 Can plays awesome in Dota competitions and gain the highest marks I can get from the ACM Online Judgement as well.  
 `Efficient:`  
-Watch and watch, think and think before coding something. When I'm coding, It's almost finished.  
+Watch and watch, think and think before coding something. When I'm coding, It's almost done.  
 `Perfectionist:`  
 Program, User Experience and Beauty must benefit each other.  
 
