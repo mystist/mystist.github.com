@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>demo</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=8" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<script type="text/javascript" src="jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="multiSelect.js"></script>
+  
+	
+</head>
+
+<body>
+
+<div style="width: 100%; height: 100%; margin: 10px">
+
+<p>If you haven't got the value you want from the options, you can type it.</p>
+
+<div class="multiSelect">
+
+  <select style="width:200px; height: 20px; font-size: 14px; font-family: '宋体';">
+    <option>item1</option>
+    <option>item2</option>
+    <option>item3</option>
+    <option>item4</option>
+    <option>item5</option>
+    <option>item6</option>
+    <option>item7</option>
+    <option>item8</option>
+  </select>
+  
+</div>
+
+<br />
+
+<p>multiple value mode: </p>
+
+<div class="multiSelect2">
+
+  <select style="width:200px; height: 20px; font-size: 14px; font-family: '宋体';">
+    <option>item1</option>
+    <option>item2</option>
+    <option>item3</option>
+    <option>item4</option>
+    <option>item5</option>
+    <option>item6</option>
+    <option>item7</option>
+    <option>item8</option>
+  </select>
+  
+</div>
+
+</div>
+
+
+<script type="text/javascript">
+
+  $(document).ready(function() {
+  
+    $(".multiSelect").multiSelect({
+      "isSingleRow": true
+    });
+    
+    $(".multiSelect2").multiSelect();
+    
+  });
+
+</script>
+
+</body>
+</html>
