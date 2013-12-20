@@ -27,7 +27,7 @@ Education: `Bachelor Degree, Hulunbeir College & Harbin Normal University, 2006 
 Certifications: `Third Price in Northeast China, ACM/ICPC 2008`  
 English Level: `CET4`  
 Blog: [mystist.github.com][0]  
-Sites: [1050.14201420.com][1]  
+Sites: [1050][1]  
 GitHub: [github.com/Mystist][18]  
 
 [0]: http://mystist.github.com
@@ -57,6 +57,32 @@ And I'm here, Hi-Ne-Ni.
 <img src="images/2013_01_07_1.png" />
 
 <br />
+
+#### Projects:  
+
+`1050`
+A website: The 1050 Poetry of Christian.  
+
+`BIKit`  
+A tool for user to create `BI` reports. Using `OLAP` technology.  
+User can connect to `Datasource`, Drag and Drop the `Dimensions` and Preview the report.  
+
+`MRS` (Medical Report System), Version 1 and Version 2.  
+Version 1 use `BIRT`, Version 2 use `OLAP` and `eCharts`.  
+
+`MiniWorkStation`  
+A system that the Doctors and Nurses can work together.  
+Nurse can do: Manage patients, Make plan for patients, execute docter orders, etc.  
+Docter can do: Manage orders, Make applications and Add dialysis orders for patients.  
+
+`E-commerce Website for ZLD`
+`ZLD` is a logistics company.  
+The clients of `ZLD` can use the website to make orders online, search informations.  
+The carriers of `ZLD` can use the website to print order infotmations.  
+
+`Group of iTry86`
+`iTry86` is a website to trade stocks with virtual money.  
+`Group of iTry86` is the subsite that users can communicate with each other there.  
 
 #### Works:  
 
