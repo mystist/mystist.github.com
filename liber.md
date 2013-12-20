@@ -1,12 +1,12 @@
 ---
 layout: template
 title: I'm Liber 
-text: We value our future
+text: We value our future. ( Last updated at 2013-12-20 14:00 )
 ---
 
 Hi there, My name is `Gong Junlei`, from China. Working for `DJHealthUnion` at present.  
 
-#### Tags:  
+### Tags:  
 `Javascript` Web Developer Who loves create `SPA`.  
 `Backbone` guru.  
 Master in `jQuery`.  
@@ -15,7 +15,7 @@ Using `Ruby`. (Just because Yukihiro is a Christian)
 Like sing with `Sinatra`, love `git`.  
 A `Puritan`.  
 
-#### Basic Info:  
+### Basic Info:  
 Full Name: `Gong Junlei`  
 English Name: `Liber`  
 Date of Birth: `1987-11-01`  
@@ -28,13 +28,12 @@ Certifications: `Third Price in Northeast China, ACM/ICPC 2008`
 English Level: `CET4`  
 Blog: [mystist.github.com][0]  
 Sites: [1050][1]  
-GitHub: [github.com/Mystist][18]  
+GitHub: [github.com/Mystist](https://github.com/Mystist)  
 
 [0]: http://mystist.github.com
 [1]: http://1050.14201420.com/dev-blog
-[18]: https://github.com/Mystist
 
-#### Features:  
+### Features:  
 `Smart:`  
 Can plays awesome in Dota competitions and gain the highest marks I can get from the ACM Online Judgement as well.  
 `Efficient:`  
@@ -42,7 +41,7 @@ Watch and watch, think and think before coding something. When I'm coding, It's 
 `Perfectionist:`  
 Program, User Experience and Beauty should benefit each other.  
 
-#### Words:  
+### Words:  
 Life is a journey.  
 Everyone is irreplaceable.  
 We were created by our Father of different purposes with different talent.  
@@ -53,38 +52,36 @@ Now, A coder, A booming world.
 It is the best time that we can value something.  
 And I'm here, Hi-Ne-Ni.  
 
-
 <img src="images/2013_01_07_1.png" />
 
-<br />
+### Projects:  
 
-#### Projects:  
-
-`1050`
+`1050:`  
 A website: The 1050 Poetry of Christian.  
 
-`BIKit`  
+`BIKit:`  
 A tool for user to create `BI` reports. Using `OLAP` technology.  
-User can connect to `Datasource`, Drag and Drop the `Dimensions` and Preview the report.  
+User can connect to Datasource, Drag and Drop the Dimensions and Preview the report.  
 
-`MRS` (Medical Report System), Version 1 and Version 2.  
+`MRS:`  
+MRS is Medical Report System.  
 Version 1 use `BIRT`, Version 2 use `OLAP` and `eCharts`.  
 
-`MiniWorkStation`  
+`MiniWorkStation:`  
 A system that the Doctors and Nurses can work together.  
 Nurse can do: Manage patients, Make plan for patients, execute docter orders, etc.  
 Docter can do: Manage orders, Make applications and Add dialysis orders for patients.  
 
-`E-commerce Website for ZLD`
-`ZLD` is a logistics company.  
-The clients of `ZLD` can use the website to make orders online, search informations.  
-The carriers of `ZLD` can use the website to print order infotmations.  
+`E-commerce Website for ZLD:`  
+ZLD is a logistics company.  
+The clients of ZLD can use the website to make orders online, search informations.  
+The carriers of ZLD can use the website to print order infotmations.  
 
-`Group of iTry86`
-`iTry86` is a website to trade stocks with virtual money.  
-`Group of iTry86` is the subsite that users can communicate with each other there.  
+`Group of iTry86:`  
+iTry86 is a website that can trade stocks with virtual money.  
+Group of iTry86 is the subsite that users can communicate with each other there.  
 
-#### Works:  
+### Works:  
 
 <hr />
 
@@ -116,7 +113,7 @@ Take a glance of code:
 [16]: https://github.com/Mystist/picPPT
 [17]: https://github.com/Mystist/picPPT/archive/master.zip
 
-<br /><hr />
+<hr />
 
 `partialPrint` (2013-07)  
 Tip:  
@@ -147,7 +144,7 @@ Take a glance of code:
 [14]: https://github.com/Mystist/partialPrint
 [15]: https://github.com/Mystist/partialPrint/archive/master.zip
 
-<br /><hr />
+<hr />
 
 `multiSelect` (2013-06)  
 Tip: Keyboard supported, try `up` and `down`.  
@@ -188,7 +185,7 @@ Take a glance of code:
 [12]: https://github.com/Mystist/multiSelect
 [13]: https://github.com/Mystist/multiSelect/archive/master.zip
 
-<br /><hr />
+<hr />
 
 `customPPT` (2013-05)  
 
@@ -210,7 +207,7 @@ Take a glance of code:
 [10]: https://github.com/Mystist/customPPT
 [11]: https://github.com/Mystist/customPPT/archive/master.zip
 
-<br /><hr />
+<hr />
 
 `tdWider` (2013-04)  
 Tip: Try to drag the right line of `td`.  
@@ -256,7 +253,7 @@ Take a glance of code:
 [8]: https://github.com/Mystist/tdWider
 [9]: https://github.com/Mystist/tdWider/archive/master.zip
 
-<br /><hr />
+<hr />
 
 `theadFixer` (2013-04)  
 Tip: The `table's header` will hold when you are scrolling.  
@@ -288,7 +285,7 @@ Take a glance of code:
 [6]: https://github.com/Mystist/theadFixer
 [7]: https://github.com/Mystist/theadFixer/archive/master.zip
 
-<br /><hr />
+<hr />
 
 `inputTip` (2012-12)  
 Tip: Input a `s` and try to scroll to the bottom.  
@@ -335,7 +332,7 @@ Take a glance of code:
 [4]: https://github.com/Mystist/inputTip
 [5]: https://github.com/Mystist/inputTip/archive/master.zip
 
-<br /><hr />
+<hr />
 
 `Timetrack` (2012-11)  
 Tip: You can drag it left and right, click the events, zoom in/out by click the `plus/minus` button on the right bottom, etc...  
