@@ -23,13 +23,12 @@ text: 没有生不逢时，只是未遇好书。
   <img style="padding-right: 10px;" src="images/reading/21.jpg" />
   <img style="padding-right: 10px;" src="images/reading/6.jpg" />
   <img style="padding-right: 10px;" src="images/reading/7.jpg" />
-  <img style="padding-right: 10px;" src="images/reading/15.jpg" />
 </div>
 
 <div style="height: 160px;">
+  <img style="padding-right: 10px;" src="images/reading/15.jpg" />
   <img style="padding-right: 10px;" src="images/reading/28.jpg" />
   <img style="padding-right: 10px;" src="images/reading/29.jpg" />
-  <img style="padding-right: 10px;" src="images/reading/30.jpg" />
   <img style="padding-right: 10px;" src="images/reading/18.jpg" />
   <img style="padding-right: 10px;" src="images/reading/19.jpg" />
   <img style="padding-right: 10px;" src="images/reading/17.jpg" />
@@ -37,6 +36,7 @@ text: 没有生不逢时，只是未遇好书。
 </div>
 
 <div style="height: 160px;">
+  <img style="padding-right: 10px;" src="images/reading/30.jpg" />
   <img style="padding-right: 10px;" src="images/reading/25.jpg" />
   <img style="padding-right: 10px;" src="images/reading/26.jpg" />
   <img style="padding-right: 10px;" src="images/reading/27.jpg" />
