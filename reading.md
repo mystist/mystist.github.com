@@ -1,14 +1,14 @@
 ---
 layout: template
 title: 读书
-text: 没有生不逢时，只有未遇好书。
+text: 没有生不逢时，只是未遇好书。
 ---
 
 #### 在读
 
 <div style="height: 160px;">
   <img style="padding-right: 10px;" src="images/reading/1.jpg" />
-  <img style="padding-right: 10px;" src="images/reading/2.jpg" />
+  <img style="padding-right: 10px;" src="images/reading/22.jpg" />
 </div>
 
 <hr /><br />
@@ -16,9 +16,10 @@ text: 没有生不逢时，只有未遇好书。
 #### 已读
 
 <div style="height: 160px;">
-  <img style="padding-right: 10px;" src="images/reading/3.jpg" />
-  <img style="padding-right: 10px;" src="images/reading/4.jpg" />
+  <img style="padding-right: 10px;" src="images/reading/2.jpg" />
   <img style="padding-right: 10px;" src="images/reading/5.jpg" />
+  <img style="padding-right: 10px;" src="images/reading/4.jpg" />
+  <img style="padding-right: 10px;" src="images/reading/3.jpg" />
   <img style="padding-right: 10px;" src="images/reading/21.jpg" />
   <img style="padding-right: 10px;" src="images/reading/6.jpg" />
   <img style="padding-right: 10px;" src="images/reading/7.jpg" />
@@ -48,7 +49,6 @@ text: 没有生不逢时，只有未遇好书。
 <div style="height: 160px;">
   <img style="padding-right: 10px;" src="images/reading/24.jpg" />
   <img style="padding-right: 10px;" src="images/reading/23.jpg" />
-  <img style="padding-right: 10px;" src="images/reading/22.jpg" />
   <img style="padding-right: 10px;" src="images/reading/16.jpg" />
   <img style="padding-right: 10px;" src="images/reading/10.jpg" />
   <img style="padding-right: 10px;" src="images/reading/11.jpg" />
