@@ -92,6 +92,7 @@ text: 没有生不逢时，只是未遇好书。
   <img style="padding-right: 10px;" src="images/reading/52.jpg" />
   <img style="padding-right: 10px;" src="images/reading/53.jpg" />
   <img style="padding-right: 10px;" src="images/reading/54.jpg" />
+  <img style="padding-right: 10px;" src="images/reading/55.jpg" />
 </div>
 
 <hr /><br />
