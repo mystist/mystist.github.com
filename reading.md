@@ -9,6 +9,7 @@ text: 没有生不逢时，只是未遇好书。
 <div style="height: 160px;">
   <img style="padding-right: 10px;" src="images/reading/37.jpg" />
   <img style="padding-right: 10px;" src="images/reading/47.jpg" />
+  <img style="padding-right: 10px;" src="images/reading/49.jpg" />
   <img style="padding-right: 10px;" src="images/reading/22.jpg" />
 </div>
 
@@ -85,13 +86,12 @@ text: 没有生不逢时，只是未遇好书。
   <img style="padding-right: 10px;" src="images/reading/45.jpg" />
   <img style="padding-right: 10px;" src="images/reading/46.jpg" />
   <img style="padding-right: 10px;" src="images/reading/48.jpg" />
-  <img style="padding-right: 10px;" src="images/reading/49.jpg" />
   <img style="padding-right: 10px;" src="images/reading/50.jpg" />
   <img style="padding-right: 10px;" src="images/reading/51.jpg" />
+  <img style="padding-right: 10px;" src="images/reading/52.jpg" />
 </div>
 
 <div style="height: 160px;">
-  <img style="padding-right: 10px;" src="images/reading/52.jpg" />
   <img style="padding-right: 10px;" src="images/reading/53.jpg" />
   <img style="padding-right: 10px;" src="images/reading/54.jpg" />
   <img style="padding-right: 10px;" src="images/reading/55.jpg" />
