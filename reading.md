@@ -68,31 +68,31 @@ text: 没有生不逢时，只是未遇好书。
   <img style="padding-right: 10px;" src="images/reading/34.jpg" />
   <img style="padding-right: 10px;" src="images/reading/33.jpg" />
   <img style="padding-right: 10px;" src="images/reading/32.jpg" />
-  <img style="padding-right: 10px;" src="images/reading/31.jpg" />
-  <img style="padding-right: 10px;" src="images/reading/38.jpg" />
 </div>
 
 <div style="height: 160px;">
+  <img style="padding-right: 10px;" src="images/reading/31.jpg" />
+  <img style="padding-right: 10px;" src="images/reading/38.jpg" />
   <img style="padding-right: 10px;" src="images/reading/39.jpg" />
   <img style="padding-right: 10px;" src="images/reading/40.jpg" />
   <img style="padding-right: 10px;" src="images/reading/41.jpg" />
   <img style="padding-right: 10px;" src="images/reading/42.jpg" />
   <img style="padding-right: 10px;" src="images/reading/43.jpg" />
-  <img style="padding-right: 10px;" src="images/reading/44.jpg" />
-  <img style="padding-right: 10px;" src="images/reading/45.jpg" />
 </div>
 
 <div style="height: 160px;">
+  <img style="padding-right: 10px;" src="images/reading/44.jpg" />
+  <img style="padding-right: 10px;" src="images/reading/45.jpg" />
   <img style="padding-right: 10px;" src="images/reading/46.jpg" />
   <img style="padding-right: 10px;" src="images/reading/48.jpg" />
   <img style="padding-right: 10px;" src="images/reading/49.jpg" />
   <img style="padding-right: 10px;" src="images/reading/50.jpg" />
   <img style="padding-right: 10px;" src="images/reading/51.jpg" />
-  <img style="padding-right: 10px;" src="images/reading/52.jpg" />
-  <img style="padding-right: 10px;" src="images/reading/53.jpg" />
 </div>
 
 <div style="height: 160px;">
+  <img style="padding-right: 10px;" src="images/reading/52.jpg" />
+  <img style="padding-right: 10px;" src="images/reading/53.jpg" />
   <img style="padding-right: 10px;" src="images/reading/54.jpg" />
   <img style="padding-right: 10px;" src="images/reading/55.jpg" />
 </div>
