@@ -108,3 +108,16 @@ text: 没有生不逢时，只是未遇好书。
   <img style="padding-right: 10px;" src="images/reading/13.jpg" />
   <img style="padding-right: 10px;" src="images/reading/14.jpg" />
 </div>
+
+<hr /><br />
+
+#### 读书笔记
+
+<ul>
+	{% for post in site.categories.reading %}
+	<li>
+	<a href="{{ post.url }}">{{ post.title }}</a>
+	<span>{{ post.date | date: "%Y-%m-%d %H:%M" }}</span>
+	</li>
+	{% endfor %}
+</ul>

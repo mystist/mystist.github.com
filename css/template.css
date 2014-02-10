@@ -1,7 +1,13 @@
-body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, p, pre, code, form, fieldset, legend, input, textarea, blockquote, th, td {
+body, div, dl, dt, dd, ul, ol, li, p, pre, code, form, fieldset, legend, input, textarea, blockquote, th, td {
 
   margin: 0;
   padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+
+  margin: 0;
+  padding: 6px 0;
 }
 
 body {
@@ -178,12 +184,12 @@ code {
 
 .main .main-wrapper .main-text ul {
 
-  margin-left: 20px;
+  /* margin-left: 20px; */
 }
 
 .main .main-wrapper .main-text ul li {
 
-  width: 840px;
+  /* width: 840px; */
   height: 28px;
 }
 
@@ -206,7 +212,7 @@ code {
 .main .main-wrapper .main-foot {
 
   border-bottom: 1px solid #CCC;
-  margin: 0 0 36px;
+  margin: 0 0 26px;
   padding: 8px 0;
   text-align: left;
 }
