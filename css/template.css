@@ -206,7 +206,7 @@ code {
 
 .main .main-wrapper .main-text p {
 
-  margin: 12px 0;
+  margin: 6px 0 12px 0;
 }
 
 .main .main-wrapper .main-foot {
@@ -254,7 +254,9 @@ code {
 
 /* -- footer end -- */
 
-
+.sub-text {
+  padding-left: 2em;
+}
 
 
 
