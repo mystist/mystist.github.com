@@ -7,10 +7,7 @@ text: 没有生不逢时，只是未遇好书。
 #### 在读
 
 <div style="height: 160px;">
-  <img style="padding-right: 10px;" src="images/reading/35.jpg" />
   <img style="padding-right: 10px;" src="images/reading/34.jpg" />
-  <img style="padding-right: 10px;" src="images/reading/58.jpg" />
-  <img style="padding-right: 10px;" src="images/reading/51.jpg" />
   <img style="padding-right: 10px;" src="images/reading/22.jpg" />
 </div>
 
@@ -19,36 +16,39 @@ text: 没有生不逢时，只是未遇好书。
 #### 已读
 
 <div style="height: 160px;">
+  <img style="padding-right: 10px;" src="images/reading/35.jpg" />
+  <img style="padding-right: 10px;" src="images/reading/58.jpg" />
+  <img style="padding-right: 10px;" src="images/reading/51.jpg" />
   <img style="padding-right: 10px;" src="images/reading/49.jpg" />
   <img style="padding-right: 10px;" src="images/reading/37.jpg" />
   <img style="padding-right: 10px;" src="images/reading/47.jpg" />
   <img style="padding-right: 10px;" src="images/reading/1.jpg" />
-  <img style="padding-right: 10px;" src="images/reading/2.jpg" />
-  <img style="padding-right: 10px;" src="images/reading/5.jpg" />
-  <img style="padding-right: 10px;" src="images/reading/4.jpg" />
 </div>
 
 <div style="height: 160px;">
+  <img style="padding-right: 10px;" src="images/reading/2.jpg" />
+  <img style="padding-right: 10px;" src="images/reading/5.jpg" />
+  <img style="padding-right: 10px;" src="images/reading/4.jpg" />
   <img style="padding-right: 10px;" src="images/reading/3.jpg" />
   <img style="padding-right: 10px;" src="images/reading/21.jpg" />
   <img style="padding-right: 10px;" src="images/reading/6.jpg" />
   <img style="padding-right: 10px;" src="images/reading/7.jpg" />
-  <img style="padding-right: 10px;" src="images/reading/15.jpg" />
-  <img style="padding-right: 10px;" src="images/reading/28.jpg" />
-  <img style="padding-right: 10px;" src="images/reading/29.jpg" />
 </div>
 
 <div style="height: 160px;">
+  <img style="padding-right: 10px;" src="images/reading/15.jpg" />
+  <img style="padding-right: 10px;" src="images/reading/28.jpg" />
+  <img style="padding-right: 10px;" src="images/reading/29.jpg" />
   <img style="padding-right: 10px;" src="images/reading/18.jpg" />
   <img style="padding-right: 10px;" src="images/reading/19.jpg" />
   <img style="padding-right: 10px;" src="images/reading/17.jpg" />
   <img style="padding-right: 10px;" src="images/reading/20.jpg" />
-  <img style="padding-right: 10px;" src="images/reading/59.jpg" />
-  <img style="padding-right: 10px;" src="images/reading/30.jpg" />
-  <img style="padding-right: 10px;" src="images/reading/25.jpg" />
 </div>
 
 <div style="height: 160px;">
+  <img style="padding-right: 10px;" src="images/reading/59.jpg" />
+  <img style="padding-right: 10px;" src="images/reading/30.jpg" />
+  <img style="padding-right: 10px;" src="images/reading/25.jpg" />
   <img style="padding-right: 10px;" src="images/reading/26.jpg" />
   <img style="padding-right: 10px;" src="images/reading/27.jpg" />
 </div>
