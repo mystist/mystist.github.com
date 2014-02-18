@@ -54,14 +54,15 @@ text: 没有生不逢时，只是未遇好书。
 
 <hr /><br />
 
-#### 已买还未读
+#### 读过但个人觉得一般
 
 <div style="height: 160px;">
-  <img style="padding-right: 10px;" src="images/reading/24.jpg" />
-  <img style="padding-right: 10px;" src="images/reading/23.jpg" />
-  <img style="padding-right: 10px;" src="images/reading/16.jpg" />
-  <img style="padding-right: 10px;" src="images/reading/10.jpg" />
-  <img style="padding-right: 10px;" src="images/reading/11.jpg" />
+  <img style="padding-right: 10px;" src="images/reading/35.jpg" />
+  <img style="padding-right: 10px;" src="images/reading/8.jpg" />
+  <img style="padding-right: 10px;" src="images/reading/9.jpg" />
+  <img style="padding-right: 10px;" src="images/reading/12.jpg" />
+  <img style="padding-right: 10px;" src="images/reading/13.jpg" />
+  <img style="padding-right: 10px;" src="images/reading/14.jpg" />
 </div>
 
 <hr /><br />
@@ -105,15 +106,14 @@ text: 没有生不逢时，只是未遇好书。
   
 <hr /><br />
 
-#### 读过但个人觉得一般
+#### 已买还未读
 
 <div style="height: 160px;">
-  <img style="padding-right: 10px;" src="images/reading/35.jpg" />
-  <img style="padding-right: 10px;" src="images/reading/8.jpg" />
-  <img style="padding-right: 10px;" src="images/reading/9.jpg" />
-  <img style="padding-right: 10px;" src="images/reading/12.jpg" />
-  <img style="padding-right: 10px;" src="images/reading/13.jpg" />
-  <img style="padding-right: 10px;" src="images/reading/14.jpg" />
+  <img style="padding-right: 10px;" src="images/reading/24.jpg" />
+  <img style="padding-right: 10px;" src="images/reading/23.jpg" />
+  <img style="padding-right: 10px;" src="images/reading/16.jpg" />
+  <img style="padding-right: 10px;" src="images/reading/10.jpg" />
+  <img style="padding-right: 10px;" src="images/reading/11.jpg" />
 </div>
 
 <hr /><br />
