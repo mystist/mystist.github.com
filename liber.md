@@ -1,7 +1,7 @@
 ---
 layout: template
 title: I'm Liber 
-text: We value our future. ( Last updated at 2013-12-20 14:00 )
+text: Show Me Something Interesting. ( Last refresh at 2014-03-03 14:36 )
 ---
 
 Hi there, My name is `Gong Junlei`, from China. Working for `DJHealthUnion` at present.  
@@ -33,26 +33,11 @@ GitHub: [github.com/Mystist](https://github.com/Mystist)
 [0]: http://mystist.github.com
 [1]: http://1050.14201420.com/dev-blog
 
-### Features:  
-`Smart:`  
-Can plays awesome in Dota competitions and gain the highest marks I can get from the ACM Online Judgement as well.  
-`Efficient:`  
-Watch and watch, think and think before coding something. When I'm coding, It's almost done.  
-`Perfectionist:`  
-Program, User Experience and Beauty should benefit each other.  
-
 ### Words:  
 Life is a journey.  
-Everyone is irreplaceable.  
-We were created by our Father of different purposes with different talent.  
-So, Why not do something that values, to ourselves, to our nation and to mankind.  
-Using the talent our father gives us.  
-
-Now, A coder, A booming world.  
-It is the best time that we can value something.  
-And I'm here, Hi-Ne-Ni.  
-
-<img src="images/2013_01_07_1.png" />
+Everyone is unique.  
+We value our future.  
+Show me something interesting!
 
 ### Projects:  
 
@@ -83,10 +68,47 @@ Group of iTry86 is the subsite that users can communicate with each other there.
 
 ### Works:  
 
+`getTreeListFromListByLevels` (2014-02)  
+Tip: Get a tree from a source list which we got it from the server.  
+
+<iframe frameborder="0" scrolling="no" src="/liber/getTree/demo.html" width="100%" height="320px;" ></iframe>
+
+Take a glance of code:  
+
+```javascript
+
+  _.each(uniqListArr, function(listItem) {
+
+    var children = [];
+    if(_.indexOf(uniqBranchArr, listItem) != -1) {
+      var currentList = _.filter(branchList, function(item) {
+        return item[levels[0]] === listItem;
+      });
+      children = this.getTreeListFromListByLevels(currentList, levels.slice(1), options);
+    }
+    var branchObj = {
+      'name': listItem,
+      'children': children,
+      'open': false
+    };
+    treeList.push(branchObj);
+    
+    _.each(leafList, function(leafItem) {
+      if(leafItem[levels[0]] === listItem) {
+        branchObj.children.push(getObjFromItemAndOptionsAtLevels(leafItem, options, levels));
+      }
+    });
+    
+  }, this);
+
+```
+
+[Source Download](https://xxx)
+
 <hr />
 
 `picPPT` (2013-09)  
-Tip:  Another PPT, `iframe` supported.  
+Tip: Another PPT, `iframe` supported.  
 
 <iframe frameborder="0" scrolling="no" src="liber/picPPT/demo.html" width="100%" height="320px;" ></iframe>
 
