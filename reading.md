@@ -67,9 +67,10 @@ text: 没有生不逢时，只是未遇好书。
 #### 想读
 
 <div>
-  <img style="padding-right: 10px;" src="images/reading/60.jpg" />
+  <img style="padding-right: 10px;" src="images/reading/62.jpg" />
   <img style="padding-right: 10px;" src="images/reading/56.jpg" />
   <img style="padding-right: 10px;" src="images/reading/57.jpg" />
+  <img style="padding-right: 10px;" src="images/reading/60.jpg" />
   <img style="padding-right: 10px;" src="images/reading/36.jpg" />
   <img style="padding-right: 10px;" src="images/reading/33.jpg" />
   <img style="padding-right: 10px;" src="images/reading/32.jpg" />
