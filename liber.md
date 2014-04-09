@@ -1,18 +1,19 @@
 ---
 layout: template
 title: I'm Liber 
-text: Show Me Something Interesting. ( Last refresh at 2014-03-03 14:36 )
+text: Show Me Something Interesting. ( Last refresh at 2014-04-09 10:53 )
 ---
 
 Hi there, My name is `Gong Junlei`, from China. Working for `DJHealthUnion` at present.  
 
 ### Tags:  
+A deep Front-End developer and a fresh Full-Stack developer.  
 `Javascript` Web Developer Who loves create `SPA`.  
 `Backbone` guru.  
 Master in `jQuery`.  
 Using `Bootstrap`, `requirejs`.  
 Using `Ruby`. (Just because Yukihiro is a Christian)  
-Like sing with `Sinatra`, love `git`.  
+Like singing with `Sinatra`, love `git`.  
 A `Puritan`.  
 
 ### Basic Info:  
@@ -232,7 +233,7 @@ Take a glance of code:
 <hr />
 
 `tdWider` (2013-04)  
-Tip: Try to drag the right line of `td`.  
+Tip: Try to drag the right line of `td` within `thead`.  
 
 <iframe frameborder="0" scrolling="no" src="liber/tdWider/demo.html" width="100%" height="400px;" ></iframe>
 
