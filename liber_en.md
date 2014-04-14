@@ -1,166 +1,152 @@
 ---
 layout: template
 title: I'm Liber 
-text: 信仰耶稣基督，信仰团队比产品重要 （刷新时间： 2014-04-14 17:21）
+text: Believe In Jesus, Love Team more than Products. ( Last refresh at 2014-04-14 17:21 )
 ---
 
 [中文](liber.html) / [English](liber_en.html)
 
-我是龚峻磊，目前就职于`岱嘉医学`。
+Hi there, My name is `Gong Junlei`, from China. Working for `DJHealthUnion` at present.  
 
-### 标签：  
-靠谱的`前端工程师`，扯蛋的`全栈工程师`。  
-喜爱使用`Javascript`开发`SPA`（单页应用程序）。  
-所谓的`Backbone`大牛。  
-合格的`jQuery`高手。  
-使用`Bootstrap`，`requirejs`。  
-使用`Ruby`（仅仅因为Matz是基督徒）。  
-喜爱`Sinatra`，喜爱`git`。  
-一个`清教徒`。  
+### Tags:  
+A deep `Front-End` developer and a fresh `Full-Stack` developer.  
+`Javascript` Web Developer Who loves create `SPA` (Single Page Application).  
+So called `Backbone` guru.  
+Master in `jQuery`.  
+Using `Bootstrap`, `requirejs`.  
+Using `Ruby` (Just because Matz is a Christian).  
+Like singing with `Sinatra`, love `git`.  
+A `Puritan`.  
 
-### 基本信息：  
-全名：龚峻磊  
-英文名：Liber  
-生日：1987-11-01  
-性别：男  
-工作经验：> 3 年  
-E-mail：gjl87910lq@gmail.com  
-手机：136-8169-8273  
-教育水平：本科，呼伦贝尔学院 & 哈尔滨师范大学，2006 - 2010，计算机科学与技术  
-证书：ACM/ICPC 2008 东北区 三等奖  
-英语水平：CET4  
-博客：[mystist.github.com](http://mystist.github.com)  
-GitHub：[github.com/Mystist](https://github.com/Mystist)  
+### Basic Info:  
+Full Name: `Gong Junlei`  
+English Name: `Liber`  
+Date of Birth: `1987-11-01`  
+Gender: `Male`  
+Yrs.of Experience: `> 3 years`  
+E-mail: `gjl87910lq@gmail.com`   
+Mobile Phone: `+86 136-8169-8273`  
+Education: `Bachelor Degree, Hulunbeir College & Harbin Normal University, 2006 - 2010, Computer Science and Technology`  
+Certifications: `Third Price in Northeast China, ACM/ICPC 2008`  
+English Level: `CET4`  
+Blog: [mystist.github.com][0]  
+GitHub: [github.com/Mystist](https://github.com/Mystist)  
 
-### 只言片语：  
-千万人中，你独一无二。  
-我们让我们的未来有意义。  
-来点有意思的吧！  
-注重产品与代码的艺术整体性。  
+[0]: http://mystist.github.com
+
+### Words:  
+Everyone is unique.  
+We value our future.  
+Show me something interesting !  
+Products, Codes, Art Altogether.  
 Always get things done.  
-信仰耶稣基督，信仰团队比产品重要。  
+Believe In Jesus, Love Team more than Products.  
 
-### 项目：  
+### Projects:  
 
-`1050:`（个人项目 2013-09 - 目前）  
-<em>简介</em> ：  
-一个网站：基督徒在线听赞美诗的平台。  
-网址： [1050](http://1050.14201420.com/dev-blog)  
-<em>职责</em> ：  
-创始人，全栈工程师。  
-<em>收获</em> ：  
-与教会的弟兄姊妹分享喜悦。  
-深入使用了`Backbone`的方方面面。  
-了解了目前世界范围内`paas`的基本情况，深入使用了`openshift`。  
-在真实环境中实践了`Ruby`，`sinatra`，`git`等等。  
-零成本startup的最佳实践！  
+`1050:` (Personal project, 2013-09 - Present)  
+<em>Introduction: </em>  
+A website: The 1050 Poetry of Christian.  
+Site: [1050](http://1050.14201420.com/dev-blog)  
+<em>Responsibility: </em>  
+I'm the starter and work as a Full-Stack Developer.  
+<em>Achievements: </em>  
+Know more about `Backbone`, `paas`, `ruby`, `sinatra`, `git`.  
+Best practice of Zero-Cost Startup !  
 
 <hr />
 
-`医疗报表系统：`（岱嘉医学 前端工程师 2013-06 - 目前）  
-<em>简介</em> ：  
-数据可视化：为医院管理层提供的报表系统。  
-第一个版本使用`BIRT`实现，第二个版本使用`OLAP`和`eCharts`。  
-<em>职责</em> ：  
-与项目经理沟通业务实现的可行性和实现方式。  
-管理前端团队。  
-搭建前端项目框架。  
-实现一些重要报表的数据可视化，以表格和图形的方式体现。  
-实现自定义报表的功能，用户可以连接数据源，通过拖拽度量和维度的方式实现自定义报表。  
-<em>收获</em> ：  
-有了一些团队管理的经验。  
-理解并掌握了BI领域包括OLAP等相关理论和具体应用。  
-熟练掌握了`eCharts`，`hightCharts`等的使用。  
-对`JSON`数据的操作达到了炉火纯青的地步。  
+`MRS:` (DJHealthUnion, Front-End Developer, 2013-06 - Present)  
+<em>Introduction: </em>  
+MRS is a Data visualization system: Medical Report System.   
+Version 1 use `BIRT`, Version 2 use `OLAP` and `eCharts`.  
+<em>Responsibility: </em>  
+Communicate with PM.  
+Take charge of front-end team.  
+Create a tool to custom report: `BIKit`.  
+<em>Achievements: </em>  
+Experience with manage team.  
+Know more about `OLAP`, `eCharts` and `hightCharts`.  
+Master in handle `JSON` datas.  
 
 <hr />
 
-`Mini医护工作站：`（岱嘉医学 前端工程师 2012-12 - 2013-05）  
-<em>简介</em> ：  
-针对透析科的医生护士协同工作平台。  
-功能包括：病人管理、医生护士排班、下透析医嘱、执行医嘱、查看实时透析数据图等。  
-采用前后端分离的开发模式。  
-<em>职责</em> ：  
-配合设计人员和项目经理实现业务功能。  
-配合后端人员实现数据的获取和保存。  
-<em>收获</em> ：  
-了解了前后端分离的开发模式。  
-掌握了前端MVC的思想和应用。  
-了解了如何与设计人员配合工作。  
-了解了医院`HIS`系统的业务知识。  
+`MiniWorkStation:` (DJHealthUnion, Front-End Developer, 2012-12 - 2013-05)  
+<em>Introduction: </em>  
+A system that the Doctors and Nurses can work together.  
+Nurse can do: Manage patients, Make plan for patients, execute docter orders, etc.  
+Docter can do: Manage orders, Make applications and Add dialysis orders for patients.  
+<em>Responsibility: </em>  
+Work with Designer and PM.  
+Work with Back-End developer.  
+<em>Achievements: </em>  
+Know more about the Roles of Designer, Front-End and Back-End.  
+Know more about Front-End MVC.  
+Business technologies about `HIS`.  
 
 <hr />
 
-`时间轴插件：`（岱嘉医学 前端工程师 2012-09 - 2012-11）  
-<em>简介</em> ：  
-jQuery时间轴插件，管理基于日期的事件轨迹。  
-<em>职责</em> ：  
-从零开始，独立完成该插件。  
-<em>收获</em> ：  
-参考了很多时间轴的实现，对各种基于事件的时间轴插件有了基本认识。  
-掌握了jQuery插件的实现方式。  
-加深了对jQuery的理解，巩固了js的基础知识。  
-自信和成就感。  
+`Plugin - Timetrack:` (DJHealthUnion, Front-End Developer, 2012-09 - 2012-11)  
+<em>Introduction: </em>  
+jQuery plugin to manage dates and events.  
+<em>Responsibility: </em>  
+Achieve it from zero to end.   
+<em>Achievements: </em>  
+Know more about `jQuery`.  
+Self-confidence and Achievability.  
 
 <hr />
 
-`中联达物流公司PC客户端：` （南软科技 软件工程师 2012-01 - 2012-08）  
-<em>简介</em> ：  
-客户端包含：企业门户、客户端管理、数据对接三大模块。  
-企业门户即中联达公司网站。  
-客户端管理提供：在线下单、查看订单、订单定位、仓储信息查询、承运商管理、业务统计等功能。  
-数据对接：客户系统导出数据，通过接口直接导入公司系统。  
-<em>职责</em> ：  
-配合架构师实现各模块。  
-设计并实现：企业网站，客户端管理的流程以及具体业务。  
-根据客户系统的文档，实现数据对接。  
-<em>收获</em> ：  
-学习了南软自主开发的后端语言：`cn`语言。  
-学习了UI、UE范畴的知识。  
-了解了第三方物流的业务知识。  
+`E-commerce Website for ZLD:`(NanRuan, Software Engineer, 2012-01 - 2012-08)  
+<em>Introduction: </em>  
+ZLD is a logistics company.  
+The clients of ZLD can use the website to make orders online, search informations.  
+The carriers of ZLD can use the website to print order infotmations.  
+<em>Responsibility: </em>  
+Work with architect engineer.  
+Design and Achieve the website.  
+<em>Achievements: </em>  
+Learnt the `cn` lauguage made by NanRuan.  
+Learnt something about `UI`, `UE`.  
+Business technologies about `logistics`.  
 
 <hr />
 
-`海吉星集团ERP系统：`（南软科技 软件工程师 2011-05 - 2011-12）  
-<em>简介</em> ：  
-海吉星集团是一家医药生产销售公司。  
-系统主要涉及：进销存、人员管理、工作流、预算管理。  
-<em>职责</em> ：  
-实现客户信息管理模块，业务单打印模块。  
-现场技术支持。  
-<em>收获</em> ：  
-学习了南软自主开发平台：子墨开发平台。  
-锻炼了应对现场突发情况的心理素质和能力。  
-了解了ERP系统的相关知识。  
+`ERP system for HaiJiXing:`(NanRuan, Software Engineer, 2011-05 - 2011-12)  
+<em>Introduction: </em>  
+HaiJiXing is a medical made/sell company.  
+<em>Responsibility: </em>  
+Achieve clients management.  
+Technical support on site.  
+<em>Achievements: </em>  
+Know how to handle things on site.  
+Business technologies about `ERP`.  
 
 <hr />
 
-`爱财部落群组项目：`（邻智网络 C#程序员 2010-09 - 2011-04）  
-<em>简介</em> ：  
-爱财部落是一家通过网络模拟交易选拔实盘操盘手的专业网站。  
-网站为注册用户提供股票、外汇、期货等品种的模拟交易服务。  
-群组项目提供类似论坛的功能，为用户提供金融资讯以及信息交流的服务。  
-<em>职责</em> ：  
-根据群组项目的设计稿，实现功能。  
-维护其它的一些项目：股票定投、排行等。  
-<em>收获</em> ：  
-掌握了jQuery。  
-了解了`Memorycache`的一些知识。  
-学会团队合作，体会到了代码可维护的重要性。  
-了解了金融行业的相关知识。  
+`Group of iTry86:`  (LinZhi, C# Programer, 2010-09 - 2011-04)  
+<em>Introduction: </em>  
+iTry86 is a website that can trade stocks with virtual money.  
+Group of iTry86 is the subsite that users can communicate with each other there.  
+<em>Responsibility: </em>  
+Work with Designer.  
+Fix other sites.  
+<em>Achievements: </em>  
+Know more about `jQuery` and `Memorycache`.  
+Know how to work with colleagues.  
+Business technologies about `Finance`.  
 
 <hr />
-
 <br />
 
-### 成果：  
+### Works:  
 
 `getTreeListFromListByLevels` (2014-02)  
-提示: 通过后台传过来的原始JSON数据，递归生成zTree需要的数据。  
+Tip: Get a tree from a source list which we got it from the server.  
 
 <iframe frameborder="0" scrolling="no" src="/liber/getTree/demo.html" width="100%" height="320px;" ></iframe>
 
-代码片段：  
+Take a glance of code:  
 
 ```javascript
 
@@ -190,16 +176,16 @@ jQuery时间轴插件，管理基于日期的事件轨迹。
 
 ```
 
-[代码下载](/liber/getTree/getTree.rar)
+[Source Download](/liber/getTree/getTree.rar)
 
 <hr />
 
 `picPPT` (2013-09)  
-提示：支持`iframe`的幻灯片插件。  
+Tip: Another PPT, `iframe` supported.  
 
 <iframe frameborder="0" scrolling="no" src="liber/picPPT/demo.html" width="100%" height="320px;" ></iframe>
 
-代码片段：  
+Take a glance of code:  
 
 {% highlight javascript %}
     bindEvent: function() {
@@ -217,22 +203,22 @@ jQuery时间轴插件，管理基于日期的事件轨迹。
     }
 {% endhighlight %}
 
-[Github地址][16]  
-[代码下载][17]
+[See in Github][16]  
+[Source Download][17]
 [16]: https://github.com/Mystist/picPPT
 [17]: https://github.com/Mystist/picPPT/archive/master.zip
 
 <hr />
 
 `partialPrint` (2013-07)  
-提示: 局部打印。  
-按 `F8` 打开/关闭 插件功能。  
-使用鼠标选择要打印的元素。    
-点击鼠标右键，选择`打印`。  
+Tip:  
+Press `F8` to `open/close` the plugin.  
+Just move your mouse to select the items you want to print.  
+Right click on those items then choose print.  
 
-<a href="liber/partialPrint/demo.html" target="_blank">查看Demo</a>
+<a href="liber/partialPrint/demo.html" target="_blank">See demo here</a>
 
-代码片段：  
+Take a glance of code:  
 
 {% highlight javascript %}
   var includeCss = function(styles, media) {
@@ -248,19 +234,19 @@ jQuery时间轴插件，管理基于日期的事件轨迹。
   };
 {% endhighlight %}
 
-[Github地址][14]  
-[代码下载][15]
+[See in Github][14]  
+[Source Download][15]
 [14]: https://github.com/Mystist/partialPrint
 [15]: https://github.com/Mystist/partialPrint/archive/master.zip
 
 <hr />
 
 `multiSelect` (2013-06)  
-提示：让html的select元素支持多选功能。支持键盘上下选择。  
+Tip: Keyboard supported, try `up` and `down`.  
 
 <iframe frameborder="0" scrolling="no" src="liber/multiSelect/demo.html" width="100%" height="300px;" ></iframe>
 
-代码片段：  
+Take a glance of code:  
 
 {% highlight javascript %}
     $target.delegate("ul", "keyup", function(e) {
@@ -289,8 +275,8 @@ jQuery时间轴插件，管理基于日期的事件轨迹。
   }
 {% endhighlight %}
 
-[Github地址][12]  
-[代码下载][13]
+[See in Github][12]  
+[Source Download][13]
 [12]: https://github.com/Mystist/multiSelect
 [13]: https://github.com/Mystist/multiSelect/archive/master.zip
 
@@ -300,7 +286,7 @@ jQuery时间轴插件，管理基于日期的事件轨迹。
 
 <iframe frameborder="0" scrolling="no" src="liber/customPPT/demo.html" width="100%" height="320px;" ></iframe>
 
-代码片段：  
+Take a glance of code:  
 
 {% highlight javascript %}
     automaticPlay: function() {
@@ -311,19 +297,19 @@ jQuery时间轴插件，管理基于日期的事件轨迹。
     },
 {% endhighlight %}
 
-[Github地址][10]  
-[代码下载][11]
+[See in Github][10]  
+[Source Download][11]
 [10]: https://github.com/Mystist/customPPT
 [11]: https://github.com/Mystist/customPPT/archive/master.zip
 
 <hr />
 
 `tdWider` (2013-04)  
-提示：试试将鼠标移到表头`td`的右边。  
+Tip: Try to drag the right line of `td` within `thead`.  
 
 <iframe frameborder="0" scrolling="no" src="liber/tdWider/demo.html" width="100%" height="400px;" ></iframe>
 
-代码片段：  
+Take a glance of code:  
 
 {% highlight javascript %}
       this.$this.find(".m_inner").draggable({
@@ -357,19 +343,19 @@ jQuery时间轴插件，管理基于日期的事件轨迹。
       });
 {% endhighlight %}
 
-[Github地址][8]  
-[代码下载][9]
+[See in Github][8]  
+[Source Download][9]
 [8]: https://github.com/Mystist/tdWider
 [9]: https://github.com/Mystist/tdWider/archive/master.zip
 
 <hr />
 
 `theadFixer` (2013-04)  
-提示：滚动表格的时候，表头会固定住。  
+Tip: The `table's header` will hold when you are scrolling.  
 
 <iframe frameborder="0" scrolling="no" src="liber/theadFixer/demo.html" width="100%" height="400px;" ></iframe>
 
-代码片段：  
+Take a glance of code:  
 
 {% highlight javascript %}
     option: function(optionName, optionValue) {
@@ -389,19 +375,19 @@ jQuery时间轴插件，管理基于日期的事件轨迹。
     },
 {% endhighlight %}
 
-[Github地址][6]  
-[代码下载][7]
+[See in Github][6]  
+[Source Download][7]
 [6]: https://github.com/Mystist/theadFixer
 [7]: https://github.com/Mystist/theadFixer/archive/master.zip
 
 <hr />
 
 `inputTip` (2012-12)  
-提示：试试输入一个`s`然后滚动到底部。  
+Tip: Input a `s` and try to scroll to the bottom.  
 
 <iframe frameborder="0" scrolling="no" src="liber/inputTip/demo.html" width="100%" height="400px;" ></iframe>
 
-代码片段：  
+Take a glance of code:  
 
 {% highlight javascript %}
       if(filteredItemList.length!=0) {
@@ -436,19 +422,19 @@ jQuery时间轴插件，管理基于日期的事件轨迹。
       });
 {% endhighlight %}
 
-[Github地址][4]  
-[代码下载][5]
+[See in Github][4]  
+[Source Download][5]
 [4]: https://github.com/Mystist/inputTip
 [5]: https://github.com/Mystist/inputTip/archive/master.zip
 
 <hr />
 
 `Timetrack` (2012-11)  
-提示：左右拖动、添加/查看事件、放大、缩小等等。  
+Tip: You can drag it left and right, click the events, zoom in/out by click the `plus/minus` button on the right bottom, etc...  
 
 <iframe frameborder="0" scrolling="no" src="liber/timetrack/page/timetrack.html" width="100%" height="400px;" ></iframe>
 
-代码片段：  
+Take a glance of code:  
 
 {% highlight javascript %}
   function getNumbersByDateType(startTime, endTime, type) {
@@ -481,8 +467,8 @@ jQuery时间轴插件，管理基于日期的事件轨迹。
   }
 {% endhighlight %}
 
-[Github地址][2]  
-[代码下载][3]
+[See in Github][2]  
+[Source Download][3]
 [2]: https://github.com/Mystist/timetrack
 [3]: https://github.com/Mystist/timetrack/archive/master.zip
 
