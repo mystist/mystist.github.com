@@ -29,8 +29,8 @@ E-mail：gjl87910lq@gmail.com
 教育水平：本科，呼伦贝尔学院 & 哈尔滨师范大学，2006 - 2010，计算机科学与技术  
 证书：ACM/ICPC 2008 东北区 三等奖  
 英语水平：CET4  
-博客：[mystist.github.com](http://mystist.github.com)  
-GitHub：[github.com/Mystist](https://github.com/Mystist)  
+博客：[http://mystist.github.com](http://mystist.github.com)  
+GitHub：[https://github.com/Mystist](https://github.com/Mystist)  
 Stackoverflow: [http://stackoverflow.com/users/1773006/liber](http://stackoverflow.com/users/1773006/liber)   
 
 ### 只言片语：  
