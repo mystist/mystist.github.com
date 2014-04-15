@@ -1,7 +1,7 @@
 ---
 layout: template
 title: I'm Liber 
-text: 信仰耶稣基督，信仰团队比产品重要 （刷新时间： 2014-04-14 17:21）
+text: 信仰耶稣基督，信仰团队比产品重要 （刷新时间： 2014-04-15 14:00）
 ---
 
 [中文](liber.html) / [English](liber_en.html)
@@ -45,7 +45,7 @@ Always get things done.
 `1050:`（个人项目 2013-09 - 目前）  
 <em>简介</em> ：  
 一个网站：基督徒在线听赞美诗的平台。  
-网址： [1050](http://1050.14201420.com/dev-blog)  
+网址： [http://1050.14201420.com/dev-blog](http://1050.14201420.com/dev-blog)  
 <em>职责</em> ：  
 创始人，全栈工程师。  
 <em>收获</em> ：  

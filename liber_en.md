@@ -1,7 +1,7 @@
 ---
 layout: template
 title: I'm Liber 
-text: Believe In Jesus, Love Team more than Products. ( Last refresh at 2014-04-14 17:21 )
+text: Believe In Jesus, Love Team more than Products. ( Last refresh at 2014-04-15 14:00 )
 ---
 
 [中文](liber.html) / [English](liber_en.html)
@@ -47,7 +47,7 @@ Believe In Jesus, Love Team more than Products.
 `1050:` (Personal project, 2013-09 - Present)  
 <em>Introduction: </em>  
 A website: The 1050 Poetry of Christian.  
-Site: [1050](http://1050.14201420.com/dev-blog)  
+Site: [http://1050.14201420.com/dev-blog](http://1050.14201420.com/dev-blog)  
 <em>Responsibility: </em>  
 I'm the starter and work as a Full-Stack Developer.  
 <em>Achievements: </em>  
