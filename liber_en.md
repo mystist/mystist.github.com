@@ -1,7 +1,7 @@
 ---
 layout: template
 title: I'm Liber 
-text: Believe In Jesus, Love Team more than Products. ( Last refresh at 2014-04-15 14:00 )
+text: Believe In Jesus, Love Team more than Products. ( Last refresh at 2014-04-16 00:36 )
 ---
 
 [中文](liber.html) / [English](liber_en.html)
@@ -31,6 +31,7 @@ Certifications: `Third Price in Northeast China, ACM/ICPC 2008`
 English Level: `CET4`  
 Blog: [mystist.github.com][0]  
 GitHub: [github.com/Mystist](https://github.com/Mystist)  
+Stackoverflow: [http://stackoverflow.com/users/1773006/liber](http://stackoverflow.com/users/1773006/liber)   
 
 [0]: http://mystist.github.com
 
