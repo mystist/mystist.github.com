@@ -29,7 +29,7 @@ Mobile Phone: `+86 136-8169-8273`
 Education: `Bachelor Degree, Hulunbeir College & Harbin Normal University, 2006 - 2010, Computer Science and Technology`  
 Certifications: `Third Price in Northeast China, ACM/ICPC 2008`  
 English Level: `CET4`  
-Blog: [http://mystist.github.com][http://mystist.github.com]  
+Blog: [http://mystist.github.com](http://mystist.github.com)  
 GitHub: [https://github.com/Mystist](https://github.com/Mystist)  
 Stackoverflow: [http://stackoverflow.com/users/1773006/liber](http://stackoverflow.com/users/1773006/liber)   
 
