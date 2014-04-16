@@ -41,6 +41,26 @@ Products, Codes, Art Altogether.
 Always get things done.  
 Believe In Jesus, Love Team more than Products.  
 
+### Work Experience:  
+`DJHealthUnion`, Front-End engineer, (2012-09 - Present)  
+<em>Introduction: </em>  
+Develop software for Hospital.  
+<em>Why leave: </em>  
+We do not work with F2E Team leader together for location reason.  
+Far away from home.  
+
+`NanRuan`, Software engineer, (2011-05 - 2012-08)  
+<em>Introduction: </em>  
+Develop software for logistics company.  
+<em>Why leave: </em>  
+The `cn` lauguage that created by the company is not good for personal career.  
+
+`LinZhi`, C# Programer, (2010-09 - 2011-04)  
+<em>Introduction: </em>  
+iTry86 is a website that can trade stocks with virtual money.  
+<em>Why leave: </em>  
+IPO failure, team off.  
+
 ### Projects:  
 
 `1050:` (Personal project, 2013-09 - Present)  
