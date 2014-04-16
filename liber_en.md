@@ -9,7 +9,7 @@ text: Believe In Jesus, Love Team more than Products. ( Last refresh at 2014-04-
 Hi there, My name is `Gong Junlei`, from China. Working for `DJHealthUnion` at present.  
 
 ### Tags:  
-A deep `Front-End` developer and a fresh `Full-Stack` developer.  
+A deep `Front-End` engineer and a fresh `Full-Stack` engineer.  
 `Javascript` Web Developer Who loves create `SPA` (Single Page Application).  
 So called `Backbone` guru.  
 Master in `jQuery`.  
@@ -48,14 +48,14 @@ Believe In Jesus, Love Team more than Products.
 A website: The 1050 Poetry of Christian.  
 Site: [http://1050.14201420.com/dev-blog](http://1050.14201420.com/dev-blog)  
 <em>Responsibility: </em>  
-I'm the starter and work as a Full-Stack Developer.  
+I'm the starter and work as a Full-Stack engineer.  
 <em>Achievements: </em>  
 Know more about `Backbone`, `paas`, `ruby`, `sinatra`, `git`.  
 Best practice of Zero-Cost Startup !  
 
 <hr />
 
-`MRS:` (DJHealthUnion, Front-End Developer, 2013-06 - Present)  
+`MRS:` (DJHealthUnion, Front-End engineer, 2013-06 - Present)  
 <em>Introduction: </em>  
 MRS is a Data visualization system: Medical Report System.   
 Version 1 use `BIRT`, Version 2 use `OLAP` and `eCharts`.  
@@ -70,14 +70,14 @@ Master in handle `JSON` datas.
 
 <hr />
 
-`MiniWorkStation:` (DJHealthUnion, Front-End Developer, 2012-12 - 2013-05)  
+`MiniWorkStation:` (DJHealthUnion, Front-End engineer, 2012-12 - 2013-05)  
 <em>Introduction: </em>  
 A system that the Doctors and Nurses can work together.  
 Nurse can do: Manage patients, Make plan for patients, execute docter orders, etc.  
 Docter can do: Manage orders, Make applications and Add dialysis orders for patients.  
 <em>Responsibility: </em>  
 Work with Designer and PM.  
-Work with Back-End developer.  
+Work with Back-End engineer.  
 <em>Achievements: </em>  
 Know more about the Roles of Designer, Front-End and Back-End.  
 Know more about Front-End MVC.  
@@ -85,7 +85,7 @@ Business technologies about `HIS`.
 
 <hr />
 
-`Plugin - Timetrack:` (DJHealthUnion, Front-End Developer, 2012-09 - 2012-11)  
+`Plugin - Timetrack:` (DJHealthUnion, Front-End engineer, 2012-09 - 2012-11)  
 <em>Introduction: </em>  
 jQuery plugin to manage dates and events.  
 <em>Responsibility: </em>  
@@ -96,7 +96,7 @@ Self-confidence and Achievability.
 
 <hr />
 
-`E-commerce Website for ZLD:`(NanRuan, Software Engineer, 2012-01 - 2012-08)  
+`E-commerce Website for ZLD:`(NanRuan, Software engineer, 2012-01 - 2012-08)  
 <em>Introduction: </em>  
 ZLD is a logistics company.  
 The clients of ZLD can use the website to make orders online, search informations.  
@@ -111,7 +111,7 @@ Business technologies about `logistics`.
 
 <hr />
 
-`ERP system for HaiJiXing:`(NanRuan, Software Engineer, 2011-05 - 2011-12)  
+`ERP system for HaiJiXing:`(NanRuan, Software engineer, 2011-05 - 2011-12)  
 <em>Introduction: </em>  
 HaiJiXing is a medical made/sell company.  
 <em>Responsibility: </em>  
