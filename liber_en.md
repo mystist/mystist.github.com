@@ -1,7 +1,7 @@
 ---
 layout: template
 title: I'm Liber 
-text: Believe In Jesus, Love Team more than Products. ( Last refresh at 2014-04-16 00:36 )
+text: Believe In Jesus, Love Team more than Products. ( Last refresh at 2014-04-16 )
 ---
 
 [中文](liber.html) / [English](liber_en.html)

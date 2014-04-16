@@ -1,7 +1,7 @@
 ---
 layout: template
 title: I'm Liber 
-text: 信仰耶稣基督，信仰团队比产品重要 （最后刷新时间： 2014-04-16 00:36）
+text: 信仰耶稣基督，信仰团队比产品重要 （最后刷新时间： 2014-04-16）
 ---
 
 [中文](liber.html) / [English](liber_en.html)
