@@ -1,7 +1,7 @@
 ---
 layout: template
 title: I'm Liber 
-text: Believe In Jesus, Love Team more than Products. ( Last refresh at 2014-04-16 )
+text: Believe In Jesus, Love Team more than Products. ( Last refresh at 2014-04-17 )
 ---
 
 [中文](liber.html) / [English](liber_en.html)
@@ -30,6 +30,7 @@ Education: `Bachelor Degree, Hulunbeir College & Harbin Normal University, 2006 
 Certifications: `Third Price in Northeast China, ACM/ICPC 2008`  
 English Level: `CET4`  
 Blog: [http://mystist.github.com](http://mystist.github.com)  
+Personal Project: [http://1050.14201420.com/dev-blog](http://1050.14201420.com/dev-blog)  
 GitHub: [https://github.com/Mystist](https://github.com/Mystist)  
 Stackoverflow: [http://stackoverflow.com/users/1773006/liber](http://stackoverflow.com/users/1773006/liber)   
 

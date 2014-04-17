@@ -1,7 +1,7 @@
 ---
 layout: template
 title: I'm Liber 
-text: 信仰耶稣基督，信仰团队比产品重要 （最后刷新时间： 2014-04-16）
+text: 信仰耶稣基督，信仰团队比产品重要 （最后刷新时间： 2014-04-17）
 ---
 
 [中文](liber.html) / [English](liber_en.html)
@@ -30,6 +30,7 @@ E-mail：gjl87910lq@gmail.com
 证书：ACM/ICPC 2008 东北区 三等奖  
 英语水平：CET4  
 博客：[http://mystist.github.com](http://mystist.github.com)  
+个人项目：[http://1050.14201420.com/dev-blog](http://1050.14201420.com/dev-blog)  
 GitHub：[https://github.com/Mystist](https://github.com/Mystist)  
 Stackoverflow: [http://stackoverflow.com/users/1773006/liber](http://stackoverflow.com/users/1773006/liber)   
 
