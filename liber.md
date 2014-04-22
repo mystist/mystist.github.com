@@ -4,7 +4,7 @@ title: I'm Liber
 text: 13681698273 / gjl87910lq@gmail.com（最后刷新时间： 2014-04-22）
 ---
 
-[中文](liber.html)，[下载](images/liber_cv.docx) / [English](liber_en.html), [Download](images/liber_cv_en.docx)
+[中文](liber.html)[（下载）](images/liber_cv.docx) / [English](liber_en.html)[(Download)](images/liber_cv_en.docx)
 
 ### 个人信息：  
 姓名：龚峻磊  
