@@ -4,7 +4,7 @@ title: I'm Liber
 text: 13681698273 / gjl87910lq@gmail.com ( Last refresh at 2014-04-22 )
 ---
 
-[中文](liber.html) / [English](liber_en.html) / [Word Version](images/liber.rar)  
+[中文](liber.html)，[下载](images/liber_cv.docx) / [English](liber_en.html), [Download](images/liber_cv_en.docx)
 
 ### Info:  
 Name: Gong Junlei  
@@ -188,7 +188,7 @@ NanRuan, Software Engineer, (2011-05 - 2012-08)
 *Introduction:*  
 Develop software for logistics company.  
 *Why leave:*  
-The cn lauguage that created by the company is not good for personal career.  
+The CN lauguage that created by the company is not good for personal career.  
 
 LinZhi, C# Programer, (2010-09 - 2011-04)  
 *Introduction:*  

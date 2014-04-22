@@ -4,7 +4,7 @@ title: I'm Liber
 text: 13681698273 / gjl87910lq@gmail.com（最后刷新时间： 2014-04-22）
 ---
 
-[中文](liber.html) / [English](liber_en.html) / [Word版本下载](images/liber.rar)  
+[中文](liber.html)，[下载](images/liber_cv.docx) / [English](liber_en.html), [Download](images/liber_cv_en.docx)
 
 ### 个人信息：  
 姓名：龚峻磊  
@@ -203,7 +203,7 @@ C#
 *公司简介*：  
 物流行业信息化服务提供商。  
 *离职原因*：  
-公司自主开发的cn语言不利于个人职业发展。  
+公司自主开发的CN语言不利于个人职业发展。  
 
 `邻智网络` C#程序员 （2010-09 - 2011-04）  
 *公司简介*：  
