@@ -1,163 +1,219 @@
 ---
 layout: template
 title: I'm Liber 
-text: Believe In Jesus, Love Team more than Products. ( Last refresh at 2014-04-17 )
+text: 13681698273 / gjl87910lq@gmail.com ( Last refresh at 2014-04-22 )
 ---
 
-[中文](liber.html) / [English](liber_en.html)
+[中文](liber.html) / [English](liber_en.html) / [Word Version](images/liber.rar)  
 
-Hi there, My name is `Gong Junlei`, from China. Working for `DJHealthUnion` at present.  
-
-### Tags:  
-A deep `Front-End` engineer and a fresh `Full-Stack` engineer.  
-`Javascript` Web Developer Who loves create `SPA` (Single Page Application).  
-So called `Backbone` guru.  
-Master in `jQuery`.  
-Using `Bootstrap`, `requirejs`.  
-Using `Ruby` (Just because Matz is a Christian).  
-Like singing with `Sinatra`, love `git`.  
-A `Puritan`.  
-
-### Basic Info:  
-Full Name: `Gong Junlei`  
-English Name: `Liber`  
-Date of Birth: `1987-11-01`  
-Gender: `Male`  
-Yrs.of Experience: `> 3 years`  
-E-mail: `gjl87910lq@gmail.com`   
-Mobile Phone: `+86 136-8169-8273`  
-Education: `Bachelor Degree, Hulunbeir College & Harbin Normal University, 2006 - 2010, Computer Science and Technology`  
-Certifications: `Third Price in Northeast China, ACM/ICPC 2008`  
-English Level: `CET4`  
+### Info:  
+Name: Gong Junlei  
+Hometown: Zhang Jiajie, HuNan  
+Birth: 1987-11-01  
+School: Institutes Of HulunBuir, Harbin Normal University,  2006 – 2010  
+Major/Degree: Computer Science & Technology / Bachelor  
+Phone/Email: 13681698273 / gjl87910lq@gmail.com  
+Location: ZhangJiang, Shanghai  
 Blog: [http://mystist.github.com](http://mystist.github.com)  
 Personal Project: [http://1050.14201420.com/dev-blog](http://1050.14201420.com/dev-blog)  
 GitHub: [https://github.com/Mystist](https://github.com/Mystist)  
-Stackoverflow: [http://stackoverflow.com/users/1773006/liber](http://stackoverflow.com/users/1773006/liber)   
+Stackoverflow: [http://stackoverflow.com/users/1773006/liber](http://stackoverflow.com/users/1773006/liber)  
 
-### Words:  
-Everyone is unique.  
-We value our future.  
-Show me something interesting !  
-Products, Codes, Art Altogether.  
+### Intro:  
+Hi there, My name is Gong Junlei, from China. Working for DJHealthUnion at present.  
+Tags of me:   
+A deep Front-End engineer and a fresh Full-Stack engineer.  
+Javascript Web Developer Who loves create SPA (Single Page Application).  
+So called Backbone guru. Master in jQuery.  
+Using Bootstrap, requirejs. Using Ruby (Just because Matz is a Christian).  
+Like singing with Sinatra, love git.   
 Always get things done.  
 Believe In Jesus, Love Team more than Products.  
 
-### Work Experience:  
-`DJHealthUnion`, Front-End engineer, (2012-09 - Present)  
-<em>Introduction: </em>  
-Develop software for Hospital.  
-<em>Why leave: </em>  
-We do not work with F2E Team leader together for location reason.  
-Far away from home.  
-
-`NanRuan`, Software engineer, (2011-05 - 2012-08)  
-<em>Introduction: </em>  
-Develop software for logistics company.  
-<em>Why leave: </em>  
-The `cn` lauguage that created by the company is not good for personal career.  
-
-`LinZhi`, C# Programer, (2010-09 - 2011-04)  
-<em>Introduction: </em>  
-iTry86 is a website that can trade stocks with virtual money.  
-<em>Why leave: </em>  
-IPO failure, team off.  
-
-### Projects:  
-
-`1050:` (Personal project, 2013-09 - Present)  
-<em>Introduction: </em>  
+### Project Experience:  
+*Project Name:*  
+1050  
+*Project Time:*  
+2013-09 – Present, Personal Project  
+*Project Intro:*  
 A website: The 1050 Poetry of Christian.  
 Site: [http://1050.14201420.com/dev-blog](http://1050.14201420.com/dev-blog)  
-<em>Responsibility: </em>  
-I'm the starter and work as a Full-Stack engineer.  
-<em>Achievements: </em>  
-Know more about `Backbone`, `paas`, `ruby`, `sinatra`, `git`.  
+*Responsibility:*  
+I'm the starter and work as a Full-Stack Engineer.  
+*Environment:*  
+Notepad++  
+*Program Lauguage:*  
+Javascript, Ruby  
+*Achievements:*  
+Know more about Backbone, paas, ruby,Bootstrap, requirejs, sinatra, git.  
+Get to know Third part API: Qiniu, QQ.   
 Best practice of Zero-Cost Startup !  
 
 <hr />
 
-`MRS:` (DJHealthUnion, Front-End engineer, 2013-06 - Present)  
-<em>Introduction: </em>  
-MRS is a Data visualization system: Medical Report System.   
-Version 1 use `BIRT`, Version 2 use `OLAP` and `eCharts`.  
-<em>Responsibility: </em>  
+*Project Name:*  
+MRS  
+*Project Time:*  
+2013-06 – Present, DJHealthUnion, F2E  
+*Project Intro:*  
+MRS is a Data visualization system: Medical Report System.  
+Version 1 use BIRT, Version 2 use OLAP and eCharts.  
+*Responsibility:*  
 Communicate with PM.  
 Take charge of front-end team.  
-Create a tool to custom report: `BIKit`.  
-<em>Achievements: </em>  
+Create a tool to custom report: BIKit.  
+*Environment:*  
+Notepad++, MyEclipse  
+*Program Lauguage:*  
+Javascript, MDX  
+*Achievements:*  
 Experience with manage team.  
-Know more about `OLAP`, `eCharts` and `hightCharts`.  
-Master in handle `JSON` datas.  
+Know more about OLAP, eCharts and hightCharts.  
+Master in handle JSON datas.  
 
 <hr />
 
-`MiniWorkStation:` (DJHealthUnion, Front-End engineer, 2012-12 - 2013-05)  
-<em>Introduction: </em>  
+*Project Name:*  
+MiniWorkStation  
+*Project Time:*  
+2012-12 - 2013-05, DJHealthUnion, F2E  
+*Project Intro:*  
 A system that the Doctors and Nurses can work together.  
 Nurse can do: Manage patients, Make plan for patients, execute docter orders, etc.  
 Docter can do: Manage orders, Make applications and Add dialysis orders for patients.  
-<em>Responsibility: </em>  
+*Responsibility:*  
 Work with Designer and PM.  
 Work with Back-End engineer.  
-<em>Achievements: </em>  
+*Environment:*  
+Notepad++, MyEclipse  
+*Program Lauguage:*  
+Javascript  
+*Achievements:*  
 Know more about the Roles of Designer, Front-End and Back-End.  
 Know more about Front-End MVC.  
-Business technologies about `HIS`.  
+Business technologies about HIS.  
 
 <hr />
 
-`Plugin - Timetrack:` (DJHealthUnion, Front-End engineer, 2012-09 - 2012-11)  
-<em>Introduction: </em>  
+*Project Name:*  
+Plugin - Timetrack  
+*Project Time:*  
+2012-09 - 2012-11, DJHealthUnion, F2E  
+*Project Intro:*  
 jQuery plugin to manage dates and events.  
-<em>Responsibility: </em>  
-Achieve it from zero to end.   
-<em>Achievements: </em>  
-Know more about `jQuery`.  
+*Responsibility:*  
+Achieve it from zero to end.  
+*Environment:*  
+Notepad++  
+*Program Lauguage:*  
+Javascript  
+*Achievements:*  
+Know more about jQuery.  
 Self-confidence and Achievability.  
 
 <hr />
 
-`E-commerce Website for ZLD:`(NanRuan, Software engineer, 2012-01 - 2012-08)  
-<em>Introduction: </em>  
+*Project Name:*  
+E-commerce Website for ZLD  
+*Project Time:*  
+2012-01 - 2012-08, NR, Software Engineer  
+*Project Intro:*  
 ZLD is a logistics company.  
 The clients of ZLD can use the website to make orders online, search informations.  
 The carriers of ZLD can use the website to print order infotmations.  
-<em>Responsibility: </em>  
+*Responsibility:*  
 Work with architect engineer.  
 Design and Achieve the website.  
-<em>Achievements: </em>  
-Learnt the `cn` lauguage made by NanRuan.  
-Learnt something about `UI`, `UE`.  
-Business technologies about `logistics`.  
+*Environment:*  
+Notepad++  
+*Program Lauguage:*  
+Javascript, CN  
+*Achievements:*  
+Learnt the CN lauguage made by NanRuan.  
+Learnt something about UI, UE.  
+Business technologies about logistics.  
 
 <hr />
 
-`ERP system for HaiJiXing:`(NanRuan, Software engineer, 2011-05 - 2011-12)  
-<em>Introduction: </em>  
+*Project Name:*  
+ERP system for HaiJiXing  
+*Project Time:*  
+2011-05 - 2011-1, NR, Software Engineer  
+*Project Intro:*  
 HaiJiXing is a medical made/sell company.  
-<em>Responsibility: </em>  
+*Responsibility:*  
 Achieve clients management.  
 Technical support on site.  
-<em>Achievements: </em>  
+*Environment:*  
+Notepad++  
+*Program Lauguage:*  
+Javascript, CN  
+*Achievements:*  
 Know how to handle things on site.  
-Business technologies about `ERP`.  
+Business technologies about ERP.  
 
 <hr />
 
-`Group of iTry86:`  (LinZhi, C# Programer, 2010-09 - 2011-04)  
-<em>Introduction: </em>  
+*Project Name:*  
+Group of iTry86  
+*Project Time:*  
+2010-09 - 2011-04, LinZhi, C# Programer  
+*Project Intro:*  
 iTry86 is a website that can trade stocks with virtual money.  
 Group of iTry86 is the subsite that users can communicate with each other there.  
-<em>Responsibility: </em>  
+*Responsibility:*  
 Work with Designer.  
 Fix other sites.  
-<em>Achievements: </em>  
-Know more about `jQuery` and `Memorycache`.  
+*Environment:*  
+Visual Studio 2008  
+*Program Lauguage:*  
+C#  
+*Achievements:*  
+Know more about jQuery and Memorycache.  
 Know how to work with colleagues.  
-Business technologies about `Finance`.  
+Business technologies about Finance.  
 
-<hr />
 <br />
+<hr />
+
+### Work Experience:  
+DJHealthUnion, Front-End Engineer, (2012-09 – Present)  
+*Introduction:*  
+Develop software for Hospital.  
+*Why leave:*  
+We do not work with F2E Team leader together for location reason.  
+Far away from home.  
+
+NanRuan, Software Engineer, (2011-05 - 2012-08)  
+*Introduction:*  
+Develop software for logistics company.  
+*Why leave:*  
+The cn lauguage that created by the company is not good for personal career.  
+
+LinZhi, C# Programer, (2010-09 - 2011-04)  
+*Introduction:*  
+iTry86 is a website that can trade stocks with virtual money.  
+*Why leave:*  
+IPO failure, team off.  
+
+### Education:  
+2006 - 2010	Bachelor, Hulunbeir College & Harbin Normal University, 2006 - 2010, Computer Science and Technology  
+
+### Certificate:  
+2008-06	CET4  
+2008-06	Third Price in Northeast China, ACM/ICPC 2008   
+2008-05	Second Price in Hei Longjiang Province, ACM/ICPC 2008  
+
+### Why Me ?  
+1\. Christian: Honest, Kindness, Happy, Persistence.  
+2\. Understand what you really want to say in comunication.  
+3\. Love Coding, Excellent in self study and always get things done.  
+
+### Salary:  
+14,000 RMB per Month before tax.   
+
+<br />
+<hr />
 
 ### Works:  
 
@@ -466,7 +522,7 @@ Take a glance of code:
       numbers++;
       curTime = addNByDateType(curTime, type);
     }
-    return	numbers;
+    return numbers;
   }
   
   function addNByDateType(time, type) {
