@@ -1,7 +1,7 @@
 ---
 layout: template
 title: I'm Liber 
-text: 13681698273 / gjl87910lq@gmail.com（最后刷新时间： 2014-04-22）
+text: 13681698273 / gjl87910lq@gmail.com（最后刷新时间： 2014-04-30）
 ---
 
 [中文](liber.html) / [English](liber_en.html) / [中文版下载](images/liber_cv.docx) / [English Version Download](images/liber_cv_en.docx)
@@ -39,7 +39,7 @@ Stackoverflow：[http://stackoverflow.com/users/1773006/liber](http://stackoverf
 基督徒在线听赞美诗的平台。  
 网址： [http://1050.14201420.com/dev-blog](http://1050.14201420.com/dev-blog)  
 *项目职责*：  
-创始人，全栈工程师。  
+创始人，全栈工程师，用户。  
 *开发环境*：  
 Notepad++  
 *开发语言*：  

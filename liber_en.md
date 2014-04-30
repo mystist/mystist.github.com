@@ -1,7 +1,7 @@
 ---
 layout: template
 title: I'm Liber 
-text: 13681698273 / gjl87910lq@gmail.com ( Last refresh at 2014-04-22 )
+text: 13681698273 / gjl87910lq@gmail.com ( Last refresh at 2014-04-30 )
 ---
 
 [中文](liber.html) / [English](liber_en.html) / [中文版下载](images/liber_cv.docx) / [English Version Download](images/liber_cv_en.docx)
@@ -39,7 +39,7 @@ Believe In Jesus, Love Team more than Products.
 A website: The 1050 Poetry of Christian.  
 Site: [http://1050.14201420.com/dev-blog](http://1050.14201420.com/dev-blog)  
 *Responsibility:*  
-I'm the starter and work as a Full-Stack Engineer.  
+I'm the starter, user and work as a Full-Stack Engineer.  
 *Environment:*  
 Notepad++  
 *Program Lauguage:*  
