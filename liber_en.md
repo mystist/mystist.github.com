@@ -4,7 +4,7 @@ title: I'm Liber
 text: 13681698273 / gjl87910lq@gmail.com ( Last refresh at 2014-04-30 )
 ---
 
-[中文](liber.html) / [English](liber_en.html) / [中文版下载](images/liber_cv.docx) / [English Version Download](images/liber_cv_en.docx)
+[中文](liber.html) / [English](liber_en.html) / [中文版下载](images/liber_cv.doc) / [English Version Download](images/liber_cv_en.doc)
 
 ### Info:  
 Name: Gong Junlei  
