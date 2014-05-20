@@ -7,7 +7,8 @@ text: 没有生不逢时，只是未遇好书。
 #### 在读
 
 <div>
-  <img style="padding-right: 10px;" src="images/reading/24.jpg" />
+  <img style="padding-right: 10px;" src="images/reading/64.jpg" />
+  <img style="padding-right: 10px;" src="images/reading/60.jpg" />
 </div>
 
 <hr /><br />
@@ -15,6 +16,7 @@ text: 没有生不逢时，只是未遇好书。
 #### 已读
 
 <div>
+  <img style="padding-right: 10px;" src="images/reading/24.jpg" />
   <img style="padding-right: 10px;" src="images/reading/62.jpg" />
   <img style="padding-right: 10px;" src="images/reading/23.jpg" />
   <img style="padding-right: 10px;" src="images/reading/22.jpg" />
@@ -67,12 +69,11 @@ text: 没有生不逢时，只是未遇好书。
 #### 想读
 
 <div>
+  <img style="padding-right: 10px;" src="images/reading/67.jpg" />
   <img style="padding-right: 10px;" src="images/reading/63.jpg" />
   <img style="padding-right: 10px;" src="images/reading/56.jpg" />
   <img style="padding-right: 10px;" src="images/reading/57.jpg" />
-  <img style="padding-right: 10px;" src="images/reading/60.jpg" />
   <img style="padding-right: 10px;" src="images/reading/36.jpg" />
-  <img style="padding-right: 10px;" src="images/reading/33.jpg" />
   <img style="padding-right: 10px;" src="images/reading/32.jpg" />
   <img style="padding-right: 10px;" src="images/reading/31.jpg" />
   <img style="padding-right: 10px;" src="images/reading/38.jpg" />
@@ -95,6 +96,9 @@ text: 没有生不逢时，只是未遇好书。
 #### 已买还未读
 
 <div>
+  <img style="padding-right: 10px;" src="images/reading/65.jpg" />
+  <img style="padding-right: 10px;" src="images/reading/66.jpg" />
+  <img style="padding-right: 10px;" src="images/reading/33.jpg" />
   <img style="padding-right: 10px;" src="images/reading/16.jpg" />
   <img style="padding-right: 10px;" src="images/reading/10.jpg" />
   <img style="padding-right: 10px;" src="images/reading/11.jpg" />
