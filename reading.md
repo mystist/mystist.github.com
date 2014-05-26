@@ -7,8 +7,7 @@ text: 没有生不逢时，只是未遇好书。
 #### 在读
 
 <div>
-  <img style="padding-right: 10px;" src="images/reading/64.jpg" />
-  <img style="padding-right: 10px;" src="images/reading/60.jpg" />
+  
 </div>
 
 <hr /><br />
@@ -16,6 +15,8 @@ text: 没有生不逢时，只是未遇好书。
 #### 已读
 
 <div>
+  <img style="padding-right: 10px;" src="images/reading/64.jpg" />
+  <img style="padding-right: 10px;" src="images/reading/60.jpg" />
   <img style="padding-right: 10px;" src="images/reading/24.jpg" />
   <img style="padding-right: 10px;" src="images/reading/62.jpg" />
   <img style="padding-right: 10px;" src="images/reading/23.jpg" />
@@ -54,6 +55,7 @@ text: 没有生不逢时，只是未遇好书。
 #### 已读但个人觉得一般
 
 <div>
+  <img style="padding-right: 10px;" src="images/reading/68.jpg" />
   <img style="padding-right: 10px;" src="images/reading/54.jpg" />
   <img style="padding-right: 10px;" src="images/reading/34.jpg" />
   <img style="padding-right: 10px;" src="images/reading/35.jpg" />
