@@ -1,4 +1,4 @@
-pygments: true
+highlighter: pygments
 markdown: redcarpet
 encoding: "utf-8"
 categories:

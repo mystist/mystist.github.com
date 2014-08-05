@@ -178,7 +178,7 @@ code {
 
 .main .main-wrapper .main-text {
 
-  font-size: 16px;
+  font-size: 14px;
   line-height: 28px;
   text-align: left;
 }
@@ -192,6 +192,7 @@ code {
 
   /* width: 840px; */
   height: 28px;
+  margin: 0 2em;
 }
 
 
