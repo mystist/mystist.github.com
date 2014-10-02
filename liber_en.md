@@ -4,6 +4,10 @@ title: I'm Liber
 text: 13681698273 / gjl87910lq@gmail.com ( Last refresh at 2014-04-30 )
 ---
 
+Liber is working hard on his present work.
+
+<div style="display: none;">
+
 [中文](liber.html) / [English](liber_en.html) / [中文版下载](images/liber_cv.doc) / [English Version Download](images/liber_cv_en.doc)
 
 ### Info:  
@@ -548,3 +552,4 @@ Take a glance of code:
 [2]: https://github.com/Mystist/timetrack
 [3]: https://github.com/Mystist/timetrack/archive/master.zip
 
+</div>
