@@ -38,7 +38,7 @@
       <div class="main-title">{{ page.title }}</div>
       
       <div class="main-foot">
-        <span>{{ page.text }} {{ page.date | date: "%Y-%m-%d %H:%M"  }}</span>
+        <span>{{ page.text }} {{ page.date | date: "%Y-%m-%d %H:%M" }} {% if page.updated %} (updated at {{ page.updated | date: "%Y-%m-%d %H:%M" }}) {% endif %}</span>
       </div>
     
       <div class="main-text">
