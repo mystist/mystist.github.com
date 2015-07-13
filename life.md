@@ -20,10 +20,17 @@ text: 充满见证，充满爱
 <script src="js/jquery.js"></script>
 <script src="js/bootstrap-waterfall.js"></script>
 
-<ul class="waterfall">
+<ul class="waterfall gallery">
   {% directory path: images/life reverse: true exclude: private %}
     <li class="pin">
       <a href="{{ file.url }}"><img src="{{ file.url }}" alt="{{ file.name }}" /></a>
     </li>
   {% enddirectory %}
 </ul>
+
+
+<script>
+  $(document).ready(function () {
+    $('.waterfall').waterfall();
+  });
+</script>

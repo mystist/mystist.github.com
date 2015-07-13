@@ -238,6 +238,10 @@ code {
   height: 100%;
 }
 
+.main .main-wrapper .main-text .waterfall.gallery .pin {
+  width: 180px;
+}
+
 
 /* -- main end -- */
 
