@@ -1,33 +1,19 @@
 ---
 layout: template
-title: 读书
-text: 没有生不逢时，只是未遇好书。
+title: 信仰
+text: 认识上帝，就是神迹。
 ---
 
 <script src="js/jquery.js"></script>
 <script src="js/bootstrap-waterfall.js"></script>
 
 <ul class="waterfall">
-  {% directory path: images/reading reverse: true exclude: private %}
+  {% directory path: images/god exclude: private %}
     <li class="pin">
       <a href="{{ file.url }}"><img src="{{ file.url }}" alt="{{ file.name }}" /></a>
     </li>
   {% enddirectory %}
 </ul>
-
-<hr /><br />
-
-#### 读书笔记
-
-<ul>
-	{% for post in site.categories.reading %}
-	<li>
-	<a href="{{ post.url }}">{{ post.title }}</a>
-	<span>{{ post.date | date: "%Y-%m-%d %H:%M" }}</span>
-	</li>
-	{% endfor %}
-</ul>
-
 
 <script>
   $(document).ready(function () {

@@ -185,7 +185,7 @@ code {
 
 .main .main-wrapper .main-text ul {
 
-  /* margin-left: 20px; */
+   margin-bottom: 12px; 
 }
 
 .main .main-wrapper .main-text ul li {
@@ -227,9 +227,15 @@ code {
   font-family: "Segoe UI";
 }
 
-.main .waterfall .pin {
+.main .main-wrapper .main-text .waterfall .pin {
   width: 130px;
+  height: auto;
   margin: 0 20px 30px 20px;
+}
+
+.main .main-wrapper .main-text .waterfall .pin a {
+  width: 100%;
+  height: 100%;
 }
 
 
