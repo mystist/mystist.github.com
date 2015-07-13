@@ -8,3 +8,4 @@ categories:
 - work_ruby
 - all
 - reading
+exclude: ['Gemfile', 'Gemfile.lock', 'Rakefile', 'README.md']
