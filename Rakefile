@@ -41,7 +41,7 @@ task :publish => [:generate] do
     system "git add ."
     system "git commit -am #{message.shellescape}"
     system "git push origin master --force"
-    system "git checkout gh-pages"
+    system "git checkout develop"
     system "echo Good job, keep going on!"
   end
 end
