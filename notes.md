@@ -1,10 +1,6 @@
 
 ### Awesome
 
-
-
-
-
 ```json
 {
 
