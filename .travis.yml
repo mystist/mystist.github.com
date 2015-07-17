@@ -2,12 +2,11 @@ language: ruby
 rvm:
 - 2.1.1
 before_script:
-  - git config remote.origin.url "https://github.com/Mystist/mystist.github.com.git"
-  - git config --global user.email "gjl87910lq@gmail.com"
-  - git config --global user.name "Mystist"
-  - git config credential.helper "store --file=.git/credentials"
-  - echo "https://${GH_TOKEN}:@github.com" > .git/credentials
+- git config remote.origin.url "https://github.com/Mystist/mystist.github.com.git"
+- git config --global user.email "gjl87910lq@gmail.com"
+- git config --global user.name "Mystist"
+- git config credential.helper "store --file=.git/credentials"
+- echo "https://${GH_TOKEN}:@github.com" > .git/credentials
 env:
   global:
-  - secure: S51S0TGm6wNTlwgcxat5GkbcT+abDDyYvkhwoD7oS5Sijv0GSWjbpCvJhdf4DIk8Pe9lx1VnNKrYGVNbImotfag4wg6aqnZqO9hTu2iGcljLSr0UvyKfwVxsbkreW2nSoRn7tC2NsHiDuF/imDyBxYNzNI0pLdwickwYTE8oXKqv4IKix/ELtTG9bO+GpAPytMRRul1hgeBCYC1l14wbQ5XxkJL2lE6uAK6q7NZ0tJrgR0P3mBRRXxRz+sQ7m/wyraMPx7cQZ07IOIMnEn9eKdCBJ0IiCVRgtAABRjlo31MdTK1ykRZwZ9+DAhpejAnXDfvw6Ml2AN+NUjAfVEbwQDoud2H+ItX0VDw5yIlrIvRjqE0XzxRQvog+guYXWtqRdv3wLjU3L7WQmWfqmoqUwFkrq5q4gaJsaGqHSWTqavwwhzZtVt3VvFVl9EFMJJ9qfHdwQ/tK1THfZFrTmvM2c/IBSmmAiRlT50XrS2W6svOTdgLqkQttfsbn7ePG1olLGbs0rPEkPFkR2irDukND3/UmRqqYzV0OghYQPLb83VcjPzGzLFsXo8D9HseJqlW9WQ1fywdoT9mXs4ep+ian+AKDizTm3WIuQrMfBZZWHWyHkEwCPf32qIwoxabZS80cvTdTIzYJ6F+nSiebJrMtJbLzVh6iLPyceDDGuLEQvd0=
-  - secure: E3dhXZvbgmXbC8r0g5ur5WRLkPbEqUHQn1BHncgvHgjnR/5QRa1MnKPgSTEiwV3uqkDML1AG1rG9GoJYG8V3CyRSeW5qSopbMTVuYqi0YeF5Jo62Ne3A1wQ+W2HZay8nGO/r47IdYxilm91rnYjgHTyrf/hZy3QQEAH9wiCjbpwC/ZQ48ZnljJU2Kt6NNdqn7bKpoeh9RT/OgP75Cb2CPIpDX8cBlScKYZIL/S9AIZcwmPDxrRwpUSdq/UdeeUjiiTFbAWuKgw1jqRhRxJt+F4/sPm5g96f0TJrb6OQFJSfrgOnZvcC/rFwk8PwQd3zrIdZHFrpHRaQzzH1hOaaDk67D/+UHukLWmMDRjqie9WS1z5X8zcnMq8RdnPCyPjNJeI9JrULPYIkDjnb0UQ7ZY6Hw2fgjel4hbp9wnuQ9JAtmRyJbO5ugt6KTn26EGWsnQgUT6e4aVvyjRsXqUrNk8iVtBYIBR9/uXJMwOKt80QdBE9F0cI0pnaslNMsGG/MM4PL8H4hiNAul0/TUDXrz9Nmac23e2/iKFRdLYYiWPcGEaeYd8Ht2YbKdKSA8FLNIr/xq0qZDEF/3c7sgy0vvvNf+RwNKNe3d2/T40qqW8WUHnXGdK3jDMoAxFAfht2zq8BbpeXIk0i9yJHQgZQ76w+Cgdn1Q701Feq5GOAF6oz4=
+    secure: ElDrxVfVI8dTGYIufEXjdyVqcp1VIlNElbiog4dRIxPGOPZdngP+XEON7ppIDoDLsDwmq2+Gju6tAbyM0hHS/HyfQpeaGkXDL4GOYVMhpVqHJXi3ZEB3XY7tNF6WesCyaj2G+fltkB1dOdjBkqNeO8m35IgZqlJHWlozZ/7RWBy8VE1OdJjENd7d4QKhpI7YW9xKKOaM/V2oNsxcR985WLmbWvZ7uwel4oXG1AtSLdxNwW9JtpQRwdKnggDFshXknrnXuGOMdCb3LDV/kUT1iNK+Lhwnse9+/k01rgF0kvvSpnpCGlR9z96DhmBjoi4ZM2+pfbPJW/KGAHSzFUN3imL5c9tEbwepSnAocaP+IK2fKNdh2pkjHSk24r9GNjTASLXGjTgmWvZMOmTdBtLW51EQgfQgOB0Td24GmXVRA0dVFpUXvPGdkESFdtdcmGmlQfMYYpn79okDYUOafw7oZvjeRFzsSxgct4q4hMk5FjuqNqQs51TkThDiVlCV1X211w6TD5SBoe5Jk5QfLFddPpqO5CuSMn5b6alNaAQpPkeqEBooOyiRgDEeCMuDWs4op0+UXo9CmEP0yjpOIhMOIJlownhmXE4hu08mTsTOfndloaXADGqJHwoOgg3FmI7N9SgU5cz60TWnWbtwyLMYHvNM0ahw2pXcvr83gHndmI8=
