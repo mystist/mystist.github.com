@@ -5,7 +5,6 @@ before_script:
   - git config remote.origin.url "https://github.com/Mystist/mystist.github.com.git"
   - git config --global user.email "gjl87910lq@gmail.com"
   - git config --global user.name "Mystist"
-after_script:
   - git config credential.helper "store --file=.git/credentials"
   - echo "https://${GH_TOKEN}:@github.com" > .git/credentials
 env:
