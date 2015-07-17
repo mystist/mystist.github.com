@@ -33,7 +33,6 @@ end
 desc "Generate and publish blog to master"
 task :publish => [:generate] do
   Dir.mktmpdir do |tmp|
-    system "git branch develop origin/develop"
     system "mv _site/* #{tmp}"
     system "git checkout -B master"
     system "rm -rf *"
