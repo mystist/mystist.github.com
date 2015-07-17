@@ -2,7 +2,7 @@ language: ruby
 rvm:
 - 2.1.1
 before_script:
-  - repo = %x(git config remote.origin.url).gsub(/^git:/, 'https:')
+  - git config remote.origin.url "https://github.com/Mystist/mystist.github.com.git"
   - git config --global user.email "gjl87910lq@gmail.com"
   - git config --global user.name "Mystist"
 after_script:
