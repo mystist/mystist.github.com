@@ -1,0 +1,132 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=8" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>关于jQueryPlugin开发的官方框架的理解</title>
+  <link rel="stylesheet" type="text/css" href="/css/github.css" />
+  <link rel="stylesheet" type="text/css" href="/css/template.css" />
+</head>
+<body>
+
+<div class="wrapper">
+
+  <div class="header shadow">
+    <div class="header-wrapper">
+      <div class="header-logo">
+        <span><a href="/">LIBER</a></span>
+      </div>
+      <div class="header-nav">
+        <ul>
+          <li><a href="/"><span>首页</span></a></li>
+          <li><a href="/programer.html"><span>程序员</span></a></li>
+          <li><a href="/reading.html"><span>读书</span></a></li>
+          <li><a href="/life.html"><span>生活</span></a></li>
+          <li><a href="/god.html"><span>信仰</span></a></li>
+          <li><a href="/all.html"><span>所有文章</span></a></li>
+          <!-- <li><a href="/liber.html"><span>I'm Liber</span></a></li> -->
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="main shadow-sides">
+
+    <div class="main-wrapper">
+
+      <div class="main-title">关于jQueryPlugin开发的官方框架的理解</div>
+
+      <div class="main-foot">
+        <span>Liber 2012-10-10 10:55 </span>
+      </div>
+
+      <div class="main-text">
+        <p>上代码：  </p>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="p">(</span><span class="kd">function</span><span class="p">(</span> <span class="nx">$</span> <span class="p">){</span>
+ 
+  <span class="kd">var</span> <span class="nx">methods</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="nx">init</span> <span class="o">:</span> <span class="kd">function</span><span class="p">(</span> <span class="nx">options</span> <span class="p">)</span> <span class="p">{</span> 
+      <span class="c1">// THIS </span>
+    <span class="p">},</span>
+    <span class="nx">show</span> <span class="o">:</span> <span class="kd">function</span><span class="p">(</span> <span class="p">)</span> <span class="p">{</span>
+      <span class="c1">// IS</span>
+    <span class="p">},</span>
+    <span class="nx">hide</span> <span class="o">:</span> <span class="kd">function</span><span class="p">(</span> <span class="p">)</span> <span class="p">{</span> 
+      <span class="c1">// GOOD</span>
+    <span class="p">},</span>
+    <span class="nx">update</span> <span class="o">:</span> <span class="kd">function</span><span class="p">(</span> <span class="nx">content</span> <span class="p">)</span> <span class="p">{</span> 
+      <span class="c1">// !!! </span>
+    <span class="p">}</span>
+  <span class="p">};</span>
+ 
+  <span class="nx">$</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">tooltip</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span> <span class="nx">method</span> <span class="p">)</span> <span class="p">{</span>
+     
+    <span class="c1">// Method calling logic</span>
+    <span class="k">if</span> <span class="p">(</span> <span class="nx">methods</span><span class="p">[</span><span class="nx">method</span><span class="p">]</span> <span class="p">)</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="nx">methods</span><span class="p">[</span> <span class="nx">method</span> <span class="p">].</span><span class="nx">apply</span><span class="p">(</span> <span class="k">this</span><span class="p">,</span> <span class="nb">Array</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">slice</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span> <span class="nx">arguments</span><span class="p">,</span> <span class="mi">1</span> <span class="p">));</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span> <span class="k">typeof</span> <span class="nx">method</span> <span class="o">===</span> <span class="s1">&#39;object&#39;</span> <span class="o">||</span> <span class="o">!</span> <span class="nx">method</span> <span class="p">)</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="nx">methods</span><span class="p">.</span><span class="nx">init</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span> <span class="k">this</span><span class="p">,</span> <span class="nx">arguments</span> <span class="p">);</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+      <span class="nx">$</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span> <span class="s1">&#39;Method &#39;</span> <span class="o">+</span>  <span class="nx">method</span> <span class="o">+</span> <span class="s1">&#39; does not exist on jQuery.tooltip&#39;</span> <span class="p">);</span>
+    <span class="p">}</span>    
+   
+  <span class="p">};</span>
+ 
+<span class="p">})(</span> <span class="nx">jQuery</span> <span class="p">);</span>
+ 
+<span class="p">});</span>
+ 
+<span class="c1">// calls the init method</span>
+<span class="nx">$</span><span class="p">(</span><span class="s1">&#39;div&#39;</span><span class="p">).</span><span class="nx">tooltip</span><span class="p">();</span> 
+ 
+<span class="c1">// calls the init method</span>
+<span class="nx">$</span><span class="p">(</span><span class="s1">&#39;div&#39;</span><span class="p">).</span><span class="nx">tooltip</span><span class="p">({</span>
+  <span class="nx">foo</span> <span class="o">:</span> <span class="s1">&#39;bar&#39;</span>
+<span class="p">});</span>
+ 
+<span class="c1">// calls the hide method</span>
+<span class="nx">$</span><span class="p">(</span><span class="s1">&#39;div&#39;</span><span class="p">).</span><span class="nx">tooltip</span><span class="p">(</span><span class="s1">&#39;hide&#39;</span><span class="p">);</span> 
+ 
+<span class="c1">// calls the update method</span>
+<span class="nx">$</span><span class="p">(</span><span class="s1">&#39;div&#39;</span><span class="p">).</span><span class="nx">tooltip</span><span class="p">(</span><span class="s1">&#39;update&#39;</span><span class="p">,</span> <span class="s1">&#39;This is the new tooltip content!&#39;</span><span class="p">);</span></code></pre></div>
+
+<p>以上代码是官方jQuery Plugins开发提供的开发文档上的一个例子。（参见：<a href="http://docs.jquery.com/Plugins/Authoring">http://docs.jquery.com/Plugins/Authoring</a>）  </p>
+
+<p>这里主要是对第22行代码的理解：
+return methods[ method ].apply( this, Array.prototype.slice.call( arguments, 1 ));</p>
+
+<p>首先是Array.prototype.slice.call( arguments, 1)这个方法，前面这一段实际上只是单纯的对slice方法的调用，然后通过call设置其执行时的作用域。我们知道Array是JS默认的引用类型，也是一个内置对象，而每个引用类型都有一个prototype属性，实际上prototype才是保存它们所有实例方法的真正所在。（有人可能会疑问，为什么访问实例化之后的对象的prototype里面的方法的时候不能加.prototype，而这里访问Array这种内置对象的prototype下面的方法的时候要加.prototype。好吧，先记住这个规则，具体的原因可以参看《JavaScript高级程序设计（第三版）》第148页的解释）
+call方法接收两个参数，第一个参数是一个对象arguments，即设置其执行时的作用域为arguments对象；第二个参数1实际上是要传给slice方法的参数，我们知道slice方法是从位置0开始检索的，而我们调用插件的时候，如：$(‘div’).tooltip(‘update’, ‘This is the new tooltip content!’); 实际上第一个参数是我们想要执行的方法名，第二个参数才是我们想要传入的参数。slice执行之后，返回一个数组，正好作为apply的第二个参数传过去。  </p>
+
+<p>举例来说，当插件的调用方式是：<br>
+1. $(‘div’).tooltip();<br>
+第22行代码不会执行，因为if()里面的判断条件为false；  </p>
+
+<ol>
+<li><p>$(‘div’).tooltip(‘hide’);<br>
+第22行代码实际上就是：<br>
+return methods[&#39;hide&#39;].apply( this, [] );<br>
+methods[ method ]实际上是访问对象属性的另一种形式，换成一种我们熟悉的形式就好理解了：<br>
+return methods.hide.apply( this, [] );  </p></li>
+<li><p>$(‘div’).tooltip(‘update’, ‘This is the new tooltip content!’);<br>
+第22行代码实际上就是：<br>
+return methods.update.apply( this, [&#39;This is the new tooltip content!&#39;] );  </p></li>
+</ol>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="footer shadow-sides">
+    <div class="footer-wrapper">
+      <a href="http://mystist.github.com">mystist.github.com</a> | <span>gjl87910lq@gmail.com</span>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>

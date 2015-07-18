@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=8" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>浅谈异步并发 - Asynchronous Request At The Same Time</title>
+  <link rel="stylesheet" type="text/css" href="/css/github.css" />
+  <link rel="stylesheet" type="text/css" href="/css/template.css" />
+</head>
+<body>
+
+<div class="wrapper">
+
+  <div class="header shadow">
+    <div class="header-wrapper">
+      <div class="header-logo">
+        <span><a href="/">LIBER</a></span>
+      </div>
+      <div class="header-nav">
+        <ul>
+          <li><a href="/"><span>首页</span></a></li>
+          <li><a href="/programer.html"><span>程序员</span></a></li>
+          <li><a href="/reading.html"><span>读书</span></a></li>
+          <li><a href="/life.html"><span>生活</span></a></li>
+          <li><a href="/god.html"><span>信仰</span></a></li>
+          <li><a href="/all.html"><span>所有文章</span></a></li>
+          <!-- <li><a href="/liber.html"><span>I'm Liber</span></a></li> -->
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="main shadow-sides">
+
+    <div class="main-wrapper">
+
+      <div class="main-title">浅谈异步并发 - Asynchronous Request At The Same Time</div>
+
+      <div class="main-foot">
+        <span>Liber 2013-03-21 10:31 </span>
+      </div>
+
+      <div class="main-text">
+        <p>一直以来都在津津乐道，html提供的异步请求的特性使得我们前端工程师的日子明朗了起来。  </p>
+
+<p>这几天在项目中，涉及到了异步并发的访问，引发了一系列问题：</p>
+
+<p>问题一：异步并发的时候，如果前面的请求还没完成，后面的请求返回的内容会对面前的请求造成影响。因为后面的请求会覆盖前面请求的XMLHttpRequest对象。</p>
+
+<p>其实这个问题，据说现在的$.ajax()每次访问都是new一个XMLHttpRequest对象，所以使用$.ajax()方法不会出现这个问题。<br>
+这个我也没去求证，我写了一个原生的请求，希望来规避这个问题：  </p>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">requestMessage</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">jlsj</span><span class="p">,</span> <span class="nx">patientId</span><span class="p">,</span> <span class="nx">treatId</span><span class="p">)</span> <span class="p">{</span>
+
+    <span class="kd">var</span> <span class="nx">jsonData</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;jlsj&quot;</span><span class="o">:</span> <span class="nx">jlsj</span><span class="p">,</span>
+        <span class="s2">&quot;patientId&quot;</span><span class="o">:</span> <span class="nx">patientId</span><span class="p">,</span>
+        <span class="s2">&quot;treatId&quot;</span><span class="o">:</span> <span class="nx">treatId</span>
+    <span class="p">};</span>
+    <span class="nx">jsonData</span> <span class="o">=</span> <span class="nx">jQuery</span><span class="p">.</span><span class="nx">param</span><span class="p">(</span><span class="nx">jsonData</span><span class="p">);</span>
+    
+    <span class="kd">var</span> <span class="nx">xhr</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">XMLHttpRequest</span><span class="p">();</span>
+    <span class="nx">xhr</span><span class="p">.</span><span class="nx">onreadystatechange</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">if</span><span class="p">(</span><span class="nx">xhr</span><span class="p">.</span><span class="nx">readyState</span><span class="o">==</span><span class="mi">4</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">if</span><span class="p">(</span> <span class="p">(</span><span class="nx">xhr</span><span class="p">.</span><span class="nx">status</span><span class="o">&gt;=</span><span class="mi">200</span><span class="o">&amp;&amp;</span><span class="nx">xhr</span><span class="p">.</span><span class="nx">status</span><span class="o">&lt;</span><span class="mi">300</span><span class="p">)</span> <span class="o">||</span> <span class="nx">xhr</span><span class="p">.</span><span class="nx">status</span><span class="o">==</span><span class="mi">304</span> <span class="p">)</span> <span class="p">{</span>
+                <span class="kd">var</span> <span class="nx">obj</span> <span class="o">=</span> <span class="nx">jQuery</span><span class="p">.</span><span class="nx">parseJSON</span><span class="p">(</span><span class="nx">xhr</span><span class="p">.</span><span class="nx">responseText</span><span class="p">);</span>
+                <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="nx">obj</span><span class="p">.</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="nx">nurse</span><span class="p">.</span><span class="nx">initMessages</span><span class="p">(</span><span class="nx">obj</span><span class="p">.</span><span class="nx">result</span><span class="p">);</span>
+                <span class="p">}</span>
+                <span class="k">delete</span> <span class="nx">xhr</span><span class="p">;</span>
+                <span class="nx">xhr</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">};</span>
+    <span class="nx">xhr</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="s2">&quot;post&quot;</span><span class="p">,</span> <span class="s2">&quot;../orderRecord_getMessageList&quot;</span><span class="p">,</span> <span class="kc">true</span><span class="p">);</span>
+    <span class="nx">xhr</span><span class="p">.</span><span class="nx">setRequestHeader</span><span class="p">(</span><span class="s2">&quot;Content-Type&quot;</span><span class="p">,</span> <span class="s2">&quot;application/x-www-form-urlencoded&quot;</span><span class="p">);</span>  
+    <span class="nx">xhr</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="nx">jsonData</span><span class="p">);</span>
+    
+<span class="p">};</span></code></pre></div>
+
+<p>问题二：据说在微软提供的服务器下，同一session的并发访问，在服务端这边，会形成一个队列来处理，也就是说，要等前面的请求返回了才会处理之后的请求。（貌似PHP也是类似的处理方式）</p>
+
+<p>这个问题，我在struts + spring下试了一下，貌似不是这样的（这里我关闭了默认的单例模式）。<br>
+别的平台我也没去求证，反正队列就队列吧，不至于不返回结果给我。</p>
+
+<p>问题三：struts + spring默认是单例模式，这样，服务端在处理异步请求的时候，可能会引起一些问题。</p>
+
+<p>这个具体会引起什么问题我也不知道，但是，总归前端发出的请求，还是应该关闭<a href="http://blog.sina.com.cn/s/blog_5f12739d0100cre0.html">单例模式</a>。</p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="footer shadow-sides">
+    <div class="footer-wrapper">
+      <a href="http://mystist.github.com">mystist.github.com</a> | <span>gjl87910lq@gmail.com</span>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>

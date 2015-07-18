@@ -1,0 +1,155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=8" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>由DOM View e.target三贱客引发的思考</title>
+  <link rel="stylesheet" type="text/css" href="/css/github.css" />
+  <link rel="stylesheet" type="text/css" href="/css/template.css" />
+</head>
+<body>
+
+<div class="wrapper">
+
+  <div class="header shadow">
+    <div class="header-wrapper">
+      <div class="header-logo">
+        <span><a href="/">LIBER</a></span>
+      </div>
+      <div class="header-nav">
+        <ul>
+          <li><a href="/"><span>首页</span></a></li>
+          <li><a href="/programer.html"><span>程序员</span></a></li>
+          <li><a href="/reading.html"><span>读书</span></a></li>
+          <li><a href="/life.html"><span>生活</span></a></li>
+          <li><a href="/god.html"><span>信仰</span></a></li>
+          <li><a href="/all.html"><span>所有文章</span></a></li>
+          <!-- <li><a href="/liber.html"><span>I'm Liber</span></a></li> -->
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="main shadow-sides">
+
+    <div class="main-wrapper">
+
+      <div class="main-title">由DOM View e.target三贱客引发的思考</div>
+
+      <div class="main-foot">
+        <span>Liber 2013-11-14 17:40 </span>
+      </div>
+
+      <div class="main-text">
+        <p>今天在开发<a href="http://1050.14201420.com">1050</a>的时候，遇到了这么一个有意思的问题：  </p>
+
+<p>我有类<code>SongModel</code>和<code>SongView</code>：  </p>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">SongModel</span> <span class="o">=</span> <span class="nx">Backbone</span><span class="p">.</span><span class="nx">Model</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>
+    <span class="p">...</span>
+  <span class="p">});</span>
+
+  <span class="kd">var</span> <span class="nx">SongView</span> <span class="o">=</span> <span class="nx">Backbone</span><span class="p">.</span><span class="nx">View</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>
+  
+    <span class="p">...</span>
+    
+    <span class="nx">render</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+      <span class="c1">// render to Dom</span>
+    <span class="p">},</span>
+    
+    <span class="nx">events</span><span class="o">:</span> <span class="p">{</span>
+      <span class="s1">&#39;click xxx&#39;</span><span class="o">:</span> <span class="s1">&#39;delete&#39;</span>
+    <span class="p">},</span>
+    
+    <span class="k">delete</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+      <span class="kd">var</span> <span class="nx">tThis</span> <span class="o">=</span> <span class="k">this</span><span class="p">;</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">model</span><span class="p">.</span><span class="nx">destroy</span><span class="p">({</span>
+        <span class="nx">wait</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+        <span class="nx">$btn</span><span class="o">:</span> <span class="nx">$</span><span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">currentTarget</span><span class="p">),</span>
+        <span class="nx">success</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+          <span class="nx">tThis</span><span class="p">.</span><span class="nx">remove</span><span class="p">();</span>
+        <span class="p">}</span>
+      <span class="p">});</span>
+    <span class="p">}</span>
+  
+  <span class="p">});</span></code></pre></div>
+
+<p>然后：  </p>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">songModel</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">SongModel</span><span class="p">(</span><span class="nx">someObj</span><span class="p">);</span>
+  <span class="kd">var</span> <span class="nx">songView</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">SongView</span><span class="p">({</span><span class="nx">model</span><span class="o">:</span> <span class="nx">songModel</span><span class="p">});</span></code></pre></div>
+
+<p>页面进来的时候，执行代码，然后<code>songView</code>正常的显示在页面上。<br>
+当我点击<code>删除</code>的时候，<code>songView</code>的<code>delete</code>事件被触发，然后发送一个<code>Http Delete</code>异步请求，后台执行删除，成功以后执行<code>tThis.remove();</code>。  </p>
+
+<p>有意思的是，我为了统一代码的交互，用到了一个<code>utils.js</code>来执行一些同样的工作，如，每次发起异步请求<code>before</code>的时候，显示<code>加载中...</code>的进度条。</p>
+
+<p>具体的实现方式，是通过<code>jQuery</code>的<code>ajaxSetup</code>以及<code>ajaxSend</code>, <code>ajaxComplete</code>, <code>ajaxSuccess</code>, <code>ajaxError</code>来实现的：</p>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">utils</span> <span class="o">=</span> <span class="p">{</span>
+
+    <span class="nx">setGlobalAjaxSettings</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    
+      <span class="kd">var</span> <span class="nx">tThis</span> <span class="o">=</span> <span class="k">this</span><span class="p">;</span>
+      
+      <span class="p">...</span>
+      
+      <span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ajaxSuccess</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">,</span> <span class="nx">jqxhr</span><span class="p">,</span> <span class="nx">settings</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span><span class="p">(</span><span class="nx">jqxhr</span><span class="p">.</span><span class="nx">responseJSON</span><span class="o">&amp;&amp;!</span><span class="nx">jqxhr</span><span class="p">.</span><span class="nx">responseJSON</span><span class="p">.</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+          <span class="nx">tThis</span><span class="p">.</span><span class="nx">success</span><span class="p">(</span><span class="nx">event</span><span class="p">,</span> <span class="nx">jqxhr</span><span class="p">,</span> <span class="nx">settings</span><span class="p">);</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+          <span class="nx">tThis</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">event</span><span class="p">,</span> <span class="nx">jqxhr</span><span class="p">,</span> <span class="nx">settings</span><span class="p">);</span>
+        <span class="p">}</span>
+      <span class="p">});</span>
+
+    <span class="p">},</span>
+    
+    <span class="nx">success</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">,</span> <span class="nx">jqxhr</span><span class="p">,</span> <span class="nx">settings</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">if</span><span class="p">(</span><span class="nx">settings</span><span class="p">.</span><span class="nx">$btn</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kd">var</span> <span class="nx">$alert</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">getAlertHtml</span><span class="p">(</span><span class="s1">&#39;alert-success&#39;</span><span class="p">,</span> <span class="s1">&#39;操作成功&#39;</span><span class="p">));</span>
+        <span class="kd">var</span> <span class="nx">$target</span> <span class="o">=</span> <span class="nx">settings</span><span class="p">.</span><span class="nx">$btn</span><span class="p">.</span><span class="nx">closest</span><span class="p">(</span><span class="s1">&#39;.row&#39;</span><span class="p">).</span><span class="nx">find</span><span class="p">(</span><span class="s1">&#39;*[tag=&quot;alert&quot;]&#39;</span><span class="p">);</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">renderAlert</span><span class="p">(</span><span class="nx">$target</span><span class="p">,</span> <span class="nx">$alert</span><span class="p">);</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+  
+  <span class="p">}</span></code></pre></div>
+
+<p>所以，当我发起的<code>Http Delete</code>请求成功之后，会先执行<code>songView</code>里面的<code>success</code>回调的代码，然后执行<code>utils</code>里面通用的<code>success</code>回调的代码。</p>
+
+<p>然后，有意思的事情就来了，我们注意到，前面发请求的时候，传入了一个<code>$btn: $(e.currentTarget)</code>，当回调成功以后，会执行<code>tThis.remove();</code>；<br>
+这时，按我之前错误的理解，在通用的回调里面，<code>settings.$btn</code>应该是<code>undefined</code>，而当我单步调试的时候发现，他竟然还是当前点击按钮的那个<code>jQuery</code>元素！<br>
+而且，它能一直<code>parent()</code>追溯到<code>songView</code>的<code>el</code>，再往上就是<code>undefined</code>了。  </p>
+
+<p>我顿时就来劲了，仔细想了一下，原来是这样：</p>
+
+<p><img src="/images/2013_11_14_1.png" />  </p>
+
+<p>如图所示，当我们执行<code>var songView = new SongView({model: songModel});</code>的时候，内存1被创建，它的内容存我们实例化的<code>jQuery</code>对象；<br>
+同时，内存2被创建，它的内容存1的地址，如图红色线所示。<br>
+而当我们<code>render</code>的时候，实际上是把2的地址存到<code>DOM</code>的内容中，如图绿色线所示。<br>
+接着，让我们执行请求的时候，传入了一个<code>$btn: $(e.currentTarget)</code>，我们知道，在JavaScript中，参数的传递，不管是基本类型还是引用类型，都是传值；<br>
+所以，这时，内存4被创建，它的内容也存1的地址，如图蓝色线所示。
+然而，当请求成功之后，执行：<code>tThis.remove();</code>，这时，内存2被销毁。红色线和绿色线同时也不存在了。<br>
+但此时，蓝色线还是存在的，所以，这就解释了我之前单步调试的时候遇到的现象。  </p>
+
+<p>那如果我们不执行<code>tThis.remove();</code>呢？，这时，我们执行<code>var $target = settings.$btn.closest(&#39;.row&#39;).find(&#39;*[tag=&quot;alert&quot;]&#39;);</code>就能搜索到<code>DOM</code>树中其它的父元素。<br>
+因为内存2的地址被存在<code>DOM</code>树中，同时内存2的内容又指向内存1的地址，所以<code>DOM</code>树中就会显示内存1的内容，当内存4不断执行<code>parent()</code>的时候，实际上也是在<code>DOM</code>树中往上查找，最终也会找到<code>window</code>元素。</p>
+
+<p>由此可见，<code>DOM</code>, <code>View</code>, <code>e.target</code>之间真是纠缠不清，也难怪我会亲切的称呼它们为三贱客了。</p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="footer shadow-sides">
+    <div class="footer-wrapper">
+      <a href="http://mystist.github.com">mystist.github.com</a> | <span>gjl87910lq@gmail.com</span>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
