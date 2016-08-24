@@ -39,7 +39,7 @@ task :publish => [:generate] do
     system "rm -rf *"
     system "mv #{tmp}/* ."
     message = "Site updated at #{Time.now.utc}"
-    system "git add ."
+    system "git add --all"
     system "git commit -am #{message.shellescape}"
     system "git push origin master --force"
     system "git checkout develop"
@@ -54,7 +54,7 @@ task :publish_testing => [:generate] do
     system "rm -rf *"
     system "mv #{tmp}/* ."
     message = "Site updated at #{Time.now.utc}"
-    system "git add ."
+    system "git add --all"
     system "git commit -am #{message.shellescape}"
   end
 end
