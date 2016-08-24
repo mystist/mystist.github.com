@@ -31,20 +31,20 @@ end
 #   end
 # end
 
-desc "Generate and publish blog to master"
-task :publish => [:generate] do
-  Dir.mktmpdir do |tmp|
-    system "mv _site/* #{tmp}"
-    system "git checkout -B master"
-    system "rm -rf *"
-    system "mv #{tmp}/* ."
-    message = "Site updated at #{Time.now.utc}"
-    system "git add --all"
-    system "git commit -am #{message.shellescape}"
-    system "git push origin master:master --force"
-    system "git checkout develop"
-  end
-end
+# desc "Generate and publish blog to master"
+# task :publish => [:generate] do
+#   Dir.mktmpdir do |tmp|
+#     system "mv _site/* #{tmp}"
+#     system "git checkout -B master"
+#     system "rm -rf *"
+#     system "mv #{tmp}/* ."
+#     message = "Site updated at #{Time.now.utc}"
+#     system "git add --all"
+#     system "git commit -am #{message.shellescape}"
+#     system "git push origin master:master --force"
+#     system "git checkout develop"
+#   end
+# end
 
 desc "Generate and publish blog to testing"
 task :publish_testing => [:generate] do
@@ -56,7 +56,8 @@ task :publish_testing => [:generate] do
     message = "Site updated at #{Time.now.utc}"
     system "git add --all"
     system "git commit -am #{message.shellescape}"
+    system "git push origin testing:master --force"
   end
 end
 
-task :default => :publish
+task :default => :publish_testing
