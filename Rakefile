@@ -46,4 +46,17 @@ task :publish => [:generate] do
   end
 end
 
+desc "Generate and publish blog to testing"
+task :publish_testing => [:generate] do
+  Dir.mktmpdir do |tmp|
+    system "mv _site/* #{tmp}"
+    system "git checkout -B testing"
+    system "rm -rf *"
+    system "mv #{tmp}/* ."
+    message = "Site updated at #{Time.now.utc}"
+    system "git add ."
+    system "git commit -am #{message.shellescape}"
+  end
+end
+
 task :default => :publish
