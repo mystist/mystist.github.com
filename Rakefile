@@ -10,27 +10,7 @@ require 'shellwords'
 desc "Generate blog files"
 task :generate do
   system "bundle exec jekyll build --incremental"
-  # Jekyll::Site.new(Jekyll.configuration({
-  #   "source"      => ".",
-  #   "destination" => "_site"
-  # })).process
 end
-
-# desc "Generate and publish blog to gh-pages"
-# task :publish => [:generate] do
-#   Dir.mktmpdir do |tmp|
-#     system "mv _site/* #{tmp}"
-#     system "git checkout -B gh-pages"
-#     system "rm -rf *"
-#     system "mv #{tmp}/* ."
-#     message = "Site updated at #{Time.now.utc}"
-#     system "git add ."
-#     system "git commit -am #{message.shellescape}"
-#     system "git push origin gh-pages --force"
-#     system "git checkout master"
-#     system "echo yolo"
-#   end
-# end
 
 desc "Generate and publish blog to master"
 task :publish => [:generate] do
@@ -46,19 +26,5 @@ task :publish => [:generate] do
     system "git checkout develop"
   end
 end
-
-# desc "Generate and publish blog to testing"
-# task :publish_testing => [:generate] do
-#   Dir.mktmpdir do |tmp|
-#     system "mv _site/* #{tmp}"
-#     system "git checkout -B testing"
-#     system "rm -rf *"
-#     system "mv #{tmp}/* ."
-#     message = "Site updated at #{Time.now.utc}"
-#     system "git add --all"
-#     system "git commit -am #{message.shellescape}"
-#     system "git push origin testing:master --force"
-#   end
-# end
 
 task :default => :publish
