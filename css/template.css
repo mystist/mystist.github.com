@@ -87,6 +87,14 @@ code {
   padding: 8px;
 }
 
+hr {
+  margin: 25px 0 30px;
+}
+
+.cv-image {
+  width: 169px;
+  float: left;
+}
 
 /* -- header start -- */
 
