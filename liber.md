@@ -47,7 +47,7 @@ gjl87910lq@126.com
 ***  
 
 ### 主要项目经验：  
-**赞美诗选编1050首**（个人项目：[1050](http://1050.14201420.com/dev-blog/)）  
+**赞美诗选编1050首**（个人项目：[1050](http://1050.14201420.com/dev-blog)）  
 基督徒赞美诗平台：听赞美诗，查看上传歌曲歌谱。  
 技术栈：Javascript, Ruby, Sinatra, Backbonejs, Requirejs, Openshift, 七牛云存储，QQ登录接入  
 

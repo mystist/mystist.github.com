@@ -47,7 +47,7 @@ Look at the result of things, trust each other.
 ***  
 
 ### Main Experiences:  
-**The 1050 Poetry of Christian** (Personal project: [1050](http://1050.14201420.com/))  
+**The 1050 Poetry of Christian** (Personal project: [1050](http://1050.14201420.com/dev-blog))  
 Songs platform of Christian.  
 Tech-stack: Javascript, Ruby, Sinatra, Backbonejs, Requirejs, Openshift, Qiniu，QQ Open API  
 
