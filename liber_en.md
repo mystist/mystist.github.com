@@ -1,7 +1,7 @@
 ---
 layout: template
 title: I'm Liber
-text: 13681698273 / gjl87910lq@gmail.com (Last Modified at 2017-02-14)
+text: 13681698273 / gjl87910lq@gmail.com（Last Modified at 2017-03-05）
 ---
 
 [中文](liber.html) / [English](liber_en.html)  
@@ -11,33 +11,49 @@ text: 13681698273 / gjl87910lq@gmail.com (Last Modified at 2017-02-14)
 
 ```html
 龚峻磊 (LIBER GONG) - 13681698273  
-Web Developer - SAP Jam - Institutes Of HulunBuir  
+gjl87910lq@126.com
+Christian, 30 years old, live in Shanghai, looking for a job in Shenzhen.  
+6+ years work experience, currently work for SAP as a front-end developer.  
 
-Christian, Web-Developer(Front-end, Ruby), 6+ years work experience. 
-
-[Blog](http://mystist.github.io/)
-[Github](https://github.com/Mystist)
-[1050](http://1050.14201420.com/dev-blog)
-[bootstrap-waterfall](https://mystist.github.io/bootstrap-waterfall/)
-[Stackoverflow](http://stackoverflow.com/users/1773006/liber)  
-```
-
--- 像国王一样思考，像侍从一样辛劳。  
-"Be a king in your mind but do the work of a servant."
-
-### Bio:  
-SAP Jam F2E.  
 Key person in the Shanghai team, share ideas and thoughts with manager, take part in the team member interviewing.  
 Continuous outstanding performance review.  
 Think as PO, coding as mechanic.  
 Devote into Writing Maintainable Code.  
 Nice person, awesome communicator and cooperator.
-Tech-stack: Javascript, Ruby, jQuery, Backbonejs, Node, Webpack, ES2015  
+```
+
+-- 像国王一样思考，像侍从一样辛劳。  
+"Be a king in your mind but do the work of a servant."
+
+[[Blog]](http://mystist.github.io/) - [[Github]](https://github.com/Mystist) - [[Stackoverflow]](http://stackoverflow.com/users/1773006/liber)  
+[Project：1050](http://1050.14201420.com/dev-blog)  
+[Project：bootstrap-waterfall](https://mystist.github.io/bootstrap-waterfall/)
+
+Tech-stack：Javascript, Ruby, jQuery, Backbonejs, Node, Webpack, ES2015  
 
 ***
 
-### Experience (SAP Jam 2014-06 - Now):  
-*SAP Jam is a team under SAP Collaboration department, their main product Jam is a SaaS intranet social network. People can freely share feeds, join groups, upload documents, create tasks, etc..*
+### Bio:  
+Good at solve problem, love challenge, full of passion, [THE MEDIATOR](https://www.16personalities.com/infp-personality).  
+Good at self-study and try out things, life-long learner.  
+Good sense for products and business, love thinking, often result good advises.  
+
+Know Who I Am, but Know Not What I May Be, don't know my limit.  
+So I hope can joining a new project.  
+Where can give the ownership to the young people, and try out things.  
+Hope the leader will got the big vision, that help leading the team into the right direction.  
+Look at the result of things, trust each other.
+
+***  
+
+### Main Experiences:  
+**The 1050 Poetry of Christian** (Personal project: [1050](http://1050.14201420.com/))  
+Songs platform of Christian.  
+Tech-stack: Javascript, Ruby, Sinatra, Backbonejs, Requirejs, Openshift, Qiniu，QQ Open API  
+
+**Bootstrap-waterfall** (Personal project [bootstrap-waterfall](https://mystist.github.io/bootstrap-waterfall/))  
+Responsive waterfall like image layout plugin.  
+Tech-stack: Javascript, jQuery, Bootstrap  
 
 **Forms & List** (Single Page application)  
 Used as a internal demonstrate system, shows the possibilities of extend a common codebase to six different use cases:  
@@ -58,14 +74,14 @@ Thinking: understand and rewrite a new article based on the main idea of the art
 Generation: generate your own articles based on the new articles.  
 Tech-stack: Redis, Node, Express, Openshift(Next Gen)  
 
-**Bootstrap-waterfall**(Personal project [bootstrap-waterfall](https://mystist.github.io/bootstrap-waterfall/))  
-Responsive waterfall like image layout plugin.  
-Tech-stack: Javascript, jQuery, Bootstrap  
-
-**CCIG Satisfaction Management System** (Part-time project, live from Nov.2015 to now)  
+**X company's Satisfaction Management System** (Part-time project, live from Nov.2015 to now)  
 Mainly a survey system and a 360 KPI system, and generate reports for the departments and sub-companies.  
 It's my first time that try to build a system uses pure front-end technologies.  
 Tech-stack: Javascript, Underscorejs, jQuery  
+
+***  
+
+### Other Experiences:  
 
 **SAP Jam Front-end Plugins**  
 `jam.accessibility.js`: Accessibility applying tools for Jam.  
@@ -78,15 +94,6 @@ I also built those features below:
 The whole front-end of: Tasks, Search, Tag Cloud Widget, Content Rating.  
 Some bug fix and enhancements for back-end features.  
 Tech-stack: Ruby on Rails, Javascript, Backbonejs   
-
-***  
-
-### Experience (DJHealthUnion 2012-09 - 2014-05):  
-*DJHealthUnion is a foreign funded company that build hospital systems*  
-
-**The 1050 Poetry of Christian** (Personal project: [1050](http://1050.14201420.com/))  
-Songs platform of Christian.  
-Tech-stack: Javascript, Ruby, Sinatra, Backbonejs, Requirejs, Openshift, Qiniu，QQ Open API  
 
 **MRS**  
 MRS is a Data visualization system: Medical Report System.  
@@ -111,14 +118,9 @@ jQuery plugin to manage dates and events.
 Learnt how to write jQuery plugins.  
 Tech-stack: Javascript, jQuery  
 
-***
-
-### Experience (NanRuan tech. 2011-05 - 2012-08):  
-*NanRuan tech. is a soft company that focus on build logistics systems*  
-
-**PC client for ZLD logistics company**  
-The customers of ZLD can use the website to make orders online, search informations.  
-The carriers of ZLD can use the website to print order infotmations.  
+**PC client for X logistics company**  
+The customers of X can use the website to make orders online, search informations.  
+The carriers of X can use the website to print order infotmations.  
 Work with architect engineer.  
 Design and Achieve the website.  
 Learnt the CN lauguage made by NanRuan.  
@@ -126,18 +128,13 @@ Learnt something about UI, UE.
 Learnt business technologies about logistics.  
 Tech-stack: Javascript, jQuery, CN  
 
-**ERP system for HaiJiXing**  
-HaiJiXing is a medical made/sell company.  
+**ERP system for X company**  
+X company is a medical made/sell company.  
 Achieve clients management.  
 Technical support on site.  
 Know how to be presence of mind when support customer on site.  
 Business technologies about ERP.  
 Tech-stack: Javascript, jQuery  
-
-***
-
-### Experience (LinZhi Network 2010-09 - 2011-04):  
-*LinZhi Network is a financial network company*  
 
 **Group of iTry86**  
 iTry86 is a website that can trade stocks with virtual money.  
@@ -150,12 +147,27 @@ Tech-stack: C#, Javascript, jQuery, Visual Studio 2008, Memcached
 
 ***
 
-### Education
+### Work Experiences:  
+**2014.06 - Now SAP**
+*(SAP Jam is a team under SAP Collaboration department, their main product Jam is a SaaS intranet social network. People can freely share feeds, join groups, upload documents, create tasks, etc...)*  
+
+**2012.09 - 2014.05 DJHealthUnion**
+*(DJHealthUnion is a foreign funded company that build hospital systems)*  
+
+**2011.05 - 2012.08 NanRuan tech.**
+*(NanRuan tech. is a soft company that focus on build logistics systems)*  
+
+**2010.09 - 2011.04 LinZhi Network**
+*(LinZhi Network is a financial network company)*  
+
+***
+
+### Education:  
 2006 - 2010	Bachelor, Hulunbeir College & Harbin Normal University, Computer Science and Technology  
 
 ***
 
-### Certificate:  
+### Certificate:    
 2008-06	CET4  
 2008-06	Third Price in Northeast China, ACM/ICPC 2008   
 2008-05	Second Price in Hei Longjiang Province, ACM/ICPC 2008  
