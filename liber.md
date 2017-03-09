@@ -1,7 +1,7 @@
 ---
 layout: template
 title: I'm Liber
-text: 13681698273 / gjl87910lq@gmail.com（最后更新时间： 2017-03-05）
+text: 13681698273 / gjl87910lq@gmail.com（最后更新时间： 2017-03-09）
 ---
 
 [中文](liber.html) / [English](liber_en.html)  
@@ -29,8 +29,6 @@ gjl87910lq@126.com
 [作品：1050](http://1050.14201420.com/dev-blog)  
 [作品：bootstrap-waterfall](https://mystist.github.io/bootstrap-waterfall/)
 
-技术栈：Javascript, Ruby, jQuery, Backbonejs, Node, Webpack, ES2015  
-
 ***
 
 ### 个人简介:  
@@ -43,6 +41,26 @@ gjl87910lq@126.com
 敢于让年轻人主导项目，承担责任，并付诸实践。  
 希望团队领导有敏锐的商业意识和格局感，帮助指导团队不偏离方向。  
 结果导向，互相信任。
+
+始终清楚自己在干什么：  
+在产品团队，会更多的从客户和产品的角度思考问题，而不是只钻技术；  
+在技术团队，会以追求更高效极致的技术为最大成就感。  
+
+最好的设计不是为未来准备好一切，而是当未来到来的时候，有灵活扩展可维护的能力。  
+维护成本升高，意味着更新能力降低，最终势必损失客户利益，在激烈的竞争中失掉先机。  
+这才是我们更应该说的“用户体验”。   
+
+有时候，我就像一张白纸，任你随意书写；  
+有时候，我就是一把利剑，助你披荆斩棘。  
+
+***  
+
+### 技术：
+精通：JavaScript  
+擅长：HTML, CSS, jQuery, Backbonejs, Bootstrap, Sass  
+熟悉：Ruby, Rails, MySQL  
+了解：React, Redux, Docker, Kubernetes, OpenShift, OAuth, Elixir  
+正在学习：Node, Redis, Express, Webpack, ES2015, Vue2, Weex, Vuex  
 
 ***  
 
@@ -80,6 +98,7 @@ Tad可以对网站的Accessibility支持进行测试，然后列出违反可访�
 技术栈：Redis, Node, Express, Openshift(Next Gen)  
 
 **某集团满意度系统**（业余项目，自2015年11月上线运行至今）  
+这是一个我“全干”的项目，经历了从见客户谈需求到上线维护的全过程，积累了针对客户满意度领域的一手需求和经验。  
 主要包括问卷系统和360度考评系统两个模块，并根据分公司以及不同部门展示相应的报告。  
 定义了一套通过HTML标签获取数据的规则方法，也是一次纯前端做系统的尝试。  
 技术栈：Javascript, Underscorejs, jQuery  

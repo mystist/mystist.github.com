@@ -1,7 +1,7 @@
 ---
 layout: template
 title: I'm Liber
-text: 13681698273 / gjl87910lq@gmail.com（Last Modified at 2017-03-05）
+text: 13681698273 / gjl87910lq@gmail.com（Last Modified at 2017-03-09）
 ---
 
 [中文](liber.html) / [English](liber_en.html)  
@@ -29,8 +29,6 @@ Nice person, awesome communicator and cooperator.
 [Project：1050](http://1050.14201420.com/dev-blog)  
 [Project：bootstrap-waterfall](https://mystist.github.io/bootstrap-waterfall/)
 
-Tech-stack：Javascript, Ruby, jQuery, Backbonejs, Node, Webpack, ES2015  
-
 ***
 
 ### Bio:  
@@ -43,6 +41,26 @@ So I hope can joining a new project.
 Where can give the ownership to the young people, and try out things.  
 Hope the leader will got the big vision, that help leading the team into the right direction.  
 Look at the result of things, trust each other.
+
+Always keep in mind the purpose of doing thing:
+Think more of customer and products instead of only care about technology when it comes to in a product team.  
+Take care more of technology when in a technical team.  
+
+The best tech-design is not prepare for the future but the ability to extend and flex and easy to maintenance when the future comes.  
+The more cost for maintenance, the less new up to date solutions released to customer, then our customer will loss the competition at the starting line in the future.  
+This is the real user-experience from my understanding.
+
+For me, I can be a paper that you can write whatever you like, or  
+Just use me as a sword that can help you kill the dragon.  
+
+***  
+
+### Technique: 
+Excellent in: JavaScript  
+Master in: HTML, CSS, jQuery, Backbonejs, Bootstrap, Sass  
+Familiar with: Ruby, Rails, MySQL  
+Know: React, Redux, Docker, Kubernetes, OpenShift, OAuth, Elixir  
+Studying now: Node, Redis, Express, Webpack, ES2015, Vue2, Weex, Vuex  
 
 ***  
 
@@ -75,6 +93,7 @@ Generation: generate your own articles based on the new articles.
 Tech-stack: Redis, Node, Express, Openshift(Next Gen)  
 
 **X company's Satisfaction Management System** (Part-time project, live from Nov.2015 to now)  
+I took part in the project all the process. From discussing about the requirements to push it out to production.  
 Mainly a survey system and a 360 KPI system, and generate reports for the departments and sub-companies.  
 It's my first time that try to build a system uses pure front-end technologies.  
 Tech-stack: Javascript, Underscorejs, jQuery  
