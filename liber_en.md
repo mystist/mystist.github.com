@@ -1,7 +1,7 @@
 ---
 layout: template
 title: I'm Liber
-text: 13681698273 / gjl87910lq@gmail.com（Last Modified at 2017-03-09）
+text: 13681698273 / gjl87910lq@gmail.com（Last Modified at 2017-03-19）
 ---
 
 [中文](liber.html) / [English](liber_en.html)  
@@ -34,24 +34,30 @@ Nice person, awesome communicator and cooperator.
 ### Bio:  
 Good at solve problem, love challenge, full of passion, [THE MEDIATOR](https://www.16personalities.com/infp-personality).  
 Good at self-study and try out things, life-long learner.  
-Good sense for products and business, love thinking, often result good advises.  
+Good sense for products and business, love thinking, often result good advises. 
 
-Know Who I Am, but Know Not What I May Be, don't know my limit.  
-So I hope can joining a new project.  
-Where can give the ownership to the young people, and try out things.  
-Hope the leader will got the big vision, that help leading the team into the right direction.  
-Look at the result of things, trust each other.
+If you are looking for:  
+Experienced  React / Vue / Angular developer.  
+Node expert.  
+HTML5 Native App developer, using like: React Native / Weex / Lonic.  
+Pity that I might not be the perfect one currently.  
+I am learning all those stuffs now, you can try contact half year later.  
+However, it's will be very glad that you still want give me a change to have a try now.  
 
-Always keep in mind the purpose of doing thing:
-Think more of customer and products instead of only care about technology when it comes to in a product team.  
-Take care more of technology when in a technical team.  
+If you are looking for:  
+Fully experienced Web developer.  
+JavaScript expert.  
+Clearly understand how browser works with JavaScript, Rendering engine and how animation works.  
+Experienced jQuery, Backbonejs, Bootstrap developer, jQuery plugin develop master.  
+A potential full-stack developer.  
+Call me now: 136-8169-8273  
 
-The best tech-design is not prepare for the future but the ability to extend and flex and easy to maintenance when the future comes.  
-The more cost for maintenance, the less new up to date solutions released to customer, then our customer will loss the competition at the starting line in the future.  
-This is the real user-experience from my understanding.
-
-For me, I can be a paper that you can write whatever you like, or  
-Just use me as a sword that can help you kill the dragon.  
+I am very good at solve problem.  
+I am very good at self learning.  
+I am with great responsibility when I am working.  
+I think a lot about what I am doing to see if it still match our vision.  
+I love thinking and feel excited about challenge.  
+I want a stage to see my limitation!
 
 ***  
 
