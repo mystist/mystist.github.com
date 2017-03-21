@@ -9,7 +9,7 @@ require 'shellwords'
 
 desc "Generate blog files"
 task :generate do
-  system "bundle exec jekyll build --incremental"
+  system "bundle exec jekyll build"
 end
 
 desc "Generate and publish blog to master"
