@@ -50,7 +50,7 @@ text: 部分作品
 
 代码片段：  
 
-{% highlight javascript %}
+~~~ javascript
     bindEvent: function() {
       var tThis = this;
       this.$imgContainers.bind("mouseover", function() {
@@ -64,7 +64,7 @@ text: 部分作品
         tThis.automaticPlay();
       });
     }
-{% endhighlight %}
+~~~
 
 [Github地址][16]  
 [代码下载][17]
@@ -83,7 +83,7 @@ text: 部分作品
 
 代码片段：  
 
-{% highlight javascript %}
+~~~ javascript
   var includeCss = function(styles, media) {
     var style = document.createElement("style");
     style.type = "text/css";
@@ -95,7 +95,7 @@ text: 部分作品
       style.appendChild(document.createTextNode(styles));
     }
   };
-{% endhighlight %}
+~~~
 
 [Github地址][14]  
 [代码下载][15]
@@ -111,7 +111,7 @@ text: 部分作品
 
 代码片段：  
 
-{% highlight javascript %}
+~~~ javascript
     $target.delegate("ul", "keyup", function(e) {
     
       e.cancelable = true;
@@ -136,7 +136,7 @@ text: 部分作品
     });
   
   }
-{% endhighlight %}
+~~~
 
 [Github地址][12]  
 [代码下载][13]
@@ -151,14 +151,14 @@ text: 部分作品
 
 代码片段：  
 
-{% highlight javascript %}
+~~~ javascript
     automaticPlay: function() {
       var tThis = this;
       this.timer = setInterval(function() {
         tThis.moveToNext();
       }, 3000);
     },
-{% endhighlight %}
+~~~
 
 [Github地址][10]  
 [代码下载][11]
@@ -174,7 +174,7 @@ text: 部分作品
 
 代码片段：  
 
-{% highlight javascript %}
+~~~ javascript
       this.$this.find(".m_inner").draggable({
         "axis": "x",
         "start": function(e) {
@@ -204,7 +204,7 @@ text: 部分作品
           }
         }
       });
-{% endhighlight %}
+~~~
 
 [Github地址][8]  
 [代码下载][9]
@@ -220,7 +220,7 @@ text: 部分作品
 
 代码片段：  
 
-{% highlight javascript %}
+~~~ javascript
     option: function(optionName, optionValue) {
       if(optionName&&optionValue) {
         this[0].settings[optionName] = optionValue;
@@ -236,7 +236,7 @@ text: 部分作品
         return this[0].settings;
       }
     },
-{% endhighlight %}
+~~~
 
 [Github地址][6]  
 [代码下载][7]
@@ -252,7 +252,7 @@ text: 部分作品
 
 代码片段：  
 
-{% highlight javascript %}
+~~~ javascript
       if(filteredItemList.length!=0) {
         for(var i=0; i< st.maxItemNumber; i++) {
           if(filteredItemList[0]) {
@@ -283,7 +283,7 @@ text: 部分作品
         }
         
       });
-{% endhighlight %}
+~~~
 
 [Github地址][4]  
 [代码下载][5]
@@ -299,7 +299,7 @@ text: 部分作品
 
 代码片段：  
 
-{% highlight javascript %}
+~~~ javascript
   function getNumbersByDateType(startTime, endTime, type) {
     var stime = formatDateTime(startTime, type, "Date");
     var etime = formatDateTime(endTime, type, "Date");
@@ -328,7 +328,7 @@ text: 部分作品
     }
     return time;
   }
-{% endhighlight %}
+~~~
 
 [Github地址][2]  
 [代码下载][3]
