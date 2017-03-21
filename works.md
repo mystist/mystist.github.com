@@ -11,7 +11,7 @@ text: 部分作品
 
 代码片段：  
 
-```javascript
+~~~ javascript
 
   _.each(uniqListArr, function(listItem) {
 
@@ -37,7 +37,7 @@ text: 部分作品
     
   }, this);
 
-```
+~~~
 
 [代码下载](/liber/getTree/getTree.rar)
 

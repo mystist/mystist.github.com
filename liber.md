@@ -9,7 +9,7 @@ text: 13681698273 / gjl87910lq@gmail.com（最后更新时间： 2017-03-19）
 
 <img src="/images/liber_cv.png" class="cv-image" />
 
-```html
+~~~ html
 龚峻磊 (LIBER GONG) - 13681698273  
 gjl87910lq@126.com
 基督徒，30岁，现居上海，期望在深圳工作。
@@ -20,7 +20,7 @@ gjl87910lq@126.com
 像产品经理一样思考，像工匠一样编码。  
 执着于编写可维护的代码。  
 稳定的性格，绝佳的沟通者与合作者。  
-```
+~~~
 
 -- 像国王一样思考，像侍从一样辛劳。  
 "Be a king in your mind but do the work of a servant."

@@ -9,7 +9,7 @@ text: 13681698273 / gjl87910lq@gmail.com（Last Modified at 2017-03-19）
 
 <img src="/images/liber_cv.png" class="cv-image" />
 
-```html
+~~~ html
 龚峻磊 (LIBER GONG) - 13681698273  
 gjl87910lq@126.com
 Christian, 30 years old, live in Shanghai, looking for a job in Shenzhen.  
@@ -20,7 +20,7 @@ Continuous outstanding performance review.
 Think as PO, coding as mechanic.  
 Devote into Writing Maintainable Code.  
 Nice person, awesome communicator and cooperator.
-```
+~~~
 
 -- 像国王一样思考，像侍从一样辛劳。  
 "Be a king in your mind but do the work of a servant."
