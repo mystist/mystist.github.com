@@ -1,7 +1,7 @@
 ---
 layout: template
 title: I'm Liber
-text: 13681698273 / gjl87910lq@gmail.com（最后更新时间： 2017-03-19）
+text: 13681698273 / gjl87910lq@gmail.com（最后更新时间： 2017-03-26）
 ---
 
 [中文](liber.html) / [English](liber_en.html)  
@@ -41,8 +41,9 @@ React / Vue / Angular熟手；
 有经验的Node开发者；  
 HTML5移动端Native App开发者，如React Native / Weex / Lonic；  
 很遗憾，目前我还不是最理想的那一位。  
-我目前正在学习以上的技术栈，您可以试试半年之后再联系我。  
-当然，如果您愿意现在给我一个锻炼的机会，我乐意至极！
+因为目前的工作没有涉及，所以我是在业余时间自己在玩，没有机会深入研究。  
+比如：[[mystist-worker]](https://github.com/Mystist/mystist-worker) 以及 [[dong]](https://github.com/Mystist/dong)  
+给我一个机会，给我一点时间，掌握它们不会太难。  
 
 如果您是在寻找一位：  
 富有有经验的、可靠的Web开发工程师；  

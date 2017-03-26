@@ -1,7 +1,7 @@
 ---
 layout: template
 title: I'm Liber
-text: 13681698273 / gjl87910lq@gmail.com（Last Modified at 2017-03-19）
+text: 13681698273 / gjl87910lq@gmail.com（Last Modified at 2017-03-26）
 ---
 
 [中文](liber.html) / [English](liber_en.html)  
@@ -41,6 +41,10 @@ Experienced  React / Vue / Angular developer.
 Node expert.  
 HTML5 Native App developer, using like: React Native / Weex / Lonic.  
 Pity that I might not be the perfect one currently.  
+Because my current job does not use those tech, so I just play it for fun my part time.  
+Eg: [[mystist-worker]](https://github.com/Mystist/mystist-worker) and [[dong]](https://github.com/Mystist/dong)   
+Give me a chance and a little time, it won't be too hard.  
+
 I am learning all those stuffs now, you can try contact half year later.  
 However, it's will be very glad that you still want give me a change to have a try now.  
 
