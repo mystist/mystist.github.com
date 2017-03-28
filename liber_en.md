@@ -31,11 +31,16 @@ Nice person, awesome communicator and cooperator.
 
 ***
 
-### Bio:  
-Good at solve problem, love challenge, full of passion, [THE MEDIATOR](https://www.16personalities.com/infp-personality).  
-Good at self-study and try out things, life-long learner.  
-Good sense for products and business, love thinking, often result good advises. 
+### Technique:  
+- Excellent in: JavaScript  
+- Master in: HTML, CSS, jQuery, Backbonejs, Bootstrap, Sass  
+- Familiar with: Ruby, Rails, MySQL  
+- Know: React, Redux, Docker, Kubernetes, OpenShift, OAuth, Elixir  
+- Studying now: Node, Redis, Express, Webpack, ES2015, Vue2, Weex, Vuex  
 
+***
+
+### Bio:  
 If you are looking for:  
 Experienced  React / Vue / Angular developer.  
 Node expert.  
@@ -45,9 +50,6 @@ Because my current job does not use those tech, so I just play it for fun my par
 Eg: [[mystist-worker]](https://github.com/Mystist/mystist-worker) and [[dong]](https://github.com/Mystist/dong)   
 Give me a chance and a little time, it won't be too hard.  
 
-I am learning all those stuffs now, you can try contact half year later.  
-However, it's will be very glad that you still want give me a change to have a try now.  
-
 If you are looking for:  
 Fully experienced Web developer.  
 JavaScript expert.  
@@ -56,21 +58,9 @@ Experienced jQuery, Backbonejs, Bootstrap developer, jQuery plugin develop maste
 A potential full-stack developer.  
 Call me now: 136-8169-8273  
 
-I am very good at solve problem.  
-I am very good at self learning.  
-I am with great responsibility when I am working.  
-I think a lot about what I am doing to see if it still match our vision.  
-I love thinking and feel excited about challenge.  
-I want a stage to see my limitation!
-
-***  
-
-### Technique: 
-Excellent in: JavaScript  
-Master in: HTML, CSS, jQuery, Backbonejs, Bootstrap, Sass  
-Familiar with: Ruby, Rails, MySQL  
-Know: React, Redux, Docker, Kubernetes, OpenShift, OAuth, Elixir  
-Studying now: Node, Redis, Express, Webpack, ES2015, Vue2, Weex, Vuex  
+Good at solve problem, love challenge, full of passion, [THE MEDIATOR](https://www.16personalities.com/infp-personality).  
+Good at self-study and try out things, life-long learner.  
+Good sense for products and business, love thinking, often result good advises. 
 
 ***  
 

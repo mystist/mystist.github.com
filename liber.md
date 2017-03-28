@@ -31,11 +31,22 @@ gjl87910lq@126.com
 
 ***
 
-### 个人简介:  
-善于解决问题，热爱挑战，充满激情，16种人格中的[调停者](https://www.16personalities.com/ch/infp-%E4%BA%BA%E6%A0%BC)。  
-良好的自学能力和动手能力，终生学习者。  
-对产品有很好的感觉，对商业有良好的嗅觉和敏感，热爱思考，常有建设性的意见。  
+### 技术：
+- 精通HTML、CSS、JavaScript、AJAX、jQuery、Bootstrap、Backbone
+- 擅长开发jQuery插件，擅长开发SPA单页应用；擅于调试BUG
+- 对数据结构、算法有一定基础，优秀的分析问题解决问题的能力
+- 熟悉浏览器工作原理、渲染过程；熟悉动画优化技术；熟练使用Timeline进行性能分析
+- 熟悉HTTP原理，熟悉缓存机制
+- 熟悉使用CSS开发Hybrid移动端响应式应用
+- 熟悉使用Ruby、Rails、Sass、Node、Webpack、ES2015、Express、Redis、MySQL开发网页应用
+- 熟悉Highcharts、eCharts等可视化工具，对D3、Threejs有兴趣
+- 了解Vue、React、Vuex、Redux前端框架；了解Weex、MUI等HTML5移动端Native App开发框架
+- 了解Docker、Kubernetes、OpenShift、Auth、Elixir、SemanticUI、Photoshop  
+- 其他使用过的技术：Requirejs、Casperjs、QUnit、OLAP、BIRT、Java、C#
 
+***  
+
+### 个人简介:  
 如果您是在寻找一位：  
 React / Vue / Angular熟手；  
 有经验的Node开发者；  
@@ -53,21 +64,9 @@ HTML5移动端Native App开发者，如React Native / Weex / Lonic；
 有潜力的全栈工程师；  
 请拨打手机号：136-8169-8273  
 
-我是一位善于解决问题的人；  
-我是一位擅长自学的人；  
-我对工作有着强烈的责任心；  
-从不会忘记为什么出发，常常思考正在做的事情，有没有符合我们的战略意义；  
-非常愿意思考，对挑战感到兴奋；  
-我渴望一个舞台，我想看看自己的上限！  
-
-***  
-
-### 技术：
-精通：JavaScript  
-擅长：HTML, CSS, jQuery, Backbonejs, Bootstrap, Sass  
-熟悉：Ruby, Rails, MySQL  
-了解：React, Redux, Docker, Kubernetes, OpenShift, OAuth, Elixir  
-正在学习：Node, Redis, Express, Webpack, ES2015, Vue2, Weex, Vuex  
+善于解决问题，热爱挑战，充满激情，16种人格中的[调停者](https://www.16personalities.com/ch/infp-%E4%BA%BA%E6%A0%BC)。  
+良好的自学能力和动手能力，终生学习者。  
+对产品有很好的感觉，对商业有良好的嗅觉和敏感，热爱思考，常有建设性的意见。  
 
 ***  
 
