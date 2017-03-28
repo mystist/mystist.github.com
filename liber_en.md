@@ -1,7 +1,7 @@
 ---
 layout: template
 title: I'm Liber
-text: 13681698273 / gjl87910lq@gmail.com（Last Modified at 2017-03-26）
+text: 13681698273 / gjl87910lq@gmail.com（Last Modified at 2017-03-28）
 ---
 
 [中文](liber.html) / [English](liber_en.html)  
@@ -32,11 +32,11 @@ Nice person, awesome communicator and cooperator.
 ***
 
 ### Technique:  
-- Excellent in: JavaScript  
-- Master in: HTML, CSS, jQuery, Backbonejs, Bootstrap, Sass  
-- Familiar with: Ruby, Rails, MySQL  
-- Know: React, Redux, Docker, Kubernetes, OpenShift, OAuth, Elixir  
-- Studying now: Node, Redis, Express, Webpack, ES2015, Vue2, Weex, Vuex  
+Excellent in: JavaScript  
+Master in: HTML, CSS, jQuery, Backbonejs, Bootstrap, Sass  
+Familiar with: Ruby, Rails, MySQL  
+Know: React, Redux, Docker, Kubernetes, OpenShift, OAuth, Elixir  
+Studying now: Node, Redis, Express, Webpack, ES2015, Vue2, Weex, Vuex  
 
 ***
 

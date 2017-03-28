@@ -1,7 +1,7 @@
 ---
 layout: template
 title: I'm Liber
-text: 13681698273 / gjl87910lq@gmail.com（最后更新时间： 2017-03-26）
+text: 13681698273 / gjl87910lq@gmail.com（最后更新时间： 2017-03-28）
 ---
 
 [中文](liber.html) / [English](liber_en.html)  
@@ -32,17 +32,17 @@ gjl87910lq@126.com
 ***
 
 ### 技术：
-- 精通HTML、CSS、JavaScript、AJAX、jQuery、Bootstrap、Backbone
-- 擅长开发jQuery插件，擅长开发SPA单页应用；擅于调试BUG
-- 对数据结构、算法有一定基础，优秀的分析问题解决问题的能力
-- 熟悉浏览器工作原理、渲染过程；熟悉动画优化技术；熟练使用Timeline进行性能分析
-- 熟悉HTTP原理，熟悉缓存机制
-- 熟悉使用CSS开发Hybrid移动端响应式应用
-- 熟悉使用Ruby、Rails、Sass、Node、Webpack、ES2015、Express、Redis、MySQL开发网页应用
-- 熟悉Highcharts、eCharts等可视化工具，对D3、Threejs有兴趣
-- 了解Vue、React、Vuex、Redux前端框架；了解Weex、MUI等HTML5移动端Native App开发框架
-- 了解Docker、Kubernetes、OpenShift、Auth、Elixir、SemanticUI、Photoshop  
-- 其他使用过的技术：Requirejs、Casperjs、QUnit、OLAP、BIRT、Java、C#
+精通HTML、CSS、JavaScript、AJAX、jQuery、Bootstrap、Backbone  
+擅长开发jQuery插件，擅长开发SPA单页应用；擅于调试BUG  
+对数据结构、算法有一定基础，优秀的分析问题解决问题的能力  
+熟悉浏览器工作原理、渲染过程；熟悉动画优化技术；熟练使用Timeline进行性能分析  
+熟悉HTTP原理，熟悉缓存机制  
+熟悉使用CSS开发Hybrid移动端响应式应用  
+熟悉使用Ruby、Rails、Sass、Node、Webpack、ES2015、Express、Redis、MySQL开发网页应用  
+熟悉Highcharts、eCharts等可视化工具，对D3、Threejs有兴趣  
+了解Vue、React、Vuex、Redux前端框架；了解Weex、MUI等HTML5移动端Native App开发框架  
+了解Docker、Kubernetes、OpenShift、Auth、Elixir、SemanticUI、Photoshop  
+其他使用过的技术：Requirejs、Casperjs、QUnit、OLAP、BIRT、Java、C#  
 
 ***  
 
