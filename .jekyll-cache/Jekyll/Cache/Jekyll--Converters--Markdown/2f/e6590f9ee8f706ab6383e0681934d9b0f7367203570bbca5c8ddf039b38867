@@ -1,0 +1,40 @@
+I"T<p>最近想找个支持Ruby的ACM在线系统玩玩，一方面喜欢ACM；另一方面，可以学习Ruby。</p>
+
+<p>折腾了许久，终于有了结果，感谢主！</p>
+
+<p>不敢独享，分享如下：</p>
+
+<p>例子一：</p>
+
+<p>Problem here:<br />
+<a href="https://www.spoj.com/problems/AMR10F/">https://www.spoj.com/problems/AMR10F/</a></p>
+
+<p>My solution here:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="no">N</span> <span class="o">=</span> <span class="nb">gets</span>
+<span class="k">while</span><span class="p">(</span> <span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="nb">gets</span><span class="p">)</span> <span class="o">!=</span><span class="kp">nil</span> <span class="p">)</span>
+	<span class="n">arr</span> <span class="o">=</span> <span class="n">data</span><span class="p">.</span><span class="nf">split</span><span class="p">(</span><span class="s1">' '</span><span class="p">)</span>
+	<span class="n">sum</span> <span class="o">=</span> <span class="mi">0</span>
+	<span class="p">(</span><span class="mi">1</span><span class="o">..</span><span class="p">(</span><span class="n">arr</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nf">to_i</span><span class="p">)).</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">nn</span><span class="o">|</span>
+		<span class="n">sum</span> <span class="o">+=</span> <span class="p">(</span><span class="n">arr</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="nf">to_i</span> <span class="o">+</span> <span class="n">arr</span><span class="p">[</span><span class="mi">2</span><span class="p">].</span><span class="nf">to_i</span> <span class="o">*</span> <span class="p">(</span><span class="n">nn</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span>
+	<span class="k">end</span>
+	<span class="nb">puts</span> <span class="n">sum</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<p>例子二：</p>
+
+<p>Problem here:<br />
+<a href="https://www.spoj.com/problems/ADDREV/">https://www.spoj.com/problems/ADDREV/</a></p>
+
+<p>My solution here:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="no">N</span> <span class="o">=</span> <span class="nb">gets</span>
+<span class="k">while</span><span class="p">(</span> <span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="nb">gets</span><span class="p">)</span> <span class="o">!=</span><span class="kp">nil</span> <span class="p">)</span>
+	<span class="n">arr</span> <span class="o">=</span> <span class="n">data</span><span class="p">.</span><span class="nf">split</span><span class="p">(</span><span class="s1">' '</span><span class="p">)</span>
+	<span class="n">result</span> <span class="o">=</span> <span class="n">arr</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nf">reverse</span><span class="p">.</span><span class="nf">to_i</span> <span class="o">+</span> <span class="n">arr</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="nf">reverse</span><span class="p">.</span><span class="nf">to_i</span>
+	<span class="nb">puts</span> <span class="n">result</span><span class="p">.</span><span class="nf">to_s</span><span class="p">.</span><span class="nf">reverse</span><span class="p">.</span><span class="nf">to_i</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+:ET

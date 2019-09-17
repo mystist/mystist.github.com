@@ -1,0 +1,211 @@
+I"�w<p><code class="highlighter-rouge">sorted-array-to-bst:</code></p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cm">/*
+#### 问题：
+将一个从小到大排列好的数组转换成二叉搜索树。
+
+#### 思路：
+由于是从小到大排列好的数组，通过观察发现，每次取数组中间的元素（平衡时向右取），可以得到一个根节点，以及左右两颗子树。
+然后分别对子树做同样的操作，并将子树的根节点按二叉搜索树的要求，作为前面根节点的左右节点。
+不断对左右子树进行递归操作，最终可以得到一颗二叉搜索树。
+*/</span>
+
+<span class="kd">class</span> <span class="nx">ArrObject</span> <span class="p">{</span>
+  <span class="kd">constructor</span><span class="p">(</span><span class="nx">arr</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">arr</span> <span class="o">=</span> <span class="nx">arr</span>
+
+    <span class="kd">let</span> <span class="nx">middleIndex</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">arr</span><span class="p">.</span><span class="nx">length</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">===</span> <span class="mi">0</span> <span class="p">?</span> <span class="k">this</span><span class="p">.</span><span class="nx">arr</span><span class="p">.</span><span class="nx">length</span> <span class="o">/</span> <span class="mi">2</span> <span class="p">:</span> <span class="nb">parseInt</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">arr</span><span class="p">.</span><span class="nx">length</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">middle</span> <span class="o">=</span> <span class="nx">arr</span><span class="p">[</span><span class="nx">middleIndex</span><span class="p">]</span>
+
+    <span class="k">this</span><span class="p">.</span><span class="nx">leftArr</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">arr</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nx">middleIndex</span><span class="p">)</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">rightArr</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">arr</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="nx">middleIndex</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">class</span> <span class="nx">Node</span> <span class="p">{</span>
+  <span class="kd">constructor</span><span class="p">(</span><span class="nx">arrObject</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">data</span> <span class="o">=</span> <span class="nx">arrObject</span><span class="p">.</span><span class="nx">middle</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="nx">arrObject</span><span class="p">.</span><span class="nx">leftArr</span><span class="p">.</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">left</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Node</span><span class="p">(</span><span class="k">new</span> <span class="nx">ArrObject</span><span class="p">(</span><span class="nx">arrObject</span><span class="p">.</span><span class="nx">leftArr</span><span class="p">))</span>
+    <span class="p">}</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="nx">arrObject</span><span class="p">.</span><span class="nx">rightArr</span><span class="p">.</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">right</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Node</span><span class="p">(</span><span class="k">new</span> <span class="nx">ArrObject</span><span class="p">(</span><span class="nx">arrObject</span><span class="p">.</span><span class="nx">rightArr</span><span class="p">))</span>
+    <span class="p">}</span>  
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">class</span> <span class="nx">Tree</span> <span class="p">{</span>
+  <span class="kd">constructor</span><span class="p">(</span><span class="nx">arr</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">root</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Node</span><span class="p">(</span><span class="k">new</span> <span class="nx">ArrObject</span><span class="p">(</span><span class="nx">arr</span><span class="p">))</span>
+
+    <span class="k">this</span><span class="p">.</span><span class="nx">outs</span> <span class="o">=</span> <span class="p">[]</span>
+  <span class="p">}</span>
+
+  <span class="nx">print</span><span class="p">(</span><span class="nx">curLevelNodes</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">curLevelNodes</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">curLevelNodes</span> <span class="o">=</span> <span class="p">[</span><span class="k">this</span><span class="p">.</span><span class="nx">root</span><span class="p">]</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">outs</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">root</span><span class="p">.</span><span class="nx">data</span> <span class="o">+</span> <span class="dl">'</span><span class="s1"> </span><span class="dl">'</span><span class="p">)</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">outs</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="dl">'</span><span class="s1">| </span><span class="dl">'</span><span class="p">)</span>
+    <span class="p">}</span>
+
+    <span class="kd">let</span> <span class="nx">nextLevelNodes</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">curLevelNodes</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+      <span class="kd">let</span> <span class="nx">curNode</span> <span class="o">=</span> <span class="nx">curLevelNodes</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span>
+
+      <span class="k">if</span> <span class="p">(</span><span class="nx">curNode</span><span class="p">.</span><span class="nx">left</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">outs</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">curNode</span><span class="p">.</span><span class="nx">left</span><span class="p">.</span><span class="nx">data</span> <span class="o">+</span> <span class="dl">'</span><span class="s1"> </span><span class="dl">'</span><span class="p">)</span>
+        <span class="nx">nextLevelNodes</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">curNode</span><span class="p">.</span><span class="nx">left</span><span class="p">)</span>
+      <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">outs</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="dl">'</span><span class="s1">[] </span><span class="dl">'</span><span class="p">)</span>
+      <span class="p">}</span>
+
+      <span class="k">if</span> <span class="p">(</span><span class="nx">curNode</span><span class="p">.</span><span class="nx">right</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">outs</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">curNode</span><span class="p">.</span><span class="nx">right</span><span class="p">.</span><span class="nx">data</span> <span class="o">+</span> <span class="dl">'</span><span class="s1"> </span><span class="dl">'</span><span class="p">)</span>
+        <span class="nx">nextLevelNodes</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">curNode</span><span class="p">.</span><span class="nx">right</span><span class="p">)</span>
+      <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">outs</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="dl">'</span><span class="s1">[] </span><span class="dl">'</span><span class="p">)</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="nx">nextLevelNodes</span><span class="p">.</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">outs</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="dl">'</span><span class="s1">| </span><span class="dl">'</span><span class="p">)</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">print</span><span class="p">(</span><span class="nx">nextLevelNodes</span><span class="p">)</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">outs</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">outs</span><span class="p">.</span><span class="nx">lastIndexOf</span><span class="p">(</span><span class="dl">'</span><span class="s1">| </span><span class="dl">'</span><span class="p">)).</span><span class="nx">join</span><span class="p">(</span><span class="dl">''</span><span class="p">))</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">var</span> <span class="nx">arr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="mi">90</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">260</span><span class="p">]</span>
+<span class="kd">var</span> <span class="nx">tree</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Tree</span><span class="p">(</span><span class="nx">arr</span><span class="p">)</span>
+<span class="nx">tree</span><span class="p">.</span><span class="nx">print</span><span class="p">()</span>
+
+<span class="kd">var</span> <span class="nx">arr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="mi">90</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">200</span><span class="p">]</span>
+<span class="kd">var</span> <span class="nx">tree</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Tree</span><span class="p">(</span><span class="nx">arr</span><span class="p">)</span>
+<span class="nx">tree</span><span class="p">.</span><span class="nx">print</span><span class="p">()</span>
+
+</code></pre></div></div>
+
+<p><br /></p>
+
+<p><code class="highlighter-rouge">sorted-array-to-avl:</code></p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cm">/*
+#### 问题：
+将一个从小到大排列好的数组转换成二叉搜索树。
+
+#### 思路：
+- 先让数组按降序排列
+- 因此，在往二叉树中添加结点的过程中，新的结点只会添加在最左边
+- 通过观察发现，在失衡发生的时候，永远只需要左左旋转
+- 还可以简化一些判断条件：高度的计算，失衡的计算。
+*/</span>
+
+<span class="kd">let</span> <span class="nx">addNode</span> <span class="o">=</span> <span class="p">(</span><span class="nx">root</span><span class="p">,</span> <span class="nx">node</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">root</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nx">node</span>
+  <span class="p">}</span>
+  <span class="nx">root</span><span class="p">.</span><span class="nx">left</span> <span class="o">=</span> <span class="nx">addNode</span><span class="p">(</span><span class="nx">root</span><span class="p">.</span><span class="nx">left</span><span class="p">,</span> <span class="nx">node</span><span class="p">)</span>
+
+  <span class="k">if</span> <span class="p">(</span><span class="nx">root</span><span class="p">.</span><span class="nx">left</span><span class="p">.</span><span class="nx">height</span> <span class="o">-</span> <span class="p">(</span><span class="nx">root</span><span class="p">.</span><span class="nx">right</span> <span class="p">?</span> <span class="nx">root</span><span class="p">.</span><span class="nx">right</span><span class="p">.</span><span class="nx">height</span> <span class="p">:</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">===</span> <span class="mi">2</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">root</span> <span class="o">=</span> <span class="nx">singleRotateLeft</span><span class="p">(</span><span class="nx">root</span><span class="p">)</span>
+  <span class="p">}</span>
+  
+  <span class="nx">root</span><span class="p">.</span><span class="nx">height</span> <span class="o">=</span> <span class="nx">root</span><span class="p">.</span><span class="nx">left</span><span class="p">.</span><span class="nx">height</span> <span class="o">+</span> <span class="mi">1</span>
+
+  <span class="k">return</span> <span class="nx">root</span>
+<span class="p">}</span>
+
+<span class="kd">let</span> <span class="nx">singleRotateLeft</span> <span class="o">=</span> <span class="p">(</span><span class="nx">root</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="kd">let</span> <span class="nx">node</span> <span class="o">=</span> <span class="nx">root</span><span class="p">.</span><span class="nx">left</span>
+  <span class="nx">root</span><span class="p">.</span><span class="nx">left</span> <span class="o">=</span> <span class="nx">node</span><span class="p">.</span><span class="nx">right</span>
+  <span class="nx">node</span><span class="p">.</span><span class="nx">right</span> <span class="o">=</span> <span class="nx">root</span>
+
+  <span class="nx">root</span><span class="p">.</span><span class="nx">height</span> <span class="o">=</span> <span class="p">(</span><span class="nx">root</span><span class="p">.</span><span class="nx">left</span> <span class="p">?</span> <span class="nx">root</span><span class="p">.</span><span class="nx">left</span><span class="p">.</span><span class="nx">height</span> <span class="p">:</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
+  <span class="nx">node</span><span class="p">.</span><span class="nx">height</span> <span class="o">=</span> <span class="p">(</span><span class="nx">node</span><span class="p">.</span><span class="nx">left</span> <span class="p">?</span> <span class="nx">node</span><span class="p">.</span><span class="nx">left</span><span class="p">.</span><span class="nx">height</span> <span class="p">:</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
+
+  <span class="k">return</span> <span class="nx">node</span>
+<span class="p">}</span>
+
+<span class="kd">class</span> <span class="nx">Node</span> <span class="p">{</span>
+  <span class="kd">constructor</span><span class="p">(</span><span class="nx">options</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">data</span> <span class="o">=</span> <span class="nx">options</span><span class="p">.</span><span class="nx">data</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">left</span> <span class="o">=</span> <span class="nx">options</span><span class="p">.</span><span class="nx">left</span> <span class="o">||</span> <span class="kc">null</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">right</span> <span class="o">=</span> <span class="nx">options</span><span class="p">.</span><span class="nx">right</span> <span class="o">||</span> <span class="kc">null</span>
+
+    <span class="k">this</span><span class="p">.</span><span class="nx">height</span> <span class="o">=</span> <span class="mi">0</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">class</span> <span class="nx">Tree</span> <span class="p">{</span>
+  <span class="kd">constructor</span><span class="p">(</span><span class="nx">list</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">list</span> <span class="o">=</span> <span class="nx">list</span><span class="p">.</span><span class="nx">reverse</span><span class="p">()</span>
+
+    <span class="k">this</span><span class="p">.</span><span class="nx">root</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Node</span><span class="p">({</span> <span class="na">data</span><span class="p">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">list</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="p">})</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">buildTree</span><span class="p">()</span>
+
+    <span class="k">this</span><span class="p">.</span><span class="nx">outs</span> <span class="o">=</span> <span class="p">[]</span>
+  <span class="p">}</span>
+
+  <span class="nx">buildTree</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="k">this</span><span class="p">.</span><span class="nx">list</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+      <span class="kd">let</span> <span class="nx">node</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Node</span><span class="p">({</span> <span class="na">data</span><span class="p">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">list</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="p">})</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="nx">node</span><span class="p">)</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+
+  <span class="nx">add</span><span class="p">(</span><span class="nx">node</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">root</span> <span class="o">=</span> <span class="nx">addNode</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">root</span><span class="p">,</span> <span class="nx">node</span><span class="p">)</span>
+  <span class="p">}</span>
+
+  <span class="nx">print</span><span class="p">(</span><span class="nx">curLevelNodes</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">curLevelNodes</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">curLevelNodes</span> <span class="o">=</span> <span class="p">[</span><span class="k">this</span><span class="p">.</span><span class="nx">root</span><span class="p">]</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">outs</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">root</span><span class="p">.</span><span class="nx">data</span> <span class="o">+</span> <span class="dl">'</span><span class="s1"> </span><span class="dl">'</span><span class="p">)</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">outs</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="dl">'</span><span class="s1">| </span><span class="dl">'</span><span class="p">)</span>
+    <span class="p">}</span>
+
+    <span class="kd">let</span> <span class="nx">nextLevelNodes</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">curLevelNodes</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+      <span class="kd">let</span> <span class="nx">curNode</span> <span class="o">=</span> <span class="nx">curLevelNodes</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span>
+
+      <span class="k">if</span> <span class="p">(</span><span class="nx">curNode</span><span class="p">.</span><span class="nx">left</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">outs</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">curNode</span><span class="p">.</span><span class="nx">left</span><span class="p">.</span><span class="nx">data</span> <span class="o">+</span> <span class="dl">'</span><span class="s1"> </span><span class="dl">'</span><span class="p">)</span>
+        <span class="nx">nextLevelNodes</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">curNode</span><span class="p">.</span><span class="nx">left</span><span class="p">)</span>
+      <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">outs</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="dl">'</span><span class="s1">[] </span><span class="dl">'</span><span class="p">)</span>
+      <span class="p">}</span>
+
+      <span class="k">if</span> <span class="p">(</span><span class="nx">curNode</span><span class="p">.</span><span class="nx">right</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">outs</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">curNode</span><span class="p">.</span><span class="nx">right</span><span class="p">.</span><span class="nx">data</span> <span class="o">+</span> <span class="dl">'</span><span class="s1"> </span><span class="dl">'</span><span class="p">)</span>
+        <span class="nx">nextLevelNodes</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">curNode</span><span class="p">.</span><span class="nx">right</span><span class="p">)</span>
+      <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">outs</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="dl">'</span><span class="s1">[] </span><span class="dl">'</span><span class="p">)</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="nx">nextLevelNodes</span><span class="p">.</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">outs</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="dl">'</span><span class="s1">| </span><span class="dl">'</span><span class="p">)</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">print</span><span class="p">(</span><span class="nx">nextLevelNodes</span><span class="p">)</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">outs</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">outs</span><span class="p">.</span><span class="nx">lastIndexOf</span><span class="p">(</span><span class="dl">'</span><span class="s1">| </span><span class="dl">'</span><span class="p">)).</span><span class="nx">join</span><span class="p">(</span><span class="dl">''</span><span class="p">));</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">var</span> <span class="nx">list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="mi">90</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">260</span><span class="p">]</span>
+<span class="kd">var</span> <span class="nx">tree</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Tree</span><span class="p">(</span><span class="nx">list</span><span class="p">)</span>
+<span class="nx">tree</span><span class="p">.</span><span class="nx">print</span><span class="p">()</span>
+
+<span class="kd">var</span> <span class="nx">list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">1000</span><span class="p">,</span> <span class="mi">1001</span><span class="p">]</span>
+<span class="kd">var</span> <span class="nx">tree</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Tree</span><span class="p">(</span><span class="nx">list</span><span class="p">)</span>
+<span class="nx">tree</span><span class="p">.</span><span class="nx">print</span><span class="p">()</span>
+
+<span class="kd">var</span> <span class="nx">list</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">100</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">666</span><span class="p">,</span> <span class="mi">2333333</span><span class="p">]</span>
+<span class="kd">var</span> <span class="nx">tree</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Tree</span><span class="p">(</span><span class="nx">list</span><span class="p">)</span>
+<span class="nx">tree</span><span class="p">.</span><span class="nx">print</span><span class="p">()</span>
+
+</code></pre></div></div>
+:ET

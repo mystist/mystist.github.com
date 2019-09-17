@@ -1,0 +1,11 @@
+I"�<p>partialPrint可以实现局部打印，即：只打印你选择的元素。</p>
+
+<p>使用方法：</p>
+<ol>
+  <li>按<code class="highlighter-rouge">F8</code>来开启/关闭插件的选择器。</li>
+  <li>在你选择的元素上点击鼠标右键，然后选择<code class="highlighter-rouge">打印</code>或者<code class="highlighter-rouge">打印预览</code></li>
+</ol>
+
+<p>下载和使用插件，请访问插件的<a href="https://github.com/Mystist/partialPrint/">github地址</a>。</p>
+
+:ET

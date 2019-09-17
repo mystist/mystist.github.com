@@ -1,0 +1,308 @@
+I"Z�
+<h2 style="margin-bottom: 15px;"> 数据结构：数组和链表 </h2>
+
+<p>新建一个html文件，body里面含有两个div，一个div里含有字符串4,2,5,7,1,3, 一个div为空。同时建立一个按钮叫pop，一个按钮叫push，push按钮旁边再建立一个text input。</p>
+
+<p>实现以下效果:</p>
+
+<p>(1) 空的div里 显示 将第一个div里数字排序后的结果</p>
+
+<p>(2) 点击pop后第一个div里的最后一个数字消失，同时更新排序结果</p>
+
+<p>(3) 在text input里输入一个数字，点击push按钮后将新的数字添加到第一个div数字字符串的结尾，同时更新排序结果</p>
+
+<hr />
+
+<p><code class="highlighter-rouge">api-solution.js:</code></p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cm">/*
+#### 使用ECMAScript提供的sort API实现
+
+#### 思路：
+- 使用两个数组分别存放未排序的数组以及排好序的数组：original, sorted
+- 每次pop操作，调用original的pop方法，然后复制original对其调用sort方法，得到新的sorted数组
+- 同样的方式处理push操作
+
+#### 缺点：
+api-solution的主要问题在于，每次入栈出栈都要执行sort
+而sort(v8的实现是优化过的快排)的时间复杂度平均为O(nlogn)
+
+#### 优化方案：
+请参见optimized-solution.js
+*/</span>
+
+<span class="kd">var</span> <span class="nx">utils</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">compare</span><span class="p">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">value1</span><span class="p">,</span> <span class="nx">value2</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nx">value1</span> <span class="o">-</span> <span class="nx">value2</span><span class="p">;</span>
+  <span class="p">},</span>
+  <span class="na">sort</span><span class="p">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">arr</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nx">arr</span><span class="p">.</span><span class="nx">concat</span><span class="p">().</span><span class="nx">sort</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">compare</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">};</span>
+
+<span class="kd">var</span> <span class="nx">app</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">original</span><span class="p">:</span> <span class="p">[],</span>
+  <span class="na">sorted</span><span class="p">:</span> <span class="p">[],</span>
+
+  <span class="na">initialize</span><span class="p">:</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">initOriginal</span><span class="p">();</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">initSorted</span><span class="p">();</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">render</span><span class="p">();</span>
+
+    <span class="k">this</span><span class="p">.</span><span class="nx">subscribe</span><span class="p">();</span>
+  <span class="p">},</span>
+
+  <span class="na">initOriginal</span><span class="p">:</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">stringArr</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="dl">'</span><span class="s1">#original</span><span class="dl">'</span><span class="p">).</span><span class="nx">innerHTML</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="dl">'</span><span class="s1">,</span><span class="dl">'</span><span class="p">);</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">original</span> <span class="o">=</span> <span class="nx">stringArr</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">item</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">item</span><span class="p">,</span> <span class="mi">10</span><span class="p">);</span>
+    <span class="p">});</span>
+  <span class="p">},</span>
+
+  <span class="na">initSorted</span><span class="p">:</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">sorted</span> <span class="o">=</span> <span class="nx">utils</span><span class="p">.</span><span class="nx">sort</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">original</span><span class="p">);</span>
+  <span class="p">},</span>
+
+  <span class="na">subscribe</span><span class="p">:</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="dl">'</span><span class="s1">#pop</span><span class="dl">'</span><span class="p">).</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">'</span><span class="s1">click</span><span class="dl">'</span><span class="p">,</span> <span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">original</span><span class="p">.</span><span class="nx">pop</span><span class="p">();</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">sorted</span> <span class="o">=</span> <span class="nx">utils</span><span class="p">.</span><span class="nx">sort</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">original</span><span class="p">);</span>
+
+      <span class="k">this</span><span class="p">.</span><span class="nx">render</span><span class="p">();</span>
+    <span class="p">}).</span><span class="nx">bind</span><span class="p">(</span><span class="k">this</span><span class="p">));</span>
+
+    <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="dl">'</span><span class="s1">#push</span><span class="dl">'</span><span class="p">).</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">'</span><span class="s1">click</span><span class="dl">'</span><span class="p">,</span> <span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+      <span class="kd">var</span> <span class="nx">input</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="dl">'</span><span class="s1">input</span><span class="dl">'</span><span class="p">);</span>
+      <span class="kd">var</span> <span class="nx">number</span> <span class="o">=</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">input</span><span class="p">.</span><span class="nx">value</span><span class="p">,</span> <span class="mi">10</span><span class="p">);</span>
+
+      <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nb">isNaN</span><span class="p">(</span><span class="nx">number</span><span class="p">))</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">original</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">number</span><span class="p">);</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">sorted</span> <span class="o">=</span> <span class="nx">utils</span><span class="p">.</span><span class="nx">sort</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">original</span><span class="p">);</span>
+      <span class="p">}</span>
+
+      <span class="nx">input</span><span class="p">.</span><span class="nx">value</span> <span class="o">=</span> <span class="dl">''</span><span class="p">;</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">render</span><span class="p">();</span>
+    <span class="p">}).</span><span class="nx">bind</span><span class="p">(</span><span class="k">this</span><span class="p">));</span>
+  <span class="p">},</span>
+
+  <span class="na">render</span><span class="p">:</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="dl">'</span><span class="s1">#original</span><span class="dl">'</span><span class="p">).</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">original</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="dl">'</span><span class="s1">,</span><span class="dl">'</span><span class="p">);</span>
+    <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="dl">'</span><span class="s1">#sorted</span><span class="dl">'</span><span class="p">).</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">sorted</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="dl">'</span><span class="s1">,</span><span class="dl">'</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">};</span>
+
+<span class="nx">app</span><span class="p">.</span><span class="nx">initialize</span><span class="p">();</span>
+
+</code></pre></div></div>
+
+<p><br /></p>
+
+<p><code class="highlighter-rouge">optimized-solution.js:</code></p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cm">/*
+#### 思路：
+- 利用Hash找到pop元素的位置 - O(1)
+- 利用链表根据找到的位置进行删除 - O(1)
+- 利用链表遍历hash在相应位置进行插入 - O(logn)
+
+#### 具体实现：
+- 初始化两个数组original, sorted
+- 初始化一个哈希linkListHash，其key随机生成，其值为对象，存放original的值，对象之间实现成一个双向链表
+- 初始化一个数组originalList，每一项的值是一个对象，存放original对应的值和该值在linkListHash中对应的key
+- 对originalList进行pop出栈，根据出栈元素的key找到linkListHash中对应的属性，在链表中删除出栈元素，最后删除该属性
+- 对originalList进行push入栈，遍历链表，找到相应的位置插入入栈元素，为linkListHash添加新key及其值
+*/</span>
+
+<span class="kd">var</span> <span class="nx">utils</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">compare</span><span class="p">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">value1</span><span class="p">,</span> <span class="nx">value2</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nx">value1</span> <span class="o">-</span> <span class="nx">value2</span><span class="p">;</span>
+  <span class="p">},</span>
+  <span class="na">sort</span><span class="p">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">arr</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nx">arr</span><span class="p">.</span><span class="nx">concat</span><span class="p">().</span><span class="nx">sort</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">compare</span><span class="p">);</span>
+  <span class="p">},</span>
+  <span class="na">findKey</span><span class="p">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">hash</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">key</span> <span class="k">in</span> <span class="nx">hash</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">if</span> <span class="p">(</span><span class="nx">hash</span><span class="p">[</span><span class="nx">key</span><span class="p">].</span><span class="nx">data</span> <span class="o">===</span> <span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="nx">key</span><span class="p">;</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">};</span>
+
+<span class="kd">var</span> <span class="nx">app</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">original</span><span class="p">:</span> <span class="p">[],</span>
+  <span class="na">sorted</span><span class="p">:</span> <span class="p">[],</span>
+  <span class="na">linkListHash</span><span class="p">:</span> <span class="p">{},</span>
+  <span class="na">originalList</span><span class="p">:</span> <span class="p">[],</span>
+
+  <span class="na">head</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+
+  <span class="na">initialize</span><span class="p">:</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">initOriginal</span><span class="p">();</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">initSorted</span><span class="p">();</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">initLinkListHash</span><span class="p">();</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">initOriginalList</span><span class="p">();</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">render</span><span class="p">();</span>
+
+    <span class="k">this</span><span class="p">.</span><span class="nx">subscribe</span><span class="p">();</span>
+  <span class="p">},</span>
+
+  <span class="na">initOriginal</span><span class="p">:</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">stringArr</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="dl">'</span><span class="s1">#original</span><span class="dl">'</span><span class="p">).</span><span class="nx">innerHTML</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="dl">'</span><span class="s1">,</span><span class="dl">'</span><span class="p">);</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">original</span> <span class="o">=</span> <span class="nx">stringArr</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">item</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">item</span><span class="p">,</span> <span class="mi">10</span><span class="p">);</span>
+    <span class="p">});</span>
+  <span class="p">},</span>
+
+  <span class="na">initSorted</span><span class="p">:</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">sorted</span> <span class="o">=</span> <span class="nx">utils</span><span class="p">.</span><span class="nx">sort</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">original</span><span class="p">);</span>
+  <span class="p">},</span>
+
+  <span class="na">initLinkListHash</span><span class="p">:</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">head</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+    <span class="kd">var</span> <span class="nx">linkListHash</span> <span class="o">=</span> <span class="p">{};</span>
+    <span class="kd">var</span> <span class="nx">lastNode</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+
+    <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="k">this</span><span class="p">.</span><span class="nx">sorted</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+      <span class="kd">var</span> <span class="nx">obj</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="na">data</span><span class="p">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">sorted</span><span class="p">[</span><span class="nx">i</span><span class="p">],</span>
+        <span class="na">prev</span><span class="p">:</span> <span class="nx">lastNode</span>
+      <span class="p">};</span>
+      <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">lastNode</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">head</span> <span class="o">=</span> <span class="nx">obj</span><span class="p">;</span>
+      <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="nx">lastNode</span><span class="p">.</span><span class="nx">next</span> <span class="o">=</span> <span class="nx">obj</span><span class="p">;</span>
+      <span class="p">}</span>
+      <span class="nx">linkListHash</span><span class="p">[</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()]</span> <span class="o">=</span> <span class="nx">obj</span><span class="p">;</span>
+      <span class="nx">lastNode</span> <span class="o">=</span> <span class="nx">obj</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">this</span><span class="p">.</span><span class="nx">head</span> <span class="o">=</span> <span class="nx">head</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">linkListHash</span> <span class="o">=</span> <span class="nx">linkListHash</span><span class="p">;</span>
+  <span class="p">},</span>
+
+  <span class="na">initOriginalList</span><span class="p">:</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">originalList</span> <span class="o">=</span> <span class="p">[];</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="k">this</span><span class="p">.</span><span class="nx">original</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+      <span class="kd">var</span> <span class="nx">obj</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="na">data</span><span class="p">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">original</span><span class="p">[</span><span class="nx">i</span><span class="p">],</span>
+        <span class="na">key</span><span class="p">:</span> <span class="nx">utils</span><span class="p">.</span><span class="nx">findKey</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">linkListHash</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">original</span><span class="p">[</span><span class="nx">i</span><span class="p">])</span>
+      <span class="p">};</span>
+      <span class="nx">originalList</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">obj</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="k">this</span><span class="p">.</span><span class="nx">originalList</span> <span class="o">=</span> <span class="nx">originalList</span><span class="p">;</span>
+  <span class="p">},</span>
+
+  <span class="na">subscribe</span><span class="p">:</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="dl">'</span><span class="s1">#pop</span><span class="dl">'</span><span class="p">).</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">'</span><span class="s1">click</span><span class="dl">'</span><span class="p">,</span> <span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">original</span><span class="p">.</span><span class="nx">pop</span><span class="p">();</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">popHash</span><span class="p">();</span>
+
+      <span class="k">this</span><span class="p">.</span><span class="nx">render</span><span class="p">();</span>
+    <span class="p">}).</span><span class="nx">bind</span><span class="p">(</span><span class="k">this</span><span class="p">));</span>
+
+    <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="dl">'</span><span class="s1">#push</span><span class="dl">'</span><span class="p">).</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">'</span><span class="s1">click</span><span class="dl">'</span><span class="p">,</span> <span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+      <span class="kd">var</span> <span class="nx">input</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="dl">'</span><span class="s1">input</span><span class="dl">'</span><span class="p">);</span>
+      <span class="kd">var</span> <span class="nx">number</span> <span class="o">=</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">input</span><span class="p">.</span><span class="nx">value</span><span class="p">,</span> <span class="mi">10</span><span class="p">);</span>
+
+      <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nb">isNaN</span><span class="p">(</span><span class="nx">number</span><span class="p">))</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">original</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">number</span><span class="p">);</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">pushHash</span><span class="p">(</span><span class="nx">number</span><span class="p">);</span>
+      <span class="p">}</span>
+
+      <span class="nx">input</span><span class="p">.</span><span class="nx">value</span> <span class="o">=</span> <span class="dl">''</span><span class="p">;</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">render</span><span class="p">();</span>
+    <span class="p">}).</span><span class="nx">bind</span><span class="p">(</span><span class="k">this</span><span class="p">));</span>
+  <span class="p">},</span>
+
+  <span class="na">popHash</span><span class="p">:</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">originalList</span><span class="p">.</span><span class="nx">length</span> <span class="o">===</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">return</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">var</span> <span class="nx">key</span> <span class="o">=</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">originalList</span><span class="p">.</span><span class="nx">pop</span><span class="p">()).</span><span class="nx">key</span><span class="p">;</span>
+    <span class="kd">var</span> <span class="nx">targetObj</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">linkListHash</span><span class="p">[</span><span class="nx">key</span><span class="p">];</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">targetObj</span><span class="p">.</span><span class="nx">next</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="nx">targetObj</span><span class="p">.</span><span class="nx">prev</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">head</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">targetObj</span><span class="p">.</span><span class="nx">prev</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">head</span> <span class="o">=</span> <span class="nx">targetObj</span><span class="p">.</span><span class="nx">next</span><span class="p">;</span>
+      <span class="nx">targetObj</span><span class="p">.</span><span class="nx">next</span><span class="p">.</span><span class="nx">prev</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">targetObj</span><span class="p">.</span><span class="nx">next</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">targetObj</span><span class="p">.</span><span class="nx">prev</span><span class="p">.</span><span class="nx">next</span> <span class="o">=</span> <span class="nx">targetObj</span><span class="p">.</span><span class="nx">next</span><span class="p">;</span>
+      <span class="nx">targetObj</span><span class="p">.</span><span class="nx">next</span><span class="p">.</span><span class="nx">prev</span> <span class="o">=</span> <span class="nx">targetObj</span><span class="p">.</span><span class="nx">prev</span><span class="p">;</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+      <span class="nx">targetObj</span><span class="p">.</span><span class="nx">prev</span><span class="p">.</span><span class="nx">next</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+      <span class="nx">targetObj</span><span class="p">.</span><span class="nx">prev</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">delete</span> <span class="k">this</span><span class="p">.</span><span class="nx">linkListHash</span><span class="p">[</span><span class="nx">key</span><span class="p">];</span>
+  <span class="p">},</span>
+
+  <span class="na">pushHash</span><span class="p">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">key</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">();</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">originalList</span><span class="p">.</span><span class="nx">push</span><span class="p">({</span><span class="na">data</span><span class="p">:</span> <span class="nx">data</span><span class="p">,</span> <span class="na">key</span><span class="p">:</span> <span class="nx">key</span><span class="p">});</span>
+
+    <span class="kd">var</span> <span class="nx">newObj</span> <span class="o">=</span> <span class="p">{</span>
+      <span class="na">data</span><span class="p">:</span> <span class="nx">data</span><span class="p">,</span>
+      <span class="na">key</span><span class="p">:</span> <span class="nx">key</span><span class="p">,</span>
+      <span class="na">next</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+      <span class="na">prev</span><span class="p">:</span> <span class="kc">null</span>
+    <span class="p">};</span>
+    <span class="kd">var</span> <span class="nx">node</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">head</span><span class="p">;</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">node</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">head</span> <span class="o">=</span> <span class="nx">newObj</span><span class="p">;</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+      <span class="k">while</span> <span class="p">(</span><span class="nx">node</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nx">data</span> <span class="o">&lt;</span> <span class="nx">node</span><span class="p">.</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+          <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">node</span><span class="p">.</span><span class="nx">prev</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">newObj</span><span class="p">.</span><span class="nx">next</span> <span class="o">=</span> <span class="nx">node</span><span class="p">;</span>
+            <span class="nx">node</span><span class="p">.</span><span class="nx">prev</span> <span class="o">=</span> <span class="nx">newObj</span><span class="p">;</span>
+            <span class="k">this</span><span class="p">.</span><span class="nx">head</span> <span class="o">=</span> <span class="nx">newObj</span><span class="p">;</span>
+          <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="nx">node</span><span class="p">.</span><span class="nx">prev</span><span class="p">.</span><span class="nx">next</span> <span class="o">=</span> <span class="nx">newObj</span><span class="p">;</span>
+            <span class="nx">newObj</span><span class="p">.</span><span class="nx">prev</span> <span class="o">=</span> <span class="nx">node</span><span class="p">.</span><span class="nx">prev</span><span class="p">;</span>
+            <span class="nx">newObj</span><span class="p">.</span><span class="nx">next</span> <span class="o">=</span> <span class="nx">node</span><span class="p">;</span>
+            <span class="nx">node</span><span class="p">.</span><span class="nx">prev</span> <span class="o">=</span> <span class="nx">newObj</span><span class="p">;</span>
+          <span class="p">}</span>
+          <span class="k">break</span><span class="p">;</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">node</span><span class="p">.</span><span class="nx">next</span><span class="p">)</span> <span class="p">{</span>
+          <span class="nx">node</span><span class="p">.</span><span class="nx">next</span> <span class="o">=</span> <span class="nx">newObj</span><span class="p">;</span>
+          <span class="nx">newObj</span><span class="p">.</span><span class="nx">prev</span> <span class="o">=</span> <span class="nx">node</span><span class="p">;</span>
+          <span class="k">break</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="nx">node</span> <span class="o">=</span> <span class="nx">node</span><span class="p">.</span><span class="nx">next</span><span class="p">;</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="k">this</span><span class="p">.</span><span class="nx">linkListHash</span><span class="p">[</span><span class="nx">key</span><span class="p">]</span> <span class="o">=</span> <span class="nx">newObj</span><span class="p">;</span>
+  <span class="p">},</span>
+
+  <span class="na">renderOriginal</span><span class="p">:</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="dl">'</span><span class="s1">#original</span><span class="dl">'</span><span class="p">).</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">original</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="dl">'</span><span class="s1">,</span><span class="dl">'</span><span class="p">);</span>
+  <span class="p">},</span>
+
+  <span class="na">renderSorted</span><span class="p">:</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">arr</span> <span class="o">=</span> <span class="p">[];</span>
+    <span class="kd">var</span> <span class="nx">node</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">head</span><span class="p">;</span>
+    <span class="k">while</span> <span class="p">(</span><span class="nx">node</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">arr</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">node</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
+      <span class="nx">node</span> <span class="o">=</span> <span class="nx">node</span><span class="p">.</span><span class="nx">next</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="dl">'</span><span class="s1">#sorted</span><span class="dl">'</span><span class="p">).</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="nx">arr</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="dl">'</span><span class="s1">,</span><span class="dl">'</span><span class="p">);</span>
+  <span class="p">},</span>
+
+  <span class="na">render</span><span class="p">:</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">renderOriginal</span><span class="p">();</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">renderSorted</span><span class="p">();</span>
+  <span class="p">}</span>
+<span class="p">};</span>
+
+<span class="nx">app</span><span class="p">.</span><span class="nx">initialize</span><span class="p">();</span>
+
+</code></pre></div></div>
+
+:ET

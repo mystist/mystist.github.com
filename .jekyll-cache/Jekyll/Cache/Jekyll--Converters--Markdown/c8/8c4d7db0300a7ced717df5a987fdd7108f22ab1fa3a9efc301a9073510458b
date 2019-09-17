@@ -1,0 +1,79 @@
+I"�<p>上代码：</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">(</span><span class="kd">function</span><span class="p">(</span> <span class="nx">$</span> <span class="p">){</span>
+ 
+  <span class="kd">var</span> <span class="nx">methods</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="na">init</span> <span class="p">:</span> <span class="kd">function</span><span class="p">(</span> <span class="nx">options</span> <span class="p">)</span> <span class="p">{</span> 
+      <span class="c1">// THIS </span>
+    <span class="p">},</span>
+    <span class="na">show</span> <span class="p">:</span> <span class="kd">function</span><span class="p">(</span> <span class="p">)</span> <span class="p">{</span>
+      <span class="c1">// IS</span>
+    <span class="p">},</span>
+    <span class="na">hide</span> <span class="p">:</span> <span class="kd">function</span><span class="p">(</span> <span class="p">)</span> <span class="p">{</span> 
+      <span class="c1">// GOOD</span>
+    <span class="p">},</span>
+    <span class="na">update</span> <span class="p">:</span> <span class="kd">function</span><span class="p">(</span> <span class="nx">content</span> <span class="p">)</span> <span class="p">{</span> 
+      <span class="c1">// !!! </span>
+    <span class="p">}</span>
+  <span class="p">};</span>
+ 
+  <span class="nx">$</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">tooltip</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span> <span class="nx">method</span> <span class="p">)</span> <span class="p">{</span>
+     
+    <span class="c1">// Method calling logic</span>
+    <span class="k">if</span> <span class="p">(</span> <span class="nx">methods</span><span class="p">[</span><span class="nx">method</span><span class="p">]</span> <span class="p">)</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="nx">methods</span><span class="p">[</span> <span class="nx">method</span> <span class="p">].</span><span class="nx">apply</span><span class="p">(</span> <span class="k">this</span><span class="p">,</span> <span class="nb">Array</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">slice</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span> <span class="nx">arguments</span><span class="p">,</span> <span class="mi">1</span> <span class="p">));</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span> <span class="k">typeof</span> <span class="nx">method</span> <span class="o">===</span> <span class="dl">'</span><span class="s1">object</span><span class="dl">'</span> <span class="o">||</span> <span class="o">!</span> <span class="nx">method</span> <span class="p">)</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="nx">methods</span><span class="p">.</span><span class="nx">init</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span> <span class="k">this</span><span class="p">,</span> <span class="nx">arguments</span> <span class="p">);</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+      <span class="nx">$</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span> <span class="dl">'</span><span class="s1">Method </span><span class="dl">'</span> <span class="o">+</span>  <span class="nx">method</span> <span class="o">+</span> <span class="dl">'</span><span class="s1"> does not exist on jQuery.tooltip</span><span class="dl">'</span> <span class="p">);</span>
+    <span class="p">}</span>    
+   
+  <span class="p">};</span>
+ 
+<span class="p">})(</span> <span class="nx">jQuery</span> <span class="p">);</span>
+ 
+<span class="p">});</span>
+ 
+<span class="c1">// calls the init method</span>
+<span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">div</span><span class="dl">'</span><span class="p">).</span><span class="nx">tooltip</span><span class="p">();</span> 
+ 
+<span class="c1">// calls the init method</span>
+<span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">div</span><span class="dl">'</span><span class="p">).</span><span class="nx">tooltip</span><span class="p">({</span>
+  <span class="na">foo</span> <span class="p">:</span> <span class="dl">'</span><span class="s1">bar</span><span class="dl">'</span>
+<span class="p">});</span>
+ 
+<span class="c1">// calls the hide method</span>
+<span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">div</span><span class="dl">'</span><span class="p">).</span><span class="nx">tooltip</span><span class="p">(</span><span class="dl">'</span><span class="s1">hide</span><span class="dl">'</span><span class="p">);</span> 
+ 
+<span class="c1">// calls the update method</span>
+<span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">div</span><span class="dl">'</span><span class="p">).</span><span class="nx">tooltip</span><span class="p">(</span><span class="dl">'</span><span class="s1">update</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">This is the new tooltip content!</span><span class="dl">'</span><span class="p">);</span> 
+</code></pre></div></div>
+
+<p>以上代码是官方jQuery Plugins开发提供的开发文档上的一个例子。（参见：<a href="http://docs.jquery.com/Plugins/Authoring">http://docs.jquery.com/Plugins/Authoring</a>）</p>
+
+<p>这里主要是对第22行代码的理解：
+return methods[ method ].apply( this, Array.prototype.slice.call( arguments, 1 ));</p>
+
+<p>首先是Array.prototype.slice.call( arguments, 1)这个方法，前面这一段实际上只是单纯的对slice方法的调用，然后通过call设置其执行时的作用域。我们知道Array是JS默认的引用类型，也是一个内置对象，而每个引用类型都有一个prototype属性，实际上prototype才是保存它们所有实例方法的真正所在。（有人可能会疑问，为什么访问实例化之后的对象的prototype里面的方法的时候不能加.prototype，而这里访问Array这种内置对象的prototype下面的方法的时候要加.prototype。好吧，先记住这个规则，具体的原因可以参看《JavaScript高级程序设计（第三版）》第148页的解释）
+call方法接收两个参数，第一个参数是一个对象arguments，即设置其执行时的作用域为arguments对象；第二个参数1实际上是要传给slice方法的参数，我们知道slice方法是从位置0开始检索的，而我们调用插件的时候，如：$(‘div’).tooltip(‘update’, ‘This is the new tooltip content!’); 实际上第一个参数是我们想要执行的方法名，第二个参数才是我们想要传入的参数。slice执行之后，返回一个数组，正好作为apply的第二个参数传过去。</p>
+
+<p>举例来说，当插件的调用方式是：</p>
+<ol>
+  <li>
+    <p>$(‘div’).tooltip();<br />
+第22行代码不会执行，因为if()里面的判断条件为false；</p>
+  </li>
+  <li>
+    <p>$(‘div’).tooltip(‘hide’);<br />
+第22行代码实际上就是：<br />
+return methods[‘hide’].apply( this, [] );<br />
+methods[ method ]实际上是访问对象属性的另一种形式，换成一种我们熟悉的形式就好理解了：<br />
+return methods.hide.apply( this, [] );</p>
+  </li>
+  <li>
+    <p>$(‘div’).tooltip(‘update’, ‘This is the new tooltip content!’);<br />
+第22行代码实际上就是：<br />
+return methods.update.apply( this, [‘This is the new tooltip content!’] );</p>
+  </li>
+</ol>
+:ET

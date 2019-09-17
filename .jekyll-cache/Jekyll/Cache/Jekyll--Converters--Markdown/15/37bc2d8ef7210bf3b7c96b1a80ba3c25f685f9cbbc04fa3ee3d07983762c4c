@@ -1,0 +1,13 @@
+I"]<p>multiSelect可以让你改变传统的<code class="highlighter-rouge">&lt;select&gt;&lt;/select&gt;</code>使用方式，当<code class="highlighter-rouge">&lt;option&gt;&lt;/option&gt;</code>里面没有你想要的值的时候，可以在前面输入你要的值。<br />
+支持单值模式和多值模式。</p>
+
+<p>效果截图：<br />
+<img src="/images/multiSelect1.png" /><br />
+（单值模式）</p>
+
+<p><img src="/images/multiSelect2.png" /><br />
+（多值模式）</p>
+
+<p>下载和使用插件，请访问插件的<a href="https://github.com/Mystist/multiSelect/">github地址</a>。</p>
+
+:ET

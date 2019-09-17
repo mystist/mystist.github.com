@@ -1,0 +1,27 @@
+I"
+<p>inputTip插件用来帮助人们更好的从下拉列表中选择项目。</p>
+
+<p>支持关键字，如拼音码；</p>
+
+<p>支持完整模式和简单模式；</p>
+
+<p>响应键盘上下移动和回车选择；</p>
+
+<p>可以在一个页面任意创建多个实例；</p>
+
+<p>……</p>
+
+<p>效果截图：</p>
+
+<p><img src="/images/inputtip_full.png" />
+（完整模式）</p>
+
+<p><img src="/images/inputtip_simple.png" />
+（简单模式）</p>
+
+<p><img src="/images/demo.png" />
+（2013-03-08更新后的版本）</p>
+
+<p>大家可以在我的github上<a href="https://github.com/Mystist/inputTip/">获取插件</a>，也可以<a href="https://github.com/Mystist/">fork me on github</a>，别忘了跟我分享您的需求和心得，让我们一起将它完善。</p>
+
+:ET

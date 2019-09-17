@@ -1,0 +1,190 @@
+I"4$<p><a href="liber.html">中文</a> / <a href="liber_en.html">English</a><br />
+<a href="images/liber_cv.doc">中文版下载</a> / <a href="images/liber_cv_en.doc">English Version Download</a></p>
+
+<p><img src="/images/liber_cv.png" class="cv-image" /></p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>龚峻磊 (LIBER GONG) - 13681698273  
+gjl87910lq@126.com
+Christian, 30 years old, live in Shanghai, looking for a job in Shenzhen.  
+6+ years work experience, currently work for SAP as a front-end developer.  
+
+Key person in the Shanghai team, share ideas and thoughts with manager, take part in the team member interviewing.  
+Continuous outstanding performance review.  
+Think as PO, coding as mechanic.  
+Devote into Writing Maintainable Code.  
+Nice person, awesome communicator and cooperator.
+</code></pre></div></div>
+
+<p>– 像国王一样思考，像侍从一样辛劳。<br />
+“Be a king in your mind but do the work of a servant.”</p>
+
+<p><a href="http://mystist.github.io/">[Blog]</a> - <a href="https://github.com/Mystist">[Github]</a> - <a href="http://stackoverflow.com/users/1773006/liber">[Stackoverflow]</a><br />
+<a href="http://1050.14201420.com/dev-blog">Project：1050</a><br />
+<a href="https://mystist.github.io/bootstrap-waterfall/">Project：bootstrap-waterfall</a></p>
+
+<hr />
+
+<h3 id="technique">Technique:</h3>
+<p>Excellent in: JavaScript<br />
+Master in: HTML, CSS, jQuery, Backbonejs, Bootstrap, Sass<br />
+Familiar with: Ruby, Rails, MySQL<br />
+Know: React, Redux, Docker, Kubernetes, OpenShift, OAuth, Elixir<br />
+Studying now: Node, Redis, Express, Webpack, ES2015, Vue2, Weex, Vuex</p>
+
+<hr />
+
+<h3 id="bio">Bio:</h3>
+<p>If you are looking for:<br />
+Experienced  React / Vue / Angular developer.<br />
+Node expert.<br />
+HTML5 Native App developer, using like: React Native / Weex / Lonic.<br />
+Pity that I might not be the perfect one currently.<br />
+Because my current job does not use those tech, so I just play it for fun my part time.<br />
+Eg: <a href="https://github.com/Mystist/mystist-worker">[mystist-worker]</a> and <a href="https://github.com/Mystist/dong">[dong]</a> <br />
+Give me a chance and a little time, it won’t be too hard.</p>
+
+<p>If you are looking for:<br />
+Fully experienced Web developer.<br />
+JavaScript expert.<br />
+Clearly understand how browser works with JavaScript, Rendering engine and how animation works.<br />
+Experienced jQuery, Backbonejs, Bootstrap developer, jQuery plugin develop master.<br />
+A potential full-stack developer.<br />
+Call me now: 136-8169-8273</p>
+
+<p>Good at solve problem, love challenge, full of passion, <a href="https://www.16personalities.com/infp-personality">THE MEDIATOR</a>.<br />
+Good at self-study and try out things, life-long learner.<br />
+Good sense for products and business, love thinking, often result good advises.</p>
+
+<hr />
+
+<h3 id="main-experiences">Main Experiences:</h3>
+<p><strong>The 1050 Poetry of Christian</strong> (Personal project: <a href="http://1050.14201420.com/dev-blog">1050</a>)<br />
+Songs platform of Christian.<br />
+Tech-stack: Javascript, Ruby, Sinatra, Backbonejs, Requirejs, Openshift, Qiniu，QQ Open API</p>
+
+<p><strong>Bootstrap-waterfall</strong> (Personal project <a href="https://mystist.github.io/bootstrap-waterfall/">bootstrap-waterfall</a>)<br />
+Responsive waterfall like image layout plugin.<br />
+Tech-stack: Javascript, jQuery, Bootstrap</p>
+
+<p><strong>Forms &amp; List</strong> (Single Page application)<br />
+Used as a internal demonstrate system, shows the possibilities of extend a common codebase to six different use cases:<br />
+Knowledge based system, voting, survey, form, examination, KPI.<br />
+Spent one month of my time to achieve, and got many kudos afterwards.<br />
+Tech-stack: Javascript, Ruby On Rails, jQuery, Backbonejs, MySQL, Bootstrap, Sass.</p>
+
+<p><strong>Accessibility automation toolkit</strong> (Tad)<br />
+Tad can run automation test for the website, and list all the violations.<br />
+eg: focusable elements, tab orders, key bindings, etc.<br />
+Also, tad can run automatically through Jenkins, then give results afterwards.<br />
+Tech-stack: Javascript, Webpack, ES2015, Babel, jQuery, Casperjs, QUnit</p>
+
+<p><strong>RSS generator</strong> (Personal project, in progress: <a href="https://github.com/Mystist/mystist-worker">mystist-worker</a>)<br />
+Concepts: learning, thinking, generation.<br />
+Learning: learn new thing from the articles.<br />
+Thinking: understand and rewrite a new article based on the main idea of the articles.<br />
+Generation: generate your own articles based on the new articles.<br />
+Tech-stack: Redis, Node, Express, Openshift(Next Gen)</p>
+
+<p><strong>X company’s Satisfaction Management System</strong> (Part-time project, live from Nov.2015 to now)<br />
+I took part in the project all the process. From discussing about the requirements to push it out to production.<br />
+Mainly a survey system and a 360 KPI system, and generate reports for the departments and sub-companies.<br />
+It’s my first time that try to build a system uses pure front-end technologies.<br />
+Tech-stack: Javascript, Underscorejs, jQuery</p>
+
+<hr />
+
+<h3 id="other-experiences">Other Experiences:</h3>
+
+<p><strong>SAP Jam Front-end Plugins</strong><br />
+<code class="highlighter-rouge">jam.accessibility.js</code>: Accessibility applying tools for Jam.<br />
+<code class="highlighter-rouge">jam.sticker.js</code>: Stick box like elements for Jam.<br />
+<code class="highlighter-rouge">jam.hotag.js</code>: Tag cloud plugin for Jam.<br />
+Tech-stack: Javascript, jQuery</p>
+
+<p><strong>SAP Jam Features</strong><br />
+I also built those features below:<br />
+The whole front-end of: Tasks, Search, Tag Cloud Widget, Content Rating.<br />
+Some bug fix and enhancements for back-end features.<br />
+Tech-stack: Ruby on Rails, Javascript, Backbonejs</p>
+
+<p><strong>MRS</strong><br />
+MRS is a Data visualization system: Medical Report System.<br />
+Version 1 use BIRT, Version 2 use OLAP and eCharts.<br />
+Communicate with PM.<br />
+Take charge of front-end team.<br />
+Create a tool to custom report: BIKit.<br />
+Know more about OLAP, eCharts and hightCharts.<br />
+Tech-stack: BI, OLAP, Javascript, MDX, eCharts, BIRT, hightCharts, JSON</p>
+
+<p><strong>MiniWorkStation</strong><br />
+A system that the Doctors and Nurses can work together.<br />
+Nurse can do: Manage patients, Make plan for patients, execute docter orders, etc.<br />
+Docter can do: Manage orders, Make applications and Add dialysis orders for patients.<br />
+Know more about the Roles of Designer, Front-End and Back-End.<br />
+Know more about Front-End MVC.<br />
+Business technologies about HIS.<br />
+Tech-stack: Javascript, jQuery, MyEclipse</p>
+
+<p><strong>Time-track plugin</strong><br />
+jQuery plugin to manage dates and events.<br />
+Learnt how to write jQuery plugins.<br />
+Tech-stack: Javascript, jQuery</p>
+
+<p><strong>PC client for X logistics company</strong><br />
+The customers of X can use the website to make orders online, search informations.<br />
+The carriers of X can use the website to print order infotmations.<br />
+Work with architect engineer.<br />
+Design and Achieve the website.<br />
+Learnt the CN lauguage made by NanRuan.<br />
+Learnt something about UI, UE.<br />
+Learnt business technologies about logistics.<br />
+Tech-stack: Javascript, jQuery, CN</p>
+
+<p><strong>ERP system for X company</strong><br />
+X company is a medical made/sell company.<br />
+Achieve clients management.<br />
+Technical support on site.<br />
+Know how to be presence of mind when support customer on site.<br />
+Business technologies about ERP.<br />
+Tech-stack: Javascript, jQuery</p>
+
+<p><strong>Group of iTry86</strong><br />
+iTry86 is a website that can trade stocks with virtual money.<br />
+Group of iTry86 is the subsite that users can communicate with each other there.<br />
+Work with Designer.<br />
+Know more about jQuery and Memcached.<br />
+Know how to work with colleagues.<br />
+Business technologies about Finance.<br />
+Tech-stack: C#, Javascript, jQuery, Visual Studio 2008, Memcached</p>
+
+<hr />
+
+<h3 id="work-experiences">Work Experiences:</h3>
+<p><strong>2014.06 - Now SAP</strong>
+<em>(SAP Jam is a team under SAP Collaboration department, their main product Jam is a SaaS intranet social network. People can freely share feeds, join groups, upload documents, create tasks, etc…)</em></p>
+
+<p><strong>2012.09 - 2014.05 DJHealthUnion</strong>
+<em>(DJHealthUnion is a foreign funded company that build hospital systems)</em></p>
+
+<p><strong>2011.05 - 2012.08 NanRuan tech.</strong>
+<em>(NanRuan tech. is a soft company that focus on build logistics systems)</em></p>
+
+<p><strong>2010.09 - 2011.04 LinZhi Network</strong>
+<em>(LinZhi Network is a financial network company)</em></p>
+
+<hr />
+
+<h3 id="education">Education:</h3>
+<p>2006 - 2010	Bachelor, Hulunbeir College &amp; Harbin Normal University, Computer Science and Technology</p>
+
+<hr />
+
+<h3 id="certificate">Certificate:</h3>
+<p>2008-06	CET4<br />
+2008-06	Third Price in Northeast China, ACM/ICPC 2008 <br />
+2008-05	Second Price in Hei Longjiang Province, ACM/ICPC 2008</p>
+
+<hr />
+
+<p><a href="/works.html">Some Demos</a></p>
+:ET
