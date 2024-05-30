@@ -1,6 +1,6 @@
 ---
 layout: template
-title: Welcome
+title: Liber's Blog
 text: 欢迎访问Liber的博客，这是最新的一篇内容。
 ---
 {% assign had_shown = false %}
