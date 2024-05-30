@@ -4,7 +4,7 @@ title: customPager
 text: Liber
 date: 2013-10-11 18:10
 categories:
-- plugin
+- programmer
 ---
 
 `customPager`是一个jQuery分页插件，插件本身不包含任何样式。

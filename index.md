@@ -1,13 +1,13 @@
 ---
 layout: template
 title: Welcome
-text: 欢迎访问Liber的博客，这是最新的一篇技术文章。
+text: 欢迎访问Liber的博客，这是最新的一篇内容。
 ---
 {% assign had_shown = false %}
 
 {% for post in site.posts %}
 
-{% if post.categories contains 'work' or post.categories contains 'work_ruby' or post.categories contains 'plugin' %}
+{% if post.categories contains 'programmer' or post.categories contains 'thoughts' or post.categories contains 'reading' %}
 
 {% if had_shown == false %}
 

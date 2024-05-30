@@ -4,7 +4,7 @@ title: partialPrint
 text: Liber
 date: 2013-07-26 17:45
 categories:
-- plugin
+- programmer
 ---
 partialPrint可以实现局部打印，即：只打印你选择的元素。
 

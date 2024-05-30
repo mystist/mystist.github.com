@@ -4,7 +4,7 @@ title: customAlert
 text: Liber
 date: 2013-05-09 09:55
 categories:
-- plugin
+- programmer
 ---
 customAlert可以帮助你自定义你的alert和confirm。
 

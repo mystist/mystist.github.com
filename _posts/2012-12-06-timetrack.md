@@ -4,7 +4,7 @@ title: TimeTrack
 text: Liber
 date: 2012-12-06 13:47
 categories:
-- plugin
+- programmer
 ---
 TimeTrack是一个类似时间轴的插件，您可以用它记录您的生活。  
 

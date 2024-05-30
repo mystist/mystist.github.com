@@ -4,7 +4,7 @@ title: multiSelect
 text: Liber
 date: 2013-06-26 17:34
 categories:
-- plugin
+- programmer
 ---
 multiSelect可以让你改变传统的`<select></select>`使用方式，当`<option></option>`里面没有你想要的值的时候，可以在前面输入你要的值。  
 支持单值模式和多值模式。

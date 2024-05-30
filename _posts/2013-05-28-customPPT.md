@@ -4,7 +4,7 @@ title: customPPT
 text: Liber
 date: 2013-05-28 09:00
 categories:
-- plugin
+- programmer
 ---
 customPPT可以让你的幻灯片动起来，前提是你的拥有你设计好的静态的页面。
 

@@ -106,16 +106,14 @@ hr {
 }
 
 .header .header-wrapper {
-
-  height: 50px;
+  height: 58px;
   text-align: left;
   font-family: "微软雅黑", "黑体", "Lucida Grande", Verdana, sans-serif;
 }
 
 .header .header-logo {
-
   float: left;
-  padding: 12px 34px 0;
+  padding: 16px 42px;
 }
 
 .header .header-logo span a {
@@ -126,12 +124,10 @@ hr {
 }
 
 .header .header-nav {
-
   float: left;
 }
 
 .header .header-nav ul li {
-
   float: left;
   position: relative;
 }
@@ -141,8 +137,8 @@ hr {
   float: left;
   font-size: 14px;
   font-weight: bold;
-  line-height: 50px;
-  height: 50px;
+  line-height: 58px;
+  height: 58px;
   color: #000;
   padding: 0 17px;
 }
@@ -162,7 +158,6 @@ hr {
 /* -- main start -- */
 
 .main {
-  
   background-color: white;
   border-top: 1px solid #EEE;
   text-align: center;
@@ -170,8 +165,7 @@ hr {
 }
 
 .main .main-wrapper {
-
-  padding: 18px 34px;
+  padding: 18px 42px;
 }
 
 .main .main-wrapper .main-title {
@@ -185,22 +179,19 @@ hr {
 }
 
 .main .main-wrapper .main-text {
-
   font-size: 14px;
   line-height: 28px;
   text-align: left;
 }
 
 .main .main-wrapper .main-text ul {
-
-   margin-bottom: 12px; 
+   margin-bottom: 12px;
 }
 
 .main .main-wrapper .main-text ul li {
-
   /* width: 840px; */
   height: 28px;
-  margin: 0 2em;
+  margin: 0;
 }
 
 

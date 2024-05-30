@@ -4,7 +4,7 @@ title: theadFixer
 text: Liber
 date: 2013-04-08 11:01
 categories:
-- plugin
+- programmer
 ---
 theadFixer是一个轻量级的，用来固定table的thead表头的jQuery插件。
 
