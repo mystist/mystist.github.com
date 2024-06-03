@@ -1,7 +1,7 @@
 ---
 layout: template
 title: 阅读
-text: 没有生不逢时，只是未遇好书。
+text: 没有生不逢时，只是未遇好书
 ---
 
 <script src="js/jquery.js"></script>

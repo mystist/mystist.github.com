@@ -1,7 +1,7 @@
 ---
 layout: template
 title: 程序员
-text: 学习、沉淀、创造以及第一性原理。
+text: 学习、沉淀、创造以及第一性原理
 ---
 
 <ul>

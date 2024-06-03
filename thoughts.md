@@ -1,7 +1,7 @@
 ---
 layout: template
 title: 思考
-text: Be the mind hacker.
+text: Be the mind hacker
 ---
 
 <ul>

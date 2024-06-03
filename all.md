@@ -1,7 +1,7 @@
 ---
 layout: template
 title: 全部内容
-text: Contact me at gjl87910lq@gmail.com for more!
+text: Reach out to gjl87910lq@gmail.com for more
 ---
 <ul>
 
