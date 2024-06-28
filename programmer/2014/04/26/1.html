@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=8" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>自定义Javascript的Apply和Call方法</title>
+  <link rel="stylesheet" type="text/css" href="/css/github.css" />
+  <link rel="stylesheet" type="text/css" href="/css/template.css" />
+</head>
+<body>
+
+<div class="wrapper">
+
+  <div class="header shadow">
+    <div class="header-wrapper">
+      <div class="header-logo">
+        <span><a href="/">LIBER</a></span>
+      </div>
+      <div class="header-nav">
+        <ul>
+          <li><a href="/"><span>首页</span></a></li>
+          <li><a href="/programmer.html"><span>程序员</span></a></li>
+          <li><a href="/thoughts.html"><span>思考</span></a></li>
+          <li><a href="/reading.html"><span>阅读</span></a></li>
+          <li><a href="/all.html"><span>全部内容</span></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="main shadow-sides">
+
+    <div class="main-wrapper">
+
+      <div class="main-title">自定义Javascript的Apply和Call方法</div>
+
+      <div class="main-foot">
+        <span>Liber 2014-04-26 00:43 </span>
+      </div>
+
+      <div class="main-text">
+        <p>前几天被问到Apply和Call方法的应用场景，稀里糊涂的乱答一气。</p>
+
+<p>接着又被问到它们的原理，直接语塞。</p>
+
+<p>好在，求知欲还没有彻底沦陷，终于给了自己一个满意的答案：</p>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code>
+<span class="c1">// Custom the Javascript Apply &amp; Call method.</span>
+
+<span class="nb">Function</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">customApply</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">obj</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">obj</span><span class="p">.</span><span class="nx">constructor</span><span class="p">.</span><span class="nx">prototype</span><span class="p">[</span><span class="s1">'_temp'</span><span class="p">]</span> <span class="o">=</span> <span class="k">this</span><span class="p">;</span>
+  <span class="kd">var</span> <span class="nx">argStr</span> <span class="o">=</span> <span class="s1">''</span><span class="p">;</span>
+  <span class="k">if</span><span class="p">(</span><span class="nx">arguments</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="p">{</span>
+    <span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">arguments</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">argStr</span> <span class="o">+=</span> <span class="s1">',arguments[1]['</span><span class="o">+</span><span class="nx">i</span><span class="o">+</span><span class="s1">']'</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="nx">argStr</span> <span class="o">=</span> <span class="nx">argStr</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span> <span class="c1">// Use slice(1) to remove the first ','</span>
+  <span class="p">}</span>
+  <span class="kd">var</span> <span class="nx">functionStr</span> <span class="o">=</span> <span class="s1">'obj._temp('</span><span class="o">+</span><span class="nx">argStr</span><span class="o">+</span><span class="s1">')'</span><span class="p">;</span>
+  <span class="kd">var</span> <span class="nx">re</span> <span class="o">=</span> <span class="nb">eval</span><span class="p">(</span><span class="nx">functionStr</span><span class="p">);</span>
+  <span class="k">delete</span> <span class="nx">obj</span><span class="p">.</span><span class="nx">constructor</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">_temp</span><span class="p">;</span>
+  <span class="k">return</span> <span class="nx">re</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nb">Function</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">customCall</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">obj</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">customApply</span><span class="p">(</span><span class="nx">obj</span><span class="p">,</span> <span class="nb">Array</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">slice</span><span class="p">.</span><span class="nx">customApply</span><span class="p">(</span><span class="nx">arguments</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">]));</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">Cat</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">food</span> <span class="o">=</span> <span class="s1">'fish'</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nx">Cat</span><span class="p">.</span><span class="nx">prototype</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">say</span><span class="p">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">param1</span><span class="p">,</span> <span class="nx">param2</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'I Love '</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="nx">food</span> <span class="o">+</span> <span class="s1">', '</span> <span class="o">+</span> <span class="nx">param1</span> <span class="o">+</span> <span class="s1">', '</span> <span class="o">+</span> <span class="nx">param2</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">var</span> <span class="nx">blackCat</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Cat</span><span class="p">();</span>
+<span class="nx">blackCat</span><span class="p">.</span><span class="nx">say</span><span class="p">(</span><span class="s1">'smallFish'</span><span class="p">,</span> <span class="s1">'bigFish'</span><span class="p">);</span>
+
+<span class="c1">// Demo use.</span>
+<span class="kd">var</span> <span class="nx">whiteDog</span> <span class="o">=</span> <span class="p">{</span><span class="na">food</span><span class="p">:</span> <span class="s1">'bone'</span><span class="p">};</span>
+<span class="nx">Cat</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">say</span><span class="p">.</span><span class="nx">customApply</span><span class="p">(</span><span class="nx">whiteDog</span><span class="p">,</span> <span class="p">[</span><span class="s1">'Bone!'</span><span class="p">,</span> <span class="s1">'BONE!!!'</span><span class="p">]);</span>
+<span class="nx">Cat</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">say</span><span class="p">.</span><span class="nx">customCall</span><span class="p">(</span><span class="nx">whiteDog</span><span class="p">,</span> <span class="s1">'smallBone'</span><span class="p">,</span> <span class="s1">'bigBone'</span><span class="p">);</span>
+
+<span class="c1">// Unit test maybe.</span>
+<span class="kd">function</span> <span class="nx">test</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kd">var</span> <span class="nx">t</span> <span class="o">=</span> <span class="nb">Array</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">slice</span><span class="p">.</span><span class="nx">customCall</span><span class="p">(</span><span class="nx">arguments</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">t</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="nx">test</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">);</span>
+
+</code></pre>
+</div>
+
+<p>复制粘贴以上代码到控制台即可。</p>
+
+<p>原理：<br />
+主要看customApply这个里面的这句：<br />
+<code class="highlighter-rouge">obj.constructor.prototype['_temp'] = this;</code><br />
+首先，这个方法是被<code class="highlighter-rouge">say</code>这个方法调用的，而我们知道，每个<code class="highlighter-rouge">function</code>实际上都是<code class="highlighter-rouge">Function</code>的一个实例，是一个对象。<br />
+所以，这里的<code class="highlighter-rouge">this</code>实际上就是那个<code class="highlighter-rouge">say</code>方法。<br />
+这句代码先是为传进来的<code class="highlighter-rouge">obj</code>对象的<code class="highlighter-rouge">prototype</code>对象新增了一个<code class="highlighter-rouge">_temp</code>的属性，然后将<code class="highlighter-rouge">say</code>方法赋值给它。<br />
+简单的讲，就相当于为<code class="highlighter-rouge">obj</code>对象添加了一个<code class="highlighter-rouge">say</code>方法。<br />
+就这样<code class="highlighter-rouge">obj</code>对象就可以调用<code class="highlighter-rouge">say</code>方法了，达到了我们的目的。</p>
+
+<p>原理就是这样，其他的一些代码是处理别的事情，跟原理没什么关系，就不多说了。</p>
+
+<p>不知道Javascript源码是用什么原理实现<code class="highlighter-rouge">apply</code>和<code class="highlighter-rouge">call</code>的，我下载了<code class="highlighter-rouge">Chrome V8</code>的源码，是<code class="highlighter-rouge">C</code>写的，看了以后头更大了……</p>
+
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="footer shadow-sides">
+    <div class="footer-wrapper">
+      <a href="https://mystist.github.io">https://mystist.github.io</a> | <span>gjl87910lq@gmail.com</span> ❤️
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>

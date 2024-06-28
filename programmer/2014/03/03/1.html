@@ -1,0 +1,206 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=8" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>后端没人性，前端无节操</title>
+  <link rel="stylesheet" type="text/css" href="/css/github.css" />
+  <link rel="stylesheet" type="text/css" href="/css/template.css" />
+</head>
+<body>
+
+<div class="wrapper">
+
+  <div class="header shadow">
+    <div class="header-wrapper">
+      <div class="header-logo">
+        <span><a href="/">LIBER</a></span>
+      </div>
+      <div class="header-nav">
+        <ul>
+          <li><a href="/"><span>首页</span></a></li>
+          <li><a href="/programmer.html"><span>程序员</span></a></li>
+          <li><a href="/thoughts.html"><span>思考</span></a></li>
+          <li><a href="/reading.html"><span>阅读</span></a></li>
+          <li><a href="/all.html"><span>全部内容</span></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="main shadow-sides">
+
+    <div class="main-wrapper">
+
+      <div class="main-title">后端没人性，前端无节操</div>
+
+      <div class="main-foot">
+        <span>Liber 2014-03-03 13:41 </span>
+      </div>
+
+      <div class="main-text">
+        <p>近日，有这么个事儿：<br />
+根据后端返回的一个数据List，生成一颗有层次的树形结构。</p>
+
+<p>为什么说「后端没人性」呢？相信大家看了那个数据List之后就明白了。<br />
+至于「前端无节操」，是因为我用了一个递归的方法，实现了层次的无限级递归显示。</p>
+
+<p>本文最大的价值在于：<br />
+提醒自己，处理很多问题的时候，别忘了想一想递归的方式，有时候并不像想象的那么复杂。</p>
+
+<p>注：该示例中有很多地方是对实际需求中细节的处理，大家主要去看体现递归思想的核心部分即可。</p>
+
+<p>代码一瞥：</p>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code>
+  <span class="nl">getTreeListFromListByLevels</span><span class="p">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">list</span><span class="p">,</span> <span class="nx">levels</span><span class="p">,</span> <span class="nx">options</span><span class="p">)</span> <span class="p">{</span>
+  
+    <span class="kd">var</span> <span class="nx">getObjFromItemAndOptionsAtLevels</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">item</span><span class="p">,</span> <span class="nx">options</span><span class="p">,</span> <span class="nx">levels</span><span class="p">)</span> <span class="p">{</span>
+    
+      <span class="kd">var</span> <span class="nx">name</span> <span class="o">=</span> <span class="s1">''</span><span class="p">;</span>
+      <span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="nx">levels</span><span class="p">.</span><span class="nx">length</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span><span class="o">--</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span><span class="p">(</span><span class="nx">item</span><span class="p">[</span><span class="nx">levels</span><span class="p">[</span><span class="nx">i</span><span class="p">]])</span> <span class="p">{</span>
+          <span class="nx">name</span> <span class="o">=</span> <span class="nx">item</span><span class="p">[</span><span class="nx">levels</span><span class="p">[</span><span class="nx">i</span><span class="p">]];</span>
+          <span class="k">break</span><span class="p">;</span>
+        <span class="p">}</span>
+      <span class="p">}</span>
+      <span class="kd">var</span> <span class="nx">obj</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">'name'</span><span class="p">:</span> <span class="nx">name</span>
+      <span class="p">};</span>
+      
+      <span class="nx">_</span><span class="p">.</span><span class="nx">each</span><span class="p">(</span><span class="nx">options</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">value</span><span class="p">,</span> <span class="nx">key</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">obj</span><span class="p">[</span><span class="nx">key</span><span class="p">]</span> <span class="o">=</span> <span class="nx">item</span><span class="p">[</span><span class="nx">value</span><span class="p">];</span>
+      <span class="p">});</span>
+      
+      <span class="k">return</span> <span class="nx">obj</span><span class="p">;</span>
+    <span class="p">};</span>
+    
+    <span class="kd">var</span> <span class="nx">isItemIsLeafAtLevels</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">item</span><span class="p">,</span> <span class="nx">levels</span><span class="p">)</span> <span class="p">{</span>
+      <span class="kd">var</span> <span class="nx">count</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+      <span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">levels</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span><span class="p">(</span><span class="nx">item</span><span class="p">[</span><span class="nx">levels</span><span class="p">[</span><span class="nx">i</span><span class="p">]])</span> <span class="p">{</span>
+          <span class="nx">count</span><span class="o">++</span><span class="p">;</span>
+        <span class="p">}</span>
+      <span class="p">}</span>
+      <span class="k">return</span> <span class="nx">count</span> <span class="o">&lt;=</span> <span class="mi">1</span> <span class="p">?</span> <span class="kc">true</span> <span class="p">:</span> <span class="kc">false</span><span class="p">;</span>
+    <span class="p">};</span>
+  
+    <span class="kd">var</span> <span class="nx">treeList</span> <span class="o">=</span> <span class="p">[];</span>
+    <span class="kd">var</span> <span class="nx">levelList</span> <span class="o">=</span> <span class="nx">_</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">list</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">item</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="nx">item</span><span class="p">[</span><span class="nx">levels</span><span class="p">[</span><span class="mi">0</span><span class="p">]];</span>
+    <span class="p">});</span>
+    
+    <span class="kd">var</span> <span class="nx">brokenList</span> <span class="o">=</span> <span class="nx">_</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">list</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">item</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="o">!</span><span class="nx">item</span><span class="p">[</span><span class="nx">levels</span><span class="p">[</span><span class="mi">0</span><span class="p">]];</span>
+    <span class="p">});</span>
+    <span class="k">if</span><span class="p">(</span><span class="nx">brokenList</span><span class="p">.</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">_</span><span class="p">.</span><span class="nx">each</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">getTreeListFromListByLevels</span><span class="p">(</span><span class="nx">brokenList</span><span class="p">,</span> <span class="nx">levels</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span> <span class="nx">options</span><span class="p">),</span> <span class="kd">function</span><span class="p">(</span><span class="nx">objItem</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">treeList</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">objItem</span><span class="p">);</span>
+      <span class="p">},</span> <span class="k">this</span><span class="p">);</span>
+    <span class="p">}</span>
+    
+    <span class="k">if</span><span class="p">(</span><span class="nx">levels</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="p">{</span>
+      
+      <span class="kd">var</span> <span class="nx">uniqListArr</span> <span class="o">=</span> <span class="nx">_</span><span class="p">.</span><span class="nx">uniq</span><span class="p">(</span><span class="nx">_</span><span class="p">.</span><span class="nx">pluck</span><span class="p">(</span><span class="nx">levelList</span><span class="p">,</span> <span class="nx">levels</span><span class="p">[</span><span class="mi">0</span><span class="p">]));</span>
+      
+      <span class="kd">var</span> <span class="nx">branchList</span> <span class="o">=</span> <span class="nx">_</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">levelList</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">item</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="o">!</span><span class="nx">isItemIsLeafAtLevels</span><span class="p">(</span><span class="nx">item</span><span class="p">,</span> <span class="nx">levels</span><span class="p">);</span>
+      <span class="p">});</span>
+      <span class="kd">var</span> <span class="nx">uniqBranchArr</span> <span class="o">=</span> <span class="nx">_</span><span class="p">.</span><span class="nx">uniq</span><span class="p">(</span><span class="nx">_</span><span class="p">.</span><span class="nx">pluck</span><span class="p">(</span><span class="nx">branchList</span><span class="p">,</span> <span class="nx">levels</span><span class="p">[</span><span class="mi">0</span><span class="p">]));</span>
+      
+      <span class="kd">var</span> <span class="nx">leafList</span> <span class="o">=</span> <span class="nx">_</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">levelList</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">item</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="nx">isItemIsLeafAtLevels</span><span class="p">(</span><span class="nx">item</span><span class="p">,</span> <span class="nx">levels</span><span class="p">);</span>
+      <span class="p">});</span>
+      
+      <span class="nx">_</span><span class="p">.</span><span class="nx">each</span><span class="p">(</span><span class="nx">uniqListArr</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">listItem</span><span class="p">)</span> <span class="p">{</span>
+      
+        <span class="kd">var</span> <span class="nx">children</span> <span class="o">=</span> <span class="p">[];</span>
+        <span class="k">if</span><span class="p">(</span><span class="nx">_</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="nx">uniqBranchArr</span><span class="p">,</span> <span class="nx">listItem</span><span class="p">)</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+          <span class="kd">var</span> <span class="nx">currentList</span> <span class="o">=</span> <span class="nx">_</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">branchList</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">item</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="nx">item</span><span class="p">[</span><span class="nx">levels</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span> <span class="o">===</span> <span class="nx">listItem</span><span class="p">;</span>
+          <span class="p">});</span>
+          <span class="nx">children</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">getTreeListFromListByLevels</span><span class="p">(</span><span class="nx">currentList</span><span class="p">,</span> <span class="nx">levels</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span> <span class="nx">options</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="kd">var</span> <span class="nx">branchObj</span> <span class="o">=</span> <span class="p">{</span>
+          <span class="s1">'name'</span><span class="p">:</span> <span class="nx">listItem</span><span class="p">,</span>
+          <span class="s1">'children'</span><span class="p">:</span> <span class="nx">children</span><span class="p">,</span>
+          <span class="s1">'open'</span><span class="p">:</span> <span class="kc">false</span>
+        <span class="p">};</span>
+        <span class="nx">treeList</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">branchObj</span><span class="p">);</span>
+        
+        <span class="nx">_</span><span class="p">.</span><span class="nx">each</span><span class="p">(</span><span class="nx">leafList</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">leafItem</span><span class="p">)</span> <span class="p">{</span>
+          <span class="k">if</span><span class="p">(</span><span class="nx">leafItem</span><span class="p">[</span><span class="nx">levels</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span> <span class="o">===</span> <span class="nx">listItem</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">branchObj</span><span class="p">.</span><span class="nx">children</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">getObjFromItemAndOptionsAtLevels</span><span class="p">(</span><span class="nx">leafItem</span><span class="p">,</span> <span class="nx">options</span><span class="p">,</span> <span class="nx">levels</span><span class="p">));</span>
+          <span class="p">}</span>
+        <span class="p">});</span>
+        
+      <span class="p">},</span> <span class="k">this</span><span class="p">);</span>
+    
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    
+      <span class="nx">_</span><span class="p">.</span><span class="nx">each</span><span class="p">(</span><span class="nx">levelList</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">item</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">treeList</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">getObjFromItemAndOptionsAtLevels</span><span class="p">(</span><span class="nx">item</span><span class="p">,</span> <span class="nx">options</span><span class="p">,</span> <span class="nx">levels</span><span class="p">));</span>
+      <span class="p">});</span>
+      
+    <span class="p">}</span>
+    
+    <span class="k">return</span> <span class="nx">treeList</span><span class="p">;</span>
+  <span class="p">}</span>
+  
+</code></pre>
+</div>
+
+<p>运行效果：</p>
+
+<iframe frameborder="0" scrolling="no" src="/liber/getTree/demo.html" width="100%" height="320px;"></iframe>
+
+<p><a href="/liber/getTree/getTree.rar">Source Download</a></p>
+
+<p>后记：<br />
+zTree可以接受两种数据：</p>
+
+<p>1. 标准JSON数据：</p>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code>
+<span class="kd">var</span> <span class="nx">nodes</span> <span class="o">=</span> <span class="p">[</span>
+	<span class="p">{</span><span class="na">name</span><span class="p">:</span> <span class="s2">"父节点1"</span><span class="p">,</span> <span class="na">children</span><span class="p">:</span> <span class="p">[</span>
+		<span class="p">{</span><span class="na">name</span><span class="p">:</span> <span class="s2">"子节点1"</span><span class="p">},</span>
+		<span class="p">{</span><span class="na">name</span><span class="p">:</span> <span class="s2">"子节点2"</span><span class="p">}</span>
+	<span class="p">]}</span>
+<span class="p">];</span>
+
+</code></pre>
+</div>
+
+<p>2. 简单JSON数据：</p>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code>
+<span class="kd">var</span> <span class="nx">nodes</span> <span class="o">=</span> <span class="p">[</span>
+	<span class="p">{</span><span class="na">id</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> <span class="na">pId</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span> <span class="na">name</span><span class="p">:</span> <span class="s2">"父节点1"</span><span class="p">},</span>
+	<span class="p">{</span><span class="na">id</span><span class="p">:</span><span class="mi">11</span><span class="p">,</span> <span class="na">pId</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> <span class="na">name</span><span class="p">:</span> <span class="s2">"子节点1"</span><span class="p">},</span>
+	<span class="p">{</span><span class="na">id</span><span class="p">:</span><span class="mi">12</span><span class="p">,</span> <span class="na">pId</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> <span class="na">name</span><span class="p">:</span> <span class="s2">"子节点2"</span><span class="p">}</span>
+<span class="p">];</span>
+
+</code></pre>
+</div>
+
+<p>我这里用的是前一种，事实上，用后一种方式处理起来会更简单。<br />
+看到别人用的第二种方式，顿时鄙视一下自己。总结起来，还是情报收集的不够充分，然后盲目动手造成的。</p>
+
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="footer shadow-sides">
+    <div class="footer-wrapper">
+      <a href="https://mystist.github.io">https://mystist.github.io</a> | <span>gjl87910lq@gmail.com</span> ❤️
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>

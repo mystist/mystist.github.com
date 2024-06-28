@@ -1,0 +1,159 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=8" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>《JavaScript编程全解》</title>
+  <link rel="stylesheet" type="text/css" href="/css/github.css" />
+  <link rel="stylesheet" type="text/css" href="/css/template.css" />
+</head>
+<body>
+
+<div class="wrapper">
+
+  <div class="header shadow">
+    <div class="header-wrapper">
+      <div class="header-logo">
+        <span><a href="/">LIBER</a></span>
+      </div>
+      <div class="header-nav">
+        <ul>
+          <li><a href="/"><span>首页</span></a></li>
+          <li><a href="/programmer.html"><span>程序员</span></a></li>
+          <li><a href="/thoughts.html"><span>思考</span></a></li>
+          <li><a href="/reading.html"><span>阅读</span></a></li>
+          <li><a href="/all.html"><span>全部内容</span></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="main shadow-sides">
+
+    <div class="main-wrapper">
+
+      <div class="main-title">《JavaScript编程全解》</div>
+
+      <div class="main-foot">
+        <span>Liber 2014-02-18 13:31 </span>
+      </div>
+
+      <div class="main-text">
+        <p><img style="padding-right: 10px;" src="/images/reading/3_34.jpg" /></p>
+
+<p><em>007:</em><br />
+另一方面，扩展语言是在内建对象的应用程序（宿主环境）中运行程序的。宿主应用程序会在这时收到一些运行时的上下文信息。JavaScript会以全局对象作为根节点的对象树的形式，接受这些上下文信息。<strong>在启动时，JavaScript从宿主环境获取的对象树就被成为宿主对象</strong>。</p>
+
+<p><em>027:</em></p>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code>  <span class="kd">var</span> <span class="nx">sobj1</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">String</span><span class="p">(</span><span class="s1">'abc'</span><span class="p">);</span>
+  <span class="kd">var</span> <span class="nx">sobj2</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">String</span><span class="p">(</span><span class="s1">'abc'</span><span class="p">);</span>
+  <span class="nx">sobj1</span> <span class="o">==</span> <span class="nx">sobj2</span><span class="p">;</span> <span class="c1">// false</span>
+  <span class="nx">sobj1</span> <span class="o">===</span> <span class="nx">sobj2</span><span class="p">;</span> <span class="c1">// false</span>
+</code></pre>
+</div>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code>  <span class="kd">var</span> <span class="nx">sobj</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">String</span><span class="p">(</span><span class="s1">'abc'</span><span class="p">);</span>
+  <span class="kd">var</span> <span class="nx">s</span> <span class="o">=</span> <span class="s1">'abc'</span><span class="p">;</span>
+  <span class="nx">sobj</span> <span class="o">==</span> <span class="nx">s</span><span class="p">;</span> <span class="c1">// true</span>
+  <span class="nx">sobj</span> <span class="o">===</span> <span class="nx">s</span><span class="p">;</span> <span class="c1">// false</span>
+</code></pre>
+</div>
+
+<p><em>081:</em></p>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code>  <span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="nx">a</span> <span class="o">||</span> <span class="mi">7</span><span class="p">;</span>
+</code></pre>
+</div>
+
+<p><em>082:</em><br />
+访问未声明的变量会出错，但访问不存在的属性并不会引起错误。</p>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code>  <span class="nx">print</span><span class="p">(</span><span class="nx">x</span><span class="p">);</span> <span class="c1">// ReferenceError</span>
+  <span class="nx">print</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">x</span><span class="p">);</span> <span class="c1">// undefined</span>
+</code></pre>
+</div>
+
+<p><em>090:</em><br />
+在C++中delete的功能是释放所引用的对象的内存，而在JavaScript中delete只用于删除对象中的属性。用映射中的属于来说就是，仅仅从映射中删除键，使其对应的值（对于对象来说也就是属性值）与该键不再有对应关系。<strong>虽然失去了引用的对象最终可能因为垃圾回收机制而消失，不过这并不是delete运算的直接功能。</strong></p>
+
+<p><em>096:</em></p>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code>  <span class="kd">var</span> <span class="nx">obj</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="na">x</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+    <span class="na">doit</span><span class="p">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+      <span class="nx">print</span><span class="p">(</span><span class="s1">'method is called.'</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="nx">x</span><span class="p">);</span> 
+    <span class="p">}</span>
+  <span class="p">};</span>
+  <span class="nx">obj</span><span class="p">.</span><span class="nx">doit</span><span class="p">();</span> <span class="c1">// method is called. 3</span>
+  
+  <span class="kd">var</span> <span class="nx">fn</span> <span class="o">=</span> <span class="nx">obj</span><span class="p">.</span><span class="nx">doit</span><span class="p">;</span>
+  <span class="nx">fn</span><span class="p">();</span> <span class="c1">// method is called. undefined</span>
+  
+  <span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+  <span class="nx">fn</span><span class="p">();</span> <span class="c1">// method is called. 5</span>
+  
+  <span class="kd">var</span> <span class="nx">obj2</span> <span class="o">=</span> <span class="p">{</span> <span class="na">x</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span> <span class="na">doit2</span><span class="p">:</span> <span class="nx">fn</span> <span class="p">};</span>
+  <span class="nx">obj2</span><span class="p">.</span><span class="nx">doit2</span><span class="p">();</span> <span class="c1">// method is called. 4</span>
+</code></pre>
+</div>
+
+<p><em>补充：《JavaScript高级程序设计》第三版</em></p>
+
+<p><img style="width: 100%;" src="/images/2014_02_18_2.jpg" />
+<img style="width: 100%;" src="/images/2014_02_18_3.jpg" /></p>
+
+<p><em>补充：《JavaScript高级程序设计》第三版</em></p>
+
+<p><img style="width: 100%;" src="/images/2014_02_18_1.jpg" /></p>
+
+<p><em>126:</em></p>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code> <span class="kd">function</span> <span class="nx">f</span><span class="p">(</span><span class="nx">arg</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">var</span> <span class="nx">n</span> <span class="o">=</span> <span class="mi">123</span> <span class="o">+</span> <span class="nb">Number</span><span class="p">(</span><span class="nx">arg</span><span class="p">);</span>
+  <span class="kd">function</span> <span class="nx">g</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">print</span><span class="p">(</span><span class="s1">'n is'</span> <span class="o">+</span> <span class="nx">n</span><span class="p">);</span>
+    <span class="c1">// print('g is called');</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="nx">g</span><span class="p">;</span>
+ <span class="p">}</span>
+ 
+ <span class="kd">var</span> <span class="nx">g2</span> <span class="o">=</span> <span class="nx">f</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+ <span class="kd">var</span> <span class="nx">g3</span> <span class="o">=</span> <span class="nx">f</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
+ 
+ <span class="nx">g2</span><span class="p">();</span> <span class="c1">// n is 125</span>
+ 
+ <span class="nx">g3</span><span class="p">();</span> <span class="c1">// n is 126</span>
+ 
+ <span class="kd">var</span> <span class="nx">n</span> <span class="o">=</span> <span class="mi">7</span><span class="p">;</span>
+ <span class="nx">g3</span><span class="p">();</span> <span class="c1">// n is 126</span>
+</code></pre>
+</div>
+
+<p><em>240:</em><br />
+pipe()具有两种功能。其一是更改参数的值。<br />
+另一个功能是Deferred对象链。</p>
+
+<p><em>318:</em><br />
+没有明确指定有效期限的Cookie的有效期仅限于浏览器进程存在的范围内。也就是说，一旦浏览器关闭，Cookie就无效了。<br />
+而在指定了Cookie的有效期后，它就会被保存在浏览器所在的本地磁盘中，在浏览器重启后Cookie也有效。<br />
+Web应用在接收了用户ID与密码之后，会通过内部的数据库或目录验证密码。如果验证成功，就会创建用于管理登录状态的会话，并将会话ID作为Cookie值返回。<br />
+浏览器会将Cookie发送至Cookie发表者的Web服务器中，对于发送至其他Web服务器的请求，则不会发送该Cookie。这一限制与跨源限制相类似。</p>
+
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="footer shadow-sides">
+    <div class="footer-wrapper">
+      <a href="https://mystist.github.io">https://mystist.github.io</a> | <span>gjl87910lq@gmail.com</span> ❤️
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
