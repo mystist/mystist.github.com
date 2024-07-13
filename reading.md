@@ -1,7 +1,7 @@
 ---
 layout: template
 title: 阅读
-text: 没有生不逢时，只是未遇好书<br /><br />免责申明：所有笔记内容仅供个人学习参考使用，转载需取得原作者同意
+text: 免责申明：所有笔记内容仅供个人学习参考使用，转载需取得原作者同意
 ---
 
 <script src="js/jquery.js"></script>
