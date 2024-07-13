@@ -1,196 +1,121 @@
 ---
 layout: template
 title: I'm Liber
-text: 13681698273 / gjl87910lq@gmail.com（Last Modified at 2017-03-28）
+text: 13681698273 / gjl87910lq@gmail.com（Last Modified at 2024-07-13）
 ---
 
-[中文](liber.html) / [English](liber_en.html)  
-[中文版下载](images/liber_cv.doc) / [English Version Download](images/liber_cv_en.doc)
 
-<img src="/images/liber_cv.png" class="cv-image" />
+<img src="/images/liber_cv_2.png" class="cv-image" />
 
-~~~ html
-龚峻磊 (LIBER GONG) - 13681698273  
-gjl87910lq@126.com
-Christian, 30 years old, live in Shanghai, looking for a job in Shenzhen.  
-6+ years work experience, currently work for SAP as a front-end developer.  
+### 基本信息
 
-Key person in the Shanghai team, share ideas and thoughts with manager, take part in the team member interviewing.  
-Continuous outstanding performance review.  
-Think as PO, coding as mechanic.  
-Devote into Writing Maintainable Code.  
-Nice person, awesome communicator and cooperator.
-~~~
+龚峻磊 Liber 男 1987-11-01 现居上海 13681698273  
+Email: gjl87910lq@gmail.com  
+Blog: [https://mystist.github.io/](https://mystist.github.io/)  
+Github: [https://github.com/mystist/](https://github.com/mystist/)
 
--- 像国王一样思考，像侍从一样辛劳。  
-"Be a king in your mind but do the work of a servant."
+### 关于我
 
-[[Blog]](http://mystist.github.io/) - [[Github]](https://github.com/Mystist) - [[Stackoverflow]](http://stackoverflow.com/users/1773006/liber)  
-[Project：1050](http://1050.14201420.com/dev-blog)  
-[Project：bootstrap-waterfall](https://mystist.github.io/bootstrap-waterfall/)
+The lifelong learner, the perfect "get things done" person.
 
-***
+普通院校毕业，却通过优秀的学习能力和做事能力，在一流公司工作，并取得了优异的成绩：
 
-### Technique:  
-Excellent in: JavaScript  
-Master in: HTML, CSS, jQuery, Backbonejs, Bootstrap, Sass  
-Familiar with: Ruby, Rails, MySQL  
-Know: React, Redux, Docker, Kubernetes, OpenShift, OAuth, Elixir  
-Studying now: Node, Redis, Express, Webpack, ES2015, Vue2, Weex, Vuex  
+- 拒绝Baidu、eBay的offer加入SAP，并连续获得最高绩效Outstanding
+- 加入天才云集的Conflux团队并主导了其核心产品的开发
+- Github 100+ stars project builder
 
-***
+资深前端工程师，全栈工程师，独立开发者  
+具备完整的大型项目经验，深度参与某SaaS应用（53M+ 订阅，部署在全球15+DC）的全栈开发（前端+后端+架构演进+DevOps）  
+责任心强，良好的产品taste，主导开发了多款Web产品和企业软件项目（见附录1）  
+过硬的专业能力以及丰富的项目经验，曾在某Web3 DAO社区担任技术顾问  
+兴趣驱动，动手能力强，独立开发者（见附录2）
 
-### Bio:  
-If you are looking for:  
-Experienced  React / Vue / Angular developer.  
-Node expert.  
-HTML5 Native App developer, using like: React Native / Weex / Lonic.  
-Pity that I might not be the perfect one currently.  
-Because my current job does not use those tech, so I just play it for fun my part time.  
-Eg: [[mystist-worker]](https://github.com/Mystist/mystist-worker) and [[dong]](https://github.com/Mystist/dong)   
-Give me a chance and a little time, it won't be too hard.  
+在管理和产品上面积累了一些经验和想法，逐渐内化成了一些能力模型（见附录3）  
+两年前与SAP前同事合伙创办了 Wondervoy，任首席工程师，一手打造了其AI Agent平台  
+希望在未来的职业生涯中，能够与公司共同成长，实现更大的突破
 
-If you are looking for:  
-Fully experienced Web developer.  
-JavaScript expert.  
-Clearly understand how browser works with JavaScript, Rendering engine and how animation works.  
-Experienced jQuery, Backbonejs, Bootstrap developer, jQuery plugin develop master.  
-A potential full-stack developer.  
-Call me now: 136-8169-8273  
+### 技术栈
 
-Good at solve problem, love challenge, full of passion, [THE MEDIATOR](https://www.16personalities.com/infp-personality).  
-Good at self-study and try out things, life-long learner.  
-Good sense for products and business, love thinking, often result good advises. 
+- React, Nextjs, TailwindCSS, react-query, TypeScript, ES6
+- ChatGPT, OpenAI, RAG
+- Nodejs, Nestjs, Express, Golang, Python, Ruby
+- AWS, Kafka, Redis, Postgres, Docker, Nginx, Kubernetes
+- 浏览器原理，HTTP 原理，Linux 操作系统，计算机网络
 
-***  
+### 主要项目经验
 
-### Main Experiences:  
-**The 1050 Poetry of Christian** (Personal project: [1050](http://1050.14201420.com/dev-blog))  
-Songs platform of Christian.  
-Tech-stack: Javascript, Ruby, Sinatra, Backbonejs, Requirejs, Openshift, Qiniu，QQ Open API  
+Agent Matrix（见附录1）:  
+担任首席工程师，负责整个产品的设计与实现。
 
-**Bootstrap-waterfall** (Personal project [bootstrap-waterfall](https://mystist.github.io/bootstrap-waterfall/))  
-Responsive waterfall like image layout plugin.  
-Tech-stack: Javascript, jQuery, Bootstrap  
+PMS Service:  
+一个支持使用自然语言管理酒店业务的PMS服务，与Google Sheet深度集成，使用ChatGPT实现自然语言交互，使用kafka实现了命令的消息传递。  
+负责架构的设计与实现，详见：[https://mystist.github.io/programmer/2023/05/04/1.html](https://mystist.github.io/programmer/2023/05/04/1.html)
 
-**Forms & List** (Single Page application)  
-Used as a internal demonstrate system, shows the possibilities of extend a common codebase to six different use cases:  
-Knowledge based system, voting, survey, form, examination, KPI.  
-Spent one month of my time to achieve, and got many kudos afterwards.  
-Tech-stack: Javascript, Ruby On Rails, jQuery, Backbonejs, MySQL, Bootstrap, Sass.  
+Swappi（见附录1）:  
+担任核心开发人员，主导了除合约部分的整个开发，以及CICD自动化等DevOps的实现，也包括其info站点的开发。  
+提供了高性能的页面，快速解决了info站点底层与The Graph协议不兼容的问题，保证了项目的顺利上线。
 
-**Accessibility automation toolkit** (Tad)  
-Tad can run automation test for the website, and list all the violations.  
-eg: focusable elements, tab orders, key bindings, etc.  
-Also, tad can run automatically through Jenkins, then give results afterwards.  
-Tech-stack: Javascript, Webpack, ES2015, Babel, jQuery, Casperjs, QUnit
+Meldex:   
+利用闪电贷+借贷的方式实现的杠杆DEX，根据最大质押率，可以实现最多5倍杠杆。  
+负责整个前端的设计与实现，以及实现将Venus借贷协议的ABI接口方法转化成前端杠杆形式的业务逻辑。
 
-**RSS generator** (Personal project, in progress: [mystist-worker](https://github.com/Mystist/mystist-worker))  
-Concepts: learning, thinking, generation.  
-Learning: learn new thing from the articles.  
-Thinking: understand and rewrite a new article based on the main idea of the articles.  
-Generation: generate your own articles based on the new articles.  
-Tech-stack: Redis, Node, Express, Openshift(Next Gen)  
+SAP Jam:  
+[https://help.sap.com/docs/SAP_JAM_COLLABORATION](https://help.sap.com/docs/SAP_JAM_COLLABORATION)  
+SAP Jam 是SAP旗下的一款SaaS应用，拥有5300万订阅，产品部署在全球15多个数据中心。  
+全栈开发（前端+后端+架构演进+DevOps），前端主要是React, BackboneJS技术栈，后端是用Rails以及Ruby, Go等实现的Microservice，DevOps是Kubernetes, Gardener
 
-**X company's Satisfaction Management System** (Part-time project, live from Nov.2015 to now)  
-I took part in the project all the process. From discussing about the requirements to push it out to production.  
-Mainly a survey system and a 360 KPI system, and generate reports for the departments and sub-companies.  
-It's my first time that try to build a system uses pure front-end technologies.  
-Tech-stack: Javascript, Underscorejs, jQuery  
+### 工作经历
 
-***  
+- 2022.09 - 现在 Wondervoy 首席工程师
+- 2021.09 - 2022.07 上海树图区块链研究院 Conflux 高级前端工程师
+- 2014.06 - 2021.09 SAP 高级软件工程师 DevOps工程师
+- 2012.09 - 2014.05 岱嘉医学 前端工程师
+- 2011.05 - 2012.08 南软科技 软件工程师
+- 2010.09 - 2011.04 邻智网络 Web开发工程师
 
-### Other Experiences:  
+### 教育经历 & 证书
 
-**SAP Jam Front-end Plugins**  
-`jam.accessibility.js`: Accessibility applying tools for Jam.  
-`jam.sticker.js`: Stick box like elements for Jam.  
-`jam.hotag.js`: Tag cloud plugin for Jam.  
-Tech-stack: Javascript, jQuery  
+- 2006 - 2010 本科，呼伦贝尔学院，哈尔滨师范大学，计算机科学与技术
+- 2008-06 ACM/ICPC大学生程序设计竞赛 东北地区三等奖
+- 2008-05 ACM/ICPC大学生程序设计竞赛 黑龙江省二等奖
 
-**SAP Jam Features**  
-I also built those features below:  
-The whole front-end of: Tasks, Search, Tag Cloud Widget, Content Rating.  
-Some bug fix and enhancements for back-end features.  
-Tech-stack: Ruby on Rails, Javascript, Backbonejs   
+### 附录
 
-**MRS**  
-MRS is a Data visualization system: Medical Report System.  
-Version 1 use BIRT, Version 2 use OLAP and eCharts.  
-Communicate with PM.  
-Take charge of front-end team.  
-Create a tool to custom report: BIKit.  
-Know more about OLAP, eCharts and hightCharts.  
-Tech-stack: BI, OLAP, Javascript, MDX, eCharts, BIRT, hightCharts, JSON  
+#### 附录1 - 主导开发的主要Web产品
 
-**MiniWorkStation**  
-A system that the Doctors and Nurses can work together.  
-Nurse can do: Manage patients, Make plan for patients, execute docter orders, etc.  
-Docter can do: Manage orders, Make applications and Add dialysis orders for patients.  
-Know more about the Roles of Designer, Front-End and Back-End.  
-Know more about Front-End MVC.  
-Business technologies about HIS.  
-Tech-stack: Javascript, jQuery, MyEclipse  
+名称：Agent Matrix  
+地址：[https://agent.wondervoy.com/en/auth](https://agent.wondervoy.com/en/auth)  
+介绍：Wondervoy旗下的一款AI Agent平台，旨在通过Atomic Agents + Agent Matrix可组合的设计模式，满足企业端复杂多变的业务需求，助力企业利用AI的力量实现业务增长。详细的产品逻辑见：[https://mystist.github.io/thoughts/2023/12/11/1.html](https://mystist.github.io/thoughts/2023/12/11/1.html)
 
-**Time-track plugin**  
-jQuery plugin to manage dates and events.  
-Learnt how to write jQuery plugins.  
-Tech-stack: Javascript, jQuery  
+名称：Swappi  
+地址：[https://app.swappi.io/](https://app.swappi.io/) [https://info.swappi.io/](https://info.swappi.io/)  
+介绍：Conflux旗下的核心DEX产品，日均活跃用户在1000左右。
 
-**PC client for X logistics company**  
-The customers of X can use the website to make orders online, search informations.  
-The carriers of X can use the website to print order infotmations.  
-Work with architect engineer.  
-Design and Achieve the website.  
-Learnt the CN lauguage made by NanRuan.  
-Learnt something about UI, UE.  
-Learnt business technologies about logistics.  
-Tech-stack: Javascript, jQuery, CN  
+#### 附录1 - 主导开发的主要企业软件项目
 
-**ERP system for X company**  
-X company is a medical made/sell company.  
-Achieve clients management.  
-Technical support on site.  
-Know how to be presence of mind when support customer on site.  
-Business technologies about ERP.  
-Tech-stack: Javascript, jQuery  
+名称：某央企的AI知识库项目  
+介绍：基于ChatGPT的知识库项目，并作为AI董秘助手嵌入了其官网。私有数据库存储embedding向量数据，实现了自己的chunk分段逻辑。
 
-**Group of iTry86**  
-iTry86 is a website that can trade stocks with virtual money.  
-Group of iTry86 is the subsite that users can communicate with each other there.  
-Work with Designer.  
-Know more about jQuery and Memcached.  
-Know how to work with colleagues.  
-Business technologies about Finance.  
-Tech-stack: C#, Javascript, jQuery, Visual Studio 2008, Memcached  
+名称：某集团满意度系统  
+介绍：企业内部的调研系统，主要包括问卷系统和360度考评系统两个模块，并根据分公司以及不同部门展示相应的报告，多年稳定运行并获得了良好的反馈。
 
-***
+#### 附录2 - 独立开发作品
 
-### Work Experiences:  
-**2014.06 - Now SAP**
-*(SAP Jam is a team under SAP Collaboration department, their main product Jam is a SaaS intranet social network. People can freely share feeds, join groups, upload documents, create tasks, etc...)*  
+早年开发了bootstrap-waterfall瀑布流布局插件，收获了Github 100+ stars  
+[https://mystist.github.io/bootstrap-waterfall/](https://mystist.github.io/bootstrap-waterfall/)  
+支持响应式布局的jQuery瀑布流插件，支持异步加载，代码简洁，模块清晰易懂，扩展性强。
 
-**2012.09 - 2014.05 DJHealthUnion**
-*(DJHealthUnion is a foreign funded company that build hospital systems)*  
+开发上线过一款基督徒赞美诗应用：1050，可以听赞美诗，查看上传歌曲歌谱
 
-**2011.05 - 2012.08 NanRuan tech.**
-*(NanRuan tech. is a soft company that focus on build logistics systems)*  
+开发过桌游库特牌的web版，通过ReactiveX的思想实现了整个底层逻辑，并抽象出了简洁的卡牌实现接口，实现了怪兽势力的对局Demo
 
-**2010.09 - 2011.04 LinZhi Network**
-*(LinZhi Network is a financial network company)*  
+开发上线过一款RSS订阅微信小程序，可以订阅自己喜欢的RSS源获取每日最新资讯
 
-***
+开发了一款聊天智能助手npm包：react-chatgpt，可以作为一个数字人UI嵌入任何网页使用。  
+[https://github.com/mystist/react-chatgpt](https://github.com/mystist/react-chatgpt)
 
-### Education:  
-2006 - 2010	Bachelor, Hulunbeir College & Harbin Normal University, Computer Science and Technology  
+#### 附录3 - 能力模型
 
-***
+学习知识和技术、向上管理、项目评估、项目管理、会议主持、带团队、战略方向、面试候选人、商业的本质
 
-### Certificate:    
-2008-06	CET4  
-2008-06	Third Price in Northeast China, ACM/ICPC 2008   
-2008-05	Second Price in Hei Longjiang Province, ACM/ICPC 2008  
-
-***
-
-[Some Demos](/works.html)   
+详见：[https://mystist.github.io/thoughts/2024/07/12/1.html](https://mystist.github.io/thoughts/2024/07/12/1.html)

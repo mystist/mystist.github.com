@@ -96,8 +96,9 @@ hr {
 }
 
 .cv-image {
-  width: 169px;
-  float: left;
+  width: 180px;
+  float: right;
+  padding: 1em 2em;
 }
 
 /* -- header start -- */
