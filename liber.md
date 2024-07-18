@@ -1,7 +1,7 @@
 ---
 layout: template
 title: I'm Liber
-text: 13681698273 / gjl87910lq@gmail.com（最后更新时间： 2024-07-13）
+text: 13681698273 / gjl87910lq@gmail.com（最后更新时间： 2024-07-18）
 ---
 
 <img src="/images/liber_cv_2.png" class="cv-image" />
@@ -23,11 +23,11 @@ The lifelong learner, the perfect "get things done" person.
 - 加入天才云集的Conflux团队并主导了其核心产品的开发
 - Github 100+ stars project builder
 
-资深前端工程师，全栈工程师，独立开发者  
+资深前端工程师，全栈工程师  
 具备完整的大型项目经验，深度参与某SaaS应用（53M+ 订阅，部署在全球15+DC）的全栈开发（前端+后端+架构演进+DevOps）  
 责任心强，良好的产品taste，主导开发了多款Web产品和企业软件项目（见附录1）  
 过硬的专业能力以及丰富的项目经验，曾在某Web3 DAO社区担任技术顾问  
-兴趣驱动，动手能力强，独立开发者（见附录2）
+自驱力强，动手能力强，独立开发者（见附录2）
 
 在管理和产品上面积累了一些经验和想法，逐渐内化成了一些能力模型（见附录3）  
 两年前与SAP前同事合伙创办了 Wondervoy，任首席工程师，一手打造了其AI Agent平台  
@@ -52,7 +52,7 @@ PMS Service:
 
 Swappi（见附录1）:  
 担任核心开发人员，主导了除合约部分的整个开发，以及CICD自动化等DevOps的实现，也包括其info站点的开发。  
-提供了高性能的页面，快速解决了info站点底层与The Graph协议不兼容的问题，保证了项目的顺利上线。
+提供了高质量、高性能的页面，快速解决了info站点底层与The Graph协议不兼容的问题。
 
 Meldex:   
 利用闪电贷+借贷的方式实现的杠杆DEX，根据最大质押率，可以实现最多5倍杠杆。  
@@ -61,7 +61,7 @@ Meldex: 
 SAP Jam:  
 [https://help.sap.com/docs/SAP_JAM_COLLABORATION](https://help.sap.com/docs/SAP_JAM_COLLABORATION)  
 SAP Jam 是SAP旗下的一款SaaS应用，拥有5300万订阅，产品部署在全球15多个数据中心。  
-全栈开发（前端+后端+架构演进+DevOps），前端主要是React, BackboneJS技术栈，后端是用Rails以及Ruby, Go等实现的Microservice，DevOps是Kubernetes, Gardener
+全栈开发（前端+后端+架构演进+DevOps），前端主要是React, BackboneJS技术栈，后端是用Rails以及Ruby, Shell, Go等实现的Microservice，DevOps是Kubernetes, Gardener
 
 ### 工作经历
 

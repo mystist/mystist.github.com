@@ -13,7 +13,7 @@ h1, h2, h3, h4, h5, h6 {
 body {
 
   font-size: 12px;
-  font-family: "Lucida Grande", Tahoma, Verdana, Lucida, Arial, sans-serif, Helvetica, "宋体";
+  font-family: "Consolas", "Lucida Grande", Tahoma, Verdana, Lucida, Arial, sans-serif, Helvetica, "宋体";
   background: url("images/bg.png") 0 0 repeat;
 }
 
@@ -219,7 +219,7 @@ hr {
 }
 
 .main .main-wrapper .main-text p {
-  
+  line-height: 1.75em;
   margin: 6px 0 12px 0;
 }
 
