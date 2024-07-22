@@ -17,7 +17,7 @@ Github: [https://github.com/mystist/](https://github.com/mystist/)
 
 The lifelong learner, the perfect "get things done" person.
 
-普通院校毕业，却通过优秀的学习能力和做事能力，在一流公司工作，并取得了优异的成绩：
+通过优秀的学习能力和做事能力，在一流公司工作，取得了优异的成绩：
 
 - 拒绝Baidu、eBay的offer加入SAP，并连续获得最高绩效Outstanding
 - 加入天才云集的Conflux团队并主导了其核心产品的开发
@@ -74,7 +74,7 @@ SAP Jam 是SAP旗下的一款SaaS应用，拥有5300万订阅，产品部署在�
 
 ### 教育经历 & 证书
 
-- 2006 - 2010 本科，呼伦贝尔学院，计算机科学与技术
+- 2006 - 2010 本科，呼伦贝尔学院，哈尔滨师范大学，计算机科学与技术
 - 2008-06 ACM/ICPC大学生程序设计竞赛 东北地区三等奖
 - 2008-05 ACM/ICPC大学生程序设计竞赛 黑龙江省二等奖
 

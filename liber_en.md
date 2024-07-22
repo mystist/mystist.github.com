@@ -88,7 +88,7 @@ For DevOps, we used Kubernetes and Gardener.
 
 ## Education & Certifications
 
-- 2006 - 2010, Bachelor, Hulunbeir College, Computer Science and Technology
+- 2006 - 2010, Bachelor, Hulunbeir College, Harbin Normal University, Computer Science and Technology
 - 2008-06, Third Prize in ACM/ICPC Northeast China
 - 2008-05, Second Prize in ACM/ICPC Heilongjiang Provincial
 
