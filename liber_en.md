@@ -26,7 +26,7 @@ Graduated from an ordinary college, but gained employment at top companies throu
 
 ---
 
-Senior front-end Engineer，Full Stack Engineer.
+Senior front-end Engineer，full-stack Engineer.
 
 Comprehensive experience in large-scale projects, deeply involved in full-stack development of a SaaS application with 53M+ subscriptions, deployed across 15+ data centers worldwide.
 
@@ -80,8 +80,8 @@ For DevOps, we used Kubernetes and Gardener.
 ## Work Experience
 
 - 2022.09 - Present, Wondervoy, Principal Engineer
-- 2021.09 - 2022.07, Conflux, Senior Front-end Engineer
-- 2014.06 - 2021.09, SAP, Senior Software Engineer, DevOps Engineer
+- 2021.09 - 2022.07, Conflux, Senior front-end Engineer
+- 2014.06 - 2021.09, SAP, Front-end Engineer, Full-stack Engineer, DevOps Engineer
 - 2012.09 - 2014.05, DJ Health Union, Front-end Engineer
 - 2011.05 - 2012.08, NanRuan tech, Software Engineer
 - 2010.09 - 2011.04, LinZhi Network, Web Developer
