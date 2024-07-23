@@ -102,7 +102,7 @@ SAP Jam 是SAP旗下的一款SaaS应用，拥有5300万订阅，产品部署在�
 
 早年开发了bootstrap-waterfall瀑布流布局插件，收获了Github 100+ stars  
 [https://mystist.github.io/bootstrap-waterfall/](https://mystist.github.io/bootstrap-waterfall/)  
-支持响应式布局的jQuery瀑布流插件，支持异步加载，代码简洁，模块清晰易懂，扩展性强。
+支持响应式布局的jQuery瀑布流插件，支持异步加载，代码简洁，模块清晰易懂，扩展性强
 
 开发上线过一款基督徒赞美诗应用：1050，可以听赞美诗，查看上传歌曲歌谱
 
@@ -110,7 +110,7 @@ SAP Jam 是SAP旗下的一款SaaS应用，拥有5300万订阅，产品部署在�
 
 开发上线过一款RSS订阅微信小程序，可以订阅自己喜欢的RSS源获取每日最新资讯
 
-开发了一款聊天智能助手npm包：react-chatgpt，可以作为一个数字人UI嵌入任何网页使用。  
+开发了一款聊天智能助手npm包：react-chatgpt，可以作为一个数字人UI嵌入任何网页使用  
 [https://github.com/mystist/react-chatgpt](https://github.com/mystist/react-chatgpt)
 
 #### 附录3 - 能力模型
