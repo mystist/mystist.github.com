@@ -43,10 +43,12 @@ The lifelong learner, the perfect "get things done" person.
 
 ### 主要项目经验
 
-Agent Matrix（见附录1）:  
-担任首席工程师，负责整个产品的设计与实现。
+Wondervoy Agent Matrix（见附录1）:  
+担任首席工程师，负责整个产品的设计与实现。  
+Wonderovy公司介绍：Wondervoy是一家基于AI提供解决方案的初创公司，公司背靠上海交大研究院，目标是将AI大模型的能力渗透到各个领域。公司主要服务B端和G端，客户分布在国内和海外，包括国企和央企。公司主要业务包含酒店、民宿，公司规模在20人左右。官网地址：[https://wondervoy.com/](https://wondervoy.com/)  
+Wondervoy核心产品包括AI Agents平台和智能PMS，它们通过AI Agent中间层实现大模型与业务层的整合。公司核心优势在于，通过AI Agent平台，可以针对企业实际情况快速定制AI Agents，以极低的边际成本满足客户的定制需求。
 
-PMS Service:  
+Wondervoy PMS Service:  
 一个支持使用自然语言管理酒店业务的PMS服务，与Google Sheet深度集成，使用ChatGPT实现自然语言交互，使用kafka实现了命令的消息传递。  
 负责架构的设计与实现，详见：[https://mystist.github.io/programmer/2023/05/04/1.html](https://mystist.github.io/programmer/2023/05/04/1.html)
 
@@ -56,7 +58,7 @@ Swappi（见附录1）:
 
 Meldex:   
 利用闪电贷+借贷的方式实现的杠杆DEX，根据最大质押率，可以实现最多5倍杠杆。  
-负责整个前端的设计与实现，以及实现将Venus借贷协议的ABI接口方法转化成前端杠杆形式的业务逻辑。
+负责整个前端的设计与实现，以及实现将Venus借贷协议的ABI接口方法转化成前端杠杆形式的业务逻辑，详见：[https://mystist.github.io/thoughts/2024/07/24/1.html](https://mystist.github.io/thoughts/2024/07/24/1.html)
 
 SAP Jam:  
 [https://help.sap.com/docs/SAP_JAM_COLLABORATION](https://help.sap.com/docs/SAP_JAM_COLLABORATION)  
@@ -82,7 +84,7 @@ SAP Jam 是SAP旗下的一款SaaS应用，拥有5300万订阅，产品部署在�
 
 #### 附录1 - 主导开发的主要Web产品
 
-名称：Agent Matrix  
+名称：Wondervoy Agent Matrix  
 地址：[https://agent.wondervoy.com/en/auth](https://agent.wondervoy.com/en/auth)  
 介绍：Wondervoy旗下的一款AI Agent平台，旨在通过Atomic Agents + Agent Matrix可组合的设计模式，满足企业端复杂多变的业务需求，助力企业利用AI的力量实现业务增长。详细的产品逻辑见：[https://mystist.github.io/thoughts/2023/12/11/1.html](https://mystist.github.io/thoughts/2023/12/11/1.html)
 
