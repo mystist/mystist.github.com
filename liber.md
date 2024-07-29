@@ -30,13 +30,13 @@ The lifelong learner, the perfect "get things done" person.
 自驱力强，动手能力强，独立开发者（见附录2）
 
 在管理和产品上面积累了一些经验和想法，逐渐内化成了一些能力模型（见附录3）  
-两年前与SAP前同事合伙创办了 Wondervoy，任首席工程师，一手打造了其AI Agent平台  
+两年前与SAP前同事合伙创办了 Wondervoy，任首席工程师，一手打造了其LLM AI Agent平台  
 希望在未来的职业生涯中，能够与公司共同成长，实现更大的突破
 
 ### 技术栈
 
 - React, Nextjs, TailwindCSS, react-query, TypeScript, ES6
-- ChatGPT, OpenAI, RAG
+- LLM, ChatGPT, OpenAI, RAG
 - Nodejs, Nestjs, Express, Golang, Python, Ruby
 - AWS, Kafka, Redis, Postgres, Docker, Nginx, Kubernetes
 - 浏览器原理，HTTP 原理，Linux 操作系统，计算机网络
