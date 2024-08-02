@@ -18,7 +18,7 @@ Github: [https://github.com/mystist/](https://github.com/mystist/)
 
 The lifelong learner, the perfect "get things done" person.
 
-Graduated from an ordinary college, but gained employment at top companies through excellent learning and "get things done" ability, and achieved outstanding results:
+Gained employment at top companies through excellent learning and "get things done" ability, and achieved outstanding results:
 
 - Declined offers from Baidu and eBay to join SAP, consistently achieving the highest performance rating of "Outstanding"
 - Joined the talented team at Conflux and led the development of its core product
@@ -55,7 +55,9 @@ I hope to grow with the company and bring us to the next level in my future care
 ## Major Projects
 
 Agent Matrix (see Appendix 1):  
-Principal Engineer, design and build the system.
+Principal Engineer, design and build the system.  
+Wondervoy is an AI-based solution startup. The main business of the company focus on hotels, and the company size is about 20 people. Official website: [https://wondervoy.com/](https://wondervoy.com/]  
+Wondervoy's core products include the AI Agents platform and Intelligent PMS, which integrate the LLM with the business layer through the AI Agent platform. The core advantage of the company is that through the AI Agent platform, AI Agents can be quickly customized according to the actual situation of the enterprise, and meet the customization needs of customers at a very low marginal cost.
 
 PMS Service:  
 A PMS service that supports managing hotel business using natural language, deeply integrated with Google Sheets. It uses ChatGPT for natural language interactions and Kafka for command messaging.  
