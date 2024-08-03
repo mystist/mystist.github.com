@@ -23,7 +23,7 @@ The lifelong learner, the perfect "get things done" person.
 - 加入天才云集的Conflux团队并主导了其核心产品的开发
 - Github 100+ stars project builder
 
-资深前端工程师，全栈工程师  
+资深前端工程师，全栈工程师，前SAP高级工程师  
 具备完整的大型项目经验，深度参与某SaaS应用（53M+ 订阅，部署在全球15+DC）的全栈开发（前端+后端+架构演进+DevOps）  
 责任心强，良好的产品taste，主导开发了多款Web产品和企业软件项目（见附录1）  
 过硬的专业能力以及丰富的项目经验，曾在某Web3 DAO社区担任技术顾问  
