@@ -26,7 +26,7 @@ Gained employment at top companies through excellent learning and "get things do
 
 ---
 
-Senior front-end Engineer，full-stack Engineer.
+Senior front-end Engineer, full-stack Engineer.
 
 Comprehensive experience in large-scale projects, deeply involved in full-stack development of a SaaS application with 53M+ subscriptions, deployed across 15+ data centers worldwide.
 
