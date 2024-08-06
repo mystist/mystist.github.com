@@ -1,6 +1,6 @@
 ---
 layout: template
-title: I'm Liber
+title: 大模型应用工程师 & 资深前端工程师 - 龚峻磊
 text: 13681698273 / gjl87910lq@gmail.com（最后更新时间： 2024-08-06）
 ---
 

@@ -1,6 +1,6 @@
 ---
 layout: template
-title: I'm Liber
+title: LLM Prompt Engineer & Senior front-end engineer - Liber
 text: 13681698273 / gjl87910lq@gmail.com（Last modified at 2024-08-06）
 ---
 
