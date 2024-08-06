@@ -1,6 +1,6 @@
 ---
 layout: template
-title: LLM Prompt Engineer & Senior front-end engineer - Liber
+title: LLM Prompt Engineer & Senior front-end Engineer - Liber
 text: 13681698273 / gjl87910lq@gmail.com（Last modified at 2024-08-06）
 ---
 
@@ -28,7 +28,7 @@ Gained employment at top companies through excellent learning and "get things do
 
 ---
 
-LLM Prompt Engineer, Senior front-end engineer, former senior engineer at SAP.
+LLM Prompt Engineer, Senior front-end Engineer, former Senior Engineer at SAP.
 
 Developed an LLM AI Agent platform from scratch, which can help any company build their LLM business.
 
