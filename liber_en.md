@@ -108,7 +108,7 @@ SAP Jam is a SaaS app made by CubeTree which is a startup in north US and acquir
 - 2011.05 - 2012.08, NanRuan tech, Software Engineer
 - 2010.09 - 2011.04, LinZhi Network, Web Developer
 
-Description of the Wondervoy company: Wondervoy is an AI-based solution startup. The main business of the company focus on hotels, and the company size is about 20 people. Official website: [https://wondervoy.com/](https://wondervoy.com/)
+Description of the Wondervoy company: Wondervoy is an AI-based solution startup. The main business of the company focus on hotels, and the company size is about 20 people. Official website: [https://wondervoy.com/](https://wondervoy.com/)  
 Wondervoy’s core products include the AI Agents platform and Intelligent PMS, which integrate the LLM with the business layer through the AI Agent platform. The core advantage of the company is that through the AI Agent platform, AI Agents can be quickly customized according to the actual situation of the enterprise, and meet the customization needs of customers at a very low marginal cost.
 
 ## Education & Certifications
