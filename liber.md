@@ -26,7 +26,7 @@ The lifelong learner, the perfect "get things done" person.
 - Github 100+ stars project builder
 
 大模型应用工程师，资深前端工程师，前SAP高级工程师  
-从0到1打造了一款LLM AI Agent平台，可以帮助各行业的企业快速落地大模型应用  
+带领团队从0到1打造了一款LLM AI Agent平台，可以帮助各行业的企业快速落地大模型应用  
 具备完整的大型项目经验，深度参与某SaaS应用（53M+ 订阅，部署在全球15+DC）的全栈开发（前端+后端+架构演进+DevOps）  
 
 责任心强，良好的产品taste，主导开发了多款Web产品和企业软件项目（见主要项目经验）  

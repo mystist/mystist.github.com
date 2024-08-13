@@ -30,7 +30,7 @@ Gained employment at top companies through excellent learning and "get things do
 
 LLM Prompt Engineer, Senior front-end Engineer, former Senior Engineer at SAP.
 
-Developed an LLM AI Agent platform from scratch, which can help any company build their LLM business.
+Led a team in developing an LLM AI Agent platform from scratch, which can help any company build their LLM business.
 
 Comprehensive experience in large-scale projects, deeply involved in full-stack development of a SaaS application with 53M+ subscriptions, deployed across 15+ data centers worldwide.
 
