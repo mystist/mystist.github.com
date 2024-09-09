@@ -36,15 +36,10 @@ The lifelong learner, the perfect "get things done" person.
 
 ### 技术栈
 
-核心技术栈：  
-React, NextJS, TailwindCSS, NodeJS, NestJS, AWS, Docker, ChatGPT, Prompting
-
-主要技术栈：
-
-- React, NextJS, TailwindCSS, react-query, TypeScript, ES6
-- LLM, ChatGPT, OpenAI, RAG, Prompting (CoT, ToT)
-- NodeJS, NestJS, Express, Golang, Python, Ruby
-- AWS, Kafka, Redis, Postgres, Docker, Nginx, Kubernetes
+- React, React Server Component, NextJS, TailwindCSS, react-query
+- AWS, ECS, Fargate, Docker, Nginx, Kubernetes
+- NodeJs, NestJs, Ruby, Golang, Postgres, Redis, Kafka
+- LLM, Transformer, ChatGPT, ClaudeAI, RAG, Prompting
 - 浏览器原理，HTTP 原理，Linux 操作系统，计算机网络
 
 ### 主要项目经验
