@@ -1,0 +1,137 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=8" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>Liber's Blog</title>
+  <link rel="stylesheet" type="text/css" href="/css/github.css" />
+  <link rel="stylesheet" type="text/css" href="/css/template.css" />
+</head>
+<body>
+
+<div class="wrapper">
+
+  <div class="header shadow">
+    <div class="header-wrapper">
+      <div class="header-logo">
+        <span><a href="/">LIBER</a></span>
+      </div>
+      <div class="header-nav">
+        <ul>
+          <li><a href="/"><span>首页</span></a></li>
+          <li><a href="/programmer.html"><span>程序员</span></a></li>
+          <li><a href="/thoughts.html"><span>思考</span></a></li>
+          <li><a href="/reading.html"><span>阅读</span></a></li>
+          <li><a href="/all.html"><span>全部内容</span></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="main shadow-sides">
+
+    <div class="main-wrapper">
+
+      <div class="main-title">Liber's Blog</div>
+
+      <div class="main-foot">
+        <span>欢迎访问Liber的私人博客，这是最新的一篇内容  </span>
+      </div>
+
+      <div class="main-text">
+        
+<h2 style="margin-bottom: 15px;"> 动态规划 </h2>
+
+<p>计算到从起点（左上角）到终点（右下角）的路径数：</p>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code>
+<span class="cm">/*
+
+x x      x
+x x      x(1,2)
+x x(2,1) x(2,2)
+
+到(2,2)的所有路径 = 到(1,2)的所有路径 + 到(2,1)的所有路径
+
+*/</span>
+
+
+
+<span class="cm">/*
+
+[1,1]: 1
+
+[1,2]: 1
+[1,3]: 1
+
+[2,1]: 1
+[3,1]: 1
+
+[2,2]: 2
+
+x x
+x x
+
+注意：坐标表示需要x,y都-1
+
+*/</span>
+
+<span class="kr">const</span> <span class="nx">numberOfPath</span> <span class="o">=</span> <span class="p">(</span><span class="nx">row</span><span class="p">,</span> <span class="nx">col</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="kr">const</span> <span class="nx">dp</span> <span class="o">=</span> <span class="p">[]</span>
+
+  <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">row</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">dp</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">j</span> <span class="o">&lt;</span> <span class="nx">col</span><span class="p">;</span> <span class="nx">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">if</span> <span class="p">(</span><span class="nx">i</span> <span class="o">===</span> <span class="mi">0</span> <span class="o">||</span> <span class="nx">j</span> <span class="o">===</span> <span class="mi">0</span><span class="p">)</span> <span class="nx">dp</span><span class="p">[</span><span class="nx">i</span><span class="p">][</span><span class="nx">j</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+
+      <span class="k">if</span> <span class="p">(</span><span class="nx">i</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="nx">j</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">dp</span><span class="p">[</span><span class="nx">i</span><span class="p">][</span><span class="nx">j</span><span class="p">]</span> <span class="o">=</span> <span class="nx">dp</span><span class="p">[</span><span class="nx">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">][</span><span class="nx">j</span><span class="p">]</span> <span class="o">+</span> <span class="nx">dp</span><span class="p">[</span><span class="nx">i</span><span class="p">][</span><span class="nx">j</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">dp</span><span class="p">)</span>
+
+  <span class="k">return</span> <span class="nx">dp</span><span class="p">[</span><span class="nx">row</span> <span class="o">-</span> <span class="mi">1</span><span class="p">][</span><span class="nx">col</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span>
+<span class="p">}</span>
+
+<span class="kd">var</span> <span class="nx">re</span> <span class="o">=</span> <span class="nx">numberOfPath</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">re</span><span class="p">)</span>
+
+<span class="kd">var</span> <span class="nx">re</span> <span class="o">=</span> <span class="nx">numberOfPath</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">re</span><span class="p">)</span>
+
+<span class="kd">var</span> <span class="nx">re</span> <span class="o">=</span> <span class="nx">numberOfPath</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">re</span><span class="p">)</span>
+
+<span class="kd">var</span> <span class="nx">re</span> <span class="o">=</span> <span class="nx">numberOfPath</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">re</span><span class="p">)</span>
+
+<span class="kd">var</span> <span class="nx">re</span> <span class="o">=</span> <span class="nx">numberOfPath</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">re</span><span class="p">)</span>
+
+</code></pre>
+</div>
+
+<p>从递归到动态规划的转变，核心是从一种自顶向下的解决问题的方式（递归）转变为自底向上的方式（动态规划），通过保存中间结果来避免重复计算，从而显著提高算法效率。这种转变涉及到对问题的结构性理解，发现最优子结构，定义状态和状态转移方程，并实现有效的计算和存储方式。</p>
+
+<p>动态规划的核心思想是利用子问题的解来构建原问题的解，而这通常需要状态转移方程。</p>
+
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="footer shadow-sides">
+    <div class="footer-wrapper">
+      <a href="https://mystist.github.io">https://mystist.github.io</a> | <span>gjl87910lq@gmail.com</span> ❤️
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>

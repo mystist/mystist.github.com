@@ -1,0 +1,388 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=8" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>Works</title>
+  <link rel="stylesheet" type="text/css" href="/css/github.css" />
+  <link rel="stylesheet" type="text/css" href="/css/template.css" />
+</head>
+<body>
+
+<div class="wrapper">
+
+  <div class="header shadow">
+    <div class="header-wrapper">
+      <div class="header-logo">
+        <span><a href="/">LIBER</a></span>
+      </div>
+      <div class="header-nav">
+        <ul>
+          <li><a href="/"><span>首页</span></a></li>
+          <li><a href="/programmer.html"><span>程序员</span></a></li>
+          <li><a href="/thoughts.html"><span>思考</span></a></li>
+          <li><a href="/reading.html"><span>阅读</span></a></li>
+          <li><a href="/all.html"><span>全部内容</span></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="main shadow-sides">
+
+    <div class="main-wrapper">
+
+      <div class="main-title">Works</div>
+
+      <div class="main-foot">
+        <span>部分作品  </span>
+      </div>
+
+      <div class="main-text">
+        <p><code class="highlighter-rouge">getTreeListFromListByLevels</code> (2014-02)<br />
+提示: 通过后台传过来的原始JSON数据，递归生成zTree需要的数据。</p>
+
+<iframe frameborder="0" scrolling="no" src="/liber/getTree/demo.html" width="100%" height="320px;"></iframe>
+
+<p>代码片段：</p>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code>
+  <span class="nx">_</span><span class="p">.</span><span class="nx">each</span><span class="p">(</span><span class="nx">uniqListArr</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">listItem</span><span class="p">)</span> <span class="p">{</span>
+
+    <span class="kd">var</span> <span class="nx">children</span> <span class="o">=</span> <span class="p">[];</span>
+    <span class="k">if</span><span class="p">(</span><span class="nx">_</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="nx">uniqBranchArr</span><span class="p">,</span> <span class="nx">listItem</span><span class="p">)</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+      <span class="kd">var</span> <span class="nx">currentList</span> <span class="o">=</span> <span class="nx">_</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">branchList</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">item</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="nx">item</span><span class="p">[</span><span class="nx">levels</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span> <span class="o">===</span> <span class="nx">listItem</span><span class="p">;</span>
+      <span class="p">});</span>
+      <span class="nx">children</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">getTreeListFromListByLevels</span><span class="p">(</span><span class="nx">currentList</span><span class="p">,</span> <span class="nx">levels</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span> <span class="nx">options</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="kd">var</span> <span class="nx">branchObj</span> <span class="o">=</span> <span class="p">{</span>
+      <span class="s1">'name'</span><span class="p">:</span> <span class="nx">listItem</span><span class="p">,</span>
+      <span class="s1">'children'</span><span class="p">:</span> <span class="nx">children</span><span class="p">,</span>
+      <span class="s1">'open'</span><span class="p">:</span> <span class="kc">false</span>
+    <span class="p">};</span>
+    <span class="nx">treeList</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">branchObj</span><span class="p">);</span>
+    
+    <span class="nx">_</span><span class="p">.</span><span class="nx">each</span><span class="p">(</span><span class="nx">leafList</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">leafItem</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">if</span><span class="p">(</span><span class="nx">leafItem</span><span class="p">[</span><span class="nx">levels</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span> <span class="o">===</span> <span class="nx">listItem</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">branchObj</span><span class="p">.</span><span class="nx">children</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">getObjFromItemAndOptionsAtLevels</span><span class="p">(</span><span class="nx">leafItem</span><span class="p">,</span> <span class="nx">options</span><span class="p">,</span> <span class="nx">levels</span><span class="p">));</span>
+      <span class="p">}</span>
+    <span class="p">});</span>
+    
+  <span class="p">},</span> <span class="k">this</span><span class="p">);</span>
+
+</code></pre>
+</div>
+
+<p><a href="/liber/getTree/getTree.rar">代码下载</a></p>
+
+<hr />
+
+<p><code class="highlighter-rouge">picPPT</code> (2013-09)<br />
+提示：支持<code class="highlighter-rouge">iframe</code>的幻灯片插件。</p>
+
+<iframe frameborder="0" scrolling="no" src="liber/picPPT/demo.html" width="100%" height="320px;"></iframe>
+
+<p>代码片段：</p>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code>    <span class="nx">bindEvent</span><span class="err">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+      <span class="kd">var</span> <span class="nx">tThis</span> <span class="o">=</span> <span class="k">this</span><span class="p">;</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">$imgContainers</span><span class="p">.</span><span class="nx">bind</span><span class="p">(</span><span class="s2">"mouseover"</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+        <span class="nx">clearInterval</span><span class="p">(</span><span class="nx">tThis</span><span class="p">.</span><span class="nx">intervalId</span><span class="p">);</span>
+        <span class="kd">var</span> <span class="nx">index</span> <span class="o">=</span> <span class="nx">tThis</span><span class="p">.</span><span class="nx">$imgContainers</span><span class="p">.</span><span class="nx">index</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+        <span class="k">if</span><span class="p">(</span><span class="nx">index</span><span class="o">!=</span><span class="nx">tThis</span><span class="p">.</span><span class="nx">currentIndex</span><span class="p">)</span> <span class="p">{</span>
+          <span class="nx">tThis</span><span class="p">.</span><span class="nx">showThisImg</span><span class="p">(</span><span class="nx">index</span><span class="p">);</span>
+        <span class="p">}</span>
+      <span class="p">});</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">$container</span><span class="p">.</span><span class="nx">bind</span><span class="p">(</span><span class="s2">"mouseout"</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+        <span class="nx">tThis</span><span class="p">.</span><span class="nx">automaticPlay</span><span class="p">();</span>
+      <span class="p">});</span>
+    <span class="p">}</span>
+</code></pre>
+</div>
+
+<p>[Github地址][16]<br />
+[代码下载][17]
+[16]: https://github.com/Mystist/picPPT
+[17]: https://github.com/Mystist/picPPT/archive/master.zip</p>
+
+<hr />
+
+<p><code class="highlighter-rouge">partialPrint</code> (2013-07)<br />
+提示: 局部打印。<br />
+按 <code class="highlighter-rouge">F8</code> 打开/关闭 插件功能。<br />
+使用鼠标选择要打印的元素。  <br />
+点击鼠标右键，选择<code class="highlighter-rouge">打印</code>。</p>
+
+<p><a href="liber/partialPrint/demo.html" target="_blank">查看Demo</a></p>
+
+<p>代码片段：</p>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code>  <span class="kd">var</span> <span class="nx">includeCss</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">styles</span><span class="p">,</span> <span class="nx">media</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">style</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s2">"style"</span><span class="p">);</span>
+    <span class="nx">style</span><span class="p">.</span><span class="nx">type</span> <span class="o">=</span> <span class="s2">"text/css"</span><span class="p">;</span>
+    <span class="nx">style</span><span class="p">.</span><span class="nx">media</span> <span class="o">=</span> <span class="nx">media</span> <span class="o">||</span> <span class="s2">"screen"</span><span class="p">;</span>
+    <span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementsByTagName</span><span class="p">(</span><span class="s2">"head"</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span> <span class="o">||</span> <span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">).</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">style</span><span class="p">);</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">style</span><span class="p">.</span><span class="nx">styleSheet</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// for IE</span>
+      <span class="nx">style</span><span class="p">.</span><span class="nx">styleSheet</span><span class="p">.</span><span class="nx">cssText</span> <span class="o">=</span> <span class="nx">styles</span><span class="p">;</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span> <span class="c1">//for w3c</span>
+      <span class="nx">style</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">createTextNode</span><span class="p">(</span><span class="nx">styles</span><span class="p">));</span>
+    <span class="p">}</span>
+  <span class="p">};</span>
+</code></pre>
+</div>
+
+<p>[Github地址][14]<br />
+[代码下载][15]
+[14]: https://github.com/Mystist/partialPrint
+[15]: https://github.com/Mystist/partialPrint/archive/master.zip</p>
+
+<hr />
+
+<p><code class="highlighter-rouge">multiSelect</code> (2013-06)<br />
+提示：让html的select元素支持多选功能。支持键盘上下选择。</p>
+
+<iframe frameborder="0" scrolling="no" src="liber/multiSelect/demo.html" width="100%" height="300px;"></iframe>
+
+<p>代码片段：</p>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code>    <span class="nx">$target</span><span class="p">.</span><span class="nx">delegate</span><span class="p">(</span><span class="s2">"ul"</span><span class="p">,</span> <span class="s2">"keyup"</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+    
+      <span class="nx">e</span><span class="p">.</span><span class="nx">cancelable</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+      <span class="nx">e</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span>
+    
+      <span class="k">if</span><span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">keyCode</span><span class="o">==</span><span class="mi">38</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// up</span>
+        <span class="nx">moveToPre</span><span class="p">(</span><span class="nx">$this</span><span class="p">);</span>
+      <span class="p">}</span> <span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">keyCode</span><span class="o">==</span><span class="mi">40</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// down</span>
+        <span class="nx">moveToNext</span><span class="p">(</span><span class="nx">$this</span><span class="p">);</span>
+      <span class="p">}</span> <span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">keyCode</span><span class="o">==</span><span class="mi">13</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// enter</span>
+        <span class="nx">$this</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="s2">"li"</span><span class="p">).</span><span class="nx">each</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+          <span class="k">if</span><span class="p">(</span><span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">css</span><span class="p">(</span><span class="s2">"color"</span><span class="p">)</span><span class="o">==</span><span class="s2">"white"</span><span class="o">||</span><span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">css</span><span class="p">(</span><span class="s2">"color"</span><span class="p">)</span><span class="o">==</span><span class="s2">"rgb(255, 255, 255)"</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">click</span><span class="p">();</span>
+            <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+          <span class="p">}</span>
+        <span class="p">});</span>
+      <span class="p">}</span> <span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">keyCode</span><span class="o">==</span><span class="mi">27</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// esc</span>
+        <span class="nx">$this</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="s2">".m_outerDom"</span><span class="p">).</span><span class="nx">remove</span><span class="p">();</span>
+        <span class="nx">$this</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="s2">"textarea"</span><span class="p">).</span><span class="nx">focus</span><span class="p">();</span>
+      <span class="p">}</span>
+    
+    <span class="p">});</span>
+  
+  <span class="p">}</span>
+</code></pre>
+</div>
+
+<p>[Github地址][12]<br />
+[代码下载][13]
+[12]: https://github.com/Mystist/multiSelect
+[13]: https://github.com/Mystist/multiSelect/archive/master.zip</p>
+
+<hr />
+
+<p><code class="highlighter-rouge">customPPT</code> (2013-05)</p>
+
+<iframe frameborder="0" scrolling="no" src="liber/customPPT/demo.html" width="100%" height="320px;"></iframe>
+
+<p>代码片段：</p>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code>    <span class="nx">automaticPlay</span><span class="err">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+      <span class="kd">var</span> <span class="nx">tThis</span> <span class="o">=</span> <span class="k">this</span><span class="p">;</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">timer</span> <span class="o">=</span> <span class="nx">setInterval</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+        <span class="nx">tThis</span><span class="p">.</span><span class="nx">moveToNext</span><span class="p">();</span>
+      <span class="p">},</span> <span class="mi">3000</span><span class="p">);</span>
+    <span class="p">},</span>
+</code></pre>
+</div>
+
+<p>[Github地址][10]<br />
+[代码下载][11]
+[10]: https://github.com/Mystist/customPPT
+[11]: https://github.com/Mystist/customPPT/archive/master.zip</p>
+
+<hr />
+
+<p><code class="highlighter-rouge">tdWider</code> (2013-04)<br />
+提示：试试将鼠标移到表头<code class="highlighter-rouge">td</code>的右边。</p>
+
+<iframe frameborder="0" scrolling="no" src="liber/tdWider/demo.html" width="100%" height="400px;"></iframe>
+
+<p>代码片段：</p>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code>      <span class="k">this</span><span class="p">.</span><span class="nx">$this</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="s2">".m_inner"</span><span class="p">).</span><span class="nx">draggable</span><span class="p">({</span>
+        <span class="s2">"axis"</span><span class="p">:</span> <span class="s2">"x"</span><span class="p">,</span>
+        <span class="s2">"start"</span><span class="p">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+          <span class="nx">tThis</span><span class="p">.</span><span class="nx">drawLine</span><span class="p">(</span><span class="nx">$</span><span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">target</span><span class="p">));</span>
+          <span class="k">if</span><span class="p">(</span><span class="nx">tThis</span><span class="p">.</span><span class="nx">applyToAnotherTable</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">tThis</span><span class="p">.</span><span class="nx">drawLine</span><span class="p">(</span><span class="nx">tThis</span><span class="p">.</span><span class="nx">$this</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="s2">"span[index='"</span><span class="o">+</span><span class="nx">$</span><span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">target</span><span class="p">).</span><span class="nx">attr</span><span class="p">(</span><span class="s2">"index"</span><span class="p">)</span><span class="o">+</span><span class="s2">"']:last"</span><span class="p">));</span>
+          <span class="p">}</span>
+        <span class="p">},</span>
+        <span class="s2">"drag"</span><span class="p">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">,</span> <span class="nx">ui</span><span class="p">)</span> <span class="p">{</span>
+          <span class="k">if</span><span class="p">(</span><span class="nx">tThis</span><span class="p">.</span><span class="nx">applyToAnotherTable</span><span class="p">)</span> <span class="p">{</span>
+            <span class="kd">var</span> <span class="nx">fixNumber</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+            <span class="k">if</span><span class="p">(</span><span class="nx">ui</span><span class="p">.</span><span class="nx">position</span><span class="p">.</span><span class="nx">left</span> <span class="o">-</span> <span class="nx">ui</span><span class="p">.</span><span class="nx">originalPosition</span><span class="p">.</span><span class="nx">left</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+              <span class="nx">fixNumber</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+            <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+              <span class="nx">fixNumber</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+            <span class="p">}</span>
+            <span class="nx">tThis</span><span class="p">.</span><span class="nx">$this</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="s2">"span[index='"</span><span class="o">+</span><span class="nx">$</span><span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">target</span><span class="p">).</span><span class="nx">attr</span><span class="p">(</span><span class="s2">"index"</span><span class="p">)</span><span class="o">+</span><span class="s2">"']:last"</span><span class="p">).</span><span class="nx">css</span><span class="p">(</span><span class="s2">"left"</span><span class="p">,</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">$</span><span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">target</span><span class="p">).</span><span class="nx">css</span><span class="p">(</span><span class="s2">"left"</span><span class="p">),</span> <span class="mi">10</span><span class="p">)</span> <span class="o">+</span> <span class="nx">fixNumber</span><span class="p">);</span>
+          <span class="p">}</span>
+        <span class="p">},</span>
+        <span class="s2">"stop"</span><span class="p">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">,</span> <span class="nx">ui</span><span class="p">)</span> <span class="p">{</span>
+          <span class="nx">tThis</span><span class="p">.</span><span class="nx">currentMoveLength</span> <span class="o">=</span> <span class="nx">ui</span><span class="p">.</span><span class="nx">position</span><span class="p">.</span><span class="nx">left</span> <span class="o">-</span> <span class="nx">ui</span><span class="p">.</span><span class="nx">originalPosition</span><span class="p">.</span><span class="nx">left</span><span class="p">;</span>
+          <span class="nx">tThis</span><span class="p">.</span><span class="nx">changeTdWidth</span><span class="p">(</span><span class="nx">e</span><span class="p">);</span>
+          <span class="nx">$</span><span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">target</span><span class="p">).</span><span class="nx">css</span><span class="p">(</span><span class="s2">"left"</span><span class="p">,</span> <span class="nx">ui</span><span class="p">.</span><span class="nx">originalPosition</span><span class="p">.</span><span class="nx">left</span><span class="p">);</span>
+          <span class="nx">tThis</span><span class="p">.</span><span class="nx">removeLine</span><span class="p">(</span><span class="nx">$</span><span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">target</span><span class="p">));</span>
+          <span class="k">if</span><span class="p">(</span><span class="nx">tThis</span><span class="p">.</span><span class="nx">applyToAnotherTable</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">tThis</span><span class="p">.</span><span class="nx">removeLine</span><span class="p">(</span><span class="nx">tThis</span><span class="p">.</span><span class="nx">$this</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="s2">"span[index='"</span><span class="o">+</span><span class="nx">$</span><span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">target</span><span class="p">).</span><span class="nx">attr</span><span class="p">(</span><span class="s2">"index"</span><span class="p">)</span><span class="o">+</span><span class="s2">"']:last"</span><span class="p">));</span>
+          <span class="p">}</span>
+        <span class="p">}</span>
+      <span class="p">});</span>
+</code></pre>
+</div>
+
+<p>[Github地址][8]<br />
+[代码下载][9]
+[8]: https://github.com/Mystist/tdWider
+[9]: https://github.com/Mystist/tdWider/archive/master.zip</p>
+
+<hr />
+
+<p><code class="highlighter-rouge">theadFixer</code> (2013-04)<br />
+提示：滚动表格的时候，表头会固定住。</p>
+
+<iframe frameborder="0" scrolling="no" src="liber/theadFixer/demo.html" width="100%" height="400px;"></iframe>
+
+<p>代码片段：</p>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code>    <span class="nx">option</span><span class="err">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">optionName</span><span class="p">,</span> <span class="nx">optionValue</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">if</span><span class="p">(</span><span class="nx">optionName</span><span class="o">&amp;&amp;</span><span class="nx">optionValue</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">settings</span><span class="p">[</span><span class="nx">optionName</span><span class="p">]</span> <span class="o">=</span> <span class="nx">optionValue</span><span class="p">;</span>
+      <span class="p">}</span> <span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="nx">optionName</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span><span class="p">(</span><span class="k">typeof</span> <span class="nx">optionName</span> <span class="o">==</span> <span class="s2">"object"</span><span class="p">)</span> <span class="p">{</span>
+          <span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">propName</span> <span class="k">in</span> <span class="nx">optionName</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">this</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">settings</span><span class="p">[</span><span class="nx">propName</span><span class="p">]</span> <span class="o">=</span> <span class="nx">optionName</span><span class="p">[</span><span class="nx">propName</span><span class="p">];</span>
+          <span class="p">}</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+          <span class="k">return</span> <span class="k">this</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">settings</span><span class="p">[</span><span class="nx">optionName</span><span class="p">];</span>
+        <span class="p">}</span>
+      <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="k">this</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">settings</span><span class="p">;</span>
+      <span class="p">}</span>
+    <span class="p">},</span>
+</code></pre>
+</div>
+
+<p>[Github地址][6]<br />
+[代码下载][7]
+[6]: https://github.com/Mystist/theadFixer
+[7]: https://github.com/Mystist/theadFixer/archive/master.zip</p>
+
+<hr />
+
+<p><code class="highlighter-rouge">inputTip</code> (2012-12)<br />
+提示：试试输入一个<code class="highlighter-rouge">s</code>然后试着滚动到底部。</p>
+
+<iframe frameborder="0" scrolling="no" src="liber/inputTip/demo.html" width="100%" height="400px;"></iframe>
+
+<p>代码片段：</p>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code>      <span class="k">if</span><span class="p">(</span><span class="nx">filteredItemList</span><span class="p">.</span><span class="nx">length</span><span class="o">!=</span><span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="nx">i</span><span class="o">&lt;</span> <span class="nx">st</span><span class="p">.</span><span class="nx">maxItemNumber</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+          <span class="k">if</span><span class="p">(</span><span class="nx">filteredItemList</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="p">{</span>
+            <span class="nx">toDoItemList</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">filteredItemList</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
+            <span class="nx">filteredItemList</span><span class="p">.</span><span class="nx">shift</span><span class="p">();</span>
+          <span class="p">}</span>
+        <span class="p">}</span>
+      <span class="p">}</span>
+      
+      <span class="nx">$this</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="nx">getTipDivHtml</span><span class="p">(</span><span class="nx">$this</span><span class="p">,</span> <span class="nx">toDoItemList</span><span class="p">,</span> <span class="nx">st</span><span class="p">));</span>
+      <span class="nx">setTipStyle</span><span class="p">(</span><span class="nx">$this</span><span class="p">,</span> <span class="nx">st</span><span class="p">);</span>
+      
+      <span class="nx">st</span><span class="p">.</span><span class="nx">tipIsShowing</span><span class="p">();</span>
+      
+      <span class="nx">$this</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="nx">st</span><span class="p">.</span><span class="nx">scrollTarget</span><span class="p">).</span><span class="nx">unbind</span><span class="p">().</span><span class="nx">scroll</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+        
+        <span class="k">if</span><span class="p">(</span> <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">scrollTop</span><span class="p">()</span><span class="o">+</span><span class="mi">100</span> <span class="o">&gt;=</span><span class="nx">$this</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="s2">"table:last"</span><span class="p">).</span><span class="nx">height</span><span class="p">()</span><span class="o">-</span><span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">height</span><span class="p">()</span> <span class="p">)</span> <span class="p">{</span>
+          <span class="nx">toDoItemList</span> <span class="o">=</span> <span class="p">[];</span>
+          <span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="nx">i</span><span class="o">&lt;</span> <span class="nx">st</span><span class="p">.</span><span class="nx">maxItemNumber</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">){</span>
+            <span class="k">if</span><span class="p">(</span><span class="nx">filteredItemList</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="p">{</span>
+              <span class="nx">toDoItemList</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">filteredItemList</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
+              <span class="nx">filteredItemList</span><span class="p">.</span><span class="nx">shift</span><span class="p">();</span>
+            <span class="p">}</span>
+          <span class="p">}</span>
+          <span class="k">if</span><span class="p">(</span><span class="nx">toDoItemList</span><span class="p">.</span><span class="nx">length</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">$this</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="s2">".tipDiv table:last tbody"</span><span class="p">).</span><span class="nx">append</span><span class="p">(</span><span class="nx">getTrByList</span><span class="p">(</span><span class="nx">$this</span><span class="p">,</span> <span class="nx">toDoItemList</span><span class="p">,</span> <span class="nx">st</span><span class="p">));</span>
+          <span class="p">}</span>
+        <span class="p">}</span>
+        
+      <span class="p">});</span>
+</code></pre>
+</div>
+
+<p>[Github地址][4]<br />
+[代码下载][5]
+[4]: https://github.com/Mystist/inputTip
+[5]: https://github.com/Mystist/inputTip/archive/master.zip</p>
+
+<hr />
+
+<p><code class="highlighter-rouge">Timetrack</code> (2012-11)<br />
+提示：左右拖动、添加/查看事件、放大、缩小等等。</p>
+
+<iframe frameborder="0" scrolling="no" src="liber/timetrack/page/timetrack.html" width="100%" height="400px;"></iframe>
+
+<p>代码片段：</p>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code>  <span class="kd">function</span> <span class="nx">getNumbersByDateType</span><span class="p">(</span><span class="nx">startTime</span><span class="p">,</span> <span class="nx">endTime</span><span class="p">,</span> <span class="nx">type</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">stime</span> <span class="o">=</span> <span class="nx">formatDateTime</span><span class="p">(</span><span class="nx">startTime</span><span class="p">,</span> <span class="nx">type</span><span class="p">,</span> <span class="s2">"Date"</span><span class="p">);</span>
+    <span class="kd">var</span> <span class="nx">etime</span> <span class="o">=</span> <span class="nx">formatDateTime</span><span class="p">(</span><span class="nx">endTime</span><span class="p">,</span> <span class="nx">type</span><span class="p">,</span> <span class="s2">"Date"</span><span class="p">);</span>
+    <span class="kd">var</span> <span class="nx">curTime</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">(</span> <span class="nx">stime</span><span class="p">.</span><span class="nx">valueOf</span><span class="p">()</span> <span class="p">);</span>
+    <span class="kd">var</span> <span class="nx">numbers</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">while</span><span class="p">(</span> <span class="nx">curTime</span> <span class="o">&lt;</span> <span class="nx">etime</span> <span class="p">)</span> <span class="p">{</span>
+      <span class="nx">numbers</span><span class="o">++</span><span class="p">;</span>
+      <span class="nx">curTime</span> <span class="o">=</span> <span class="nx">addNByDateType</span><span class="p">(</span><span class="nx">curTime</span><span class="p">,</span> <span class="nx">type</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="nx">numbers</span><span class="p">;</span>
+  <span class="p">}</span>
+  
+  <span class="kd">function</span> <span class="nx">addNByDateType</span><span class="p">(</span><span class="nx">time</span><span class="p">,</span> <span class="nx">type</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">n</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="k">if</span><span class="p">(</span><span class="nx">arguments</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">!==</span><span class="kc">undefined</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">n</span><span class="o">=</span><span class="nx">arguments</span><span class="p">[</span><span class="mi">2</span><span class="p">];</span>
+    <span class="p">}</span>
+    <span class="k">if</span><span class="p">(</span><span class="nx">type</span><span class="o">===</span><span class="s2">"hour"</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">time</span><span class="p">.</span><span class="nx">setHours</span><span class="p">(</span> <span class="nx">time</span><span class="p">.</span><span class="nx">getHours</span><span class="p">()</span> <span class="o">+</span> <span class="nx">n</span> <span class="p">);</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="nx">type</span><span class="o">===</span><span class="s2">"day"</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">time</span><span class="p">.</span><span class="nx">setDate</span><span class="p">(</span> <span class="nx">time</span><span class="p">.</span><span class="nx">getDate</span><span class="p">()</span> <span class="o">+</span> <span class="nx">n</span> <span class="p">);</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="nx">type</span><span class="o">===</span><span class="s2">"month"</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">time</span><span class="p">.</span><span class="nx">setMonth</span><span class="p">(</span> <span class="nx">time</span><span class="p">.</span><span class="nx">getMonth</span><span class="p">()</span> <span class="o">+</span> <span class="nx">n</span> <span class="p">);</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="nx">type</span><span class="o">===</span><span class="s2">"year"</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">time</span><span class="p">.</span><span class="nx">setFullYear</span><span class="p">(</span> <span class="nx">time</span><span class="p">.</span><span class="nx">getFullYear</span><span class="p">()</span> <span class="o">+</span> <span class="nx">n</span> <span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="nx">time</span><span class="p">;</span>
+  <span class="p">}</span>
+</code></pre>
+</div>
+
+<p>[Github地址][2]<br />
+[代码下载][3]
+[2]: https://github.com/Mystist/timetrack
+[3]: https://github.com/Mystist/timetrack/archive/master.zip</p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="footer shadow-sides">
+    <div class="footer-wrapper">
+      <a href="https://mystist.github.io">https://mystist.github.io</a> | <span>gjl87910lq@gmail.com</span> ❤️
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
