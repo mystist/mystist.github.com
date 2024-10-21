@@ -1,6 +1,6 @@
 ---
 layout: template
-title: LLM Prompt Engineer & Senior front-end Engineer - Liber
+title: Senior front-end Engineer (Web + LLM application + Web3 dapp) - Liber
 text: 13681698273 / gjl87910lq@gmail.com（Last modified at 2024-08-06）
 ---
 
