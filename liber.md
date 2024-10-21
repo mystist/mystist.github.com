@@ -36,7 +36,8 @@ The lifelong learner, the perfect "get things done" person.
 
 ### 技术栈
 
-- React, React Server Component, NextJS, TailwindCSS, react-query
+- React, NextJS (app router, react server component, server actions), TailwindCSS, react-query
+- Web3, dapp, Wagmi
 - AWS, ECS, Fargate, Docker, Nginx, Kubernetes
 - NodeJs, NestJs, Ruby, Golang, Postgres, Redis, Kafka
 - LLM, Transformer, ChatGPT, ClaudeAI, RAG, Prompting

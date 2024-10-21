@@ -44,7 +44,8 @@ I hope to grow with the company and bring us to the next level in my future care
 
 ## Tech-stack
 
-- React, React Server Component, NextJS, TailwindCSS, react-query
+- React, NextJS (app router, react server component, server actions), TailwindCSS, react-query
+- Web3, dapp, Wagmi
 - AWS, ECS, Fargate, Docker, Nginx, Kubernetes
 - NodeJs, NestJs, Ruby, Golang, Postgres, Redis, Kafka
 - LLM, Transformer, ChatGPT, ClaudeAI, RAG, Prompting
