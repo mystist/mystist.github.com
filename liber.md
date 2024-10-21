@@ -1,6 +1,6 @@
 ---
 layout: template
-title: 资深前端工程师 (Web前端 + LLM应用 + Web3 dapp) - 龚峻磊
+title: 资深前端工程师 (Web + Web3 dapp + LLM应用) - 龚峻磊
 text: 13681698273 / gjl87910lq@gmail.com（最后更新时间： 2024-08-06）
 ---
 
@@ -25,7 +25,7 @@ The lifelong learner, the perfect "get things done" person.
 - 加入天才云集的Web3团队Conflux并主导了其核心产品的开发
 - Github 100+ stars project builder
 
-大模型应用工程师，资深前端工程师，前SAP高级工程师  
+资深前端工程师，全栈工程师，Web3 dapp工程师，大模型应用工程师，前SAP高级工程师  
 带领团队从0到1打造了一款LLM AI Agent平台，可以帮助各行业的企业快速落地大模型应用  
 具备完整的大型项目经验，深度参与某SaaS应用（53M+ 订阅，部署在全球15+DC）的全栈开发（前端+后端+架构演进+DevOps）  
 

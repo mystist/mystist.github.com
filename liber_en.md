@@ -1,6 +1,6 @@
 ---
 layout: template
-title: Senior front-end Engineer (Web + LLM application + Web3 dapp) - Liber
+title: Senior front-end Engineer (Web + Web3 dapp + LLM application) - Liber
 text: 13681698273 / gjl87910lq@gmail.com（Last modified at 2024-08-06）
 ---
 
@@ -28,7 +28,7 @@ Gained employment at top companies through excellent learning and "get things do
 
 ---
 
-LLM Prompt Engineer, Senior front-end Engineer, former Senior Engineer at SAP.
+Senior front-end engineer, Full-stack engineer, Web3 dapp engineer, LLM application Engineer, former Senior Engineer at SAP.  
 
 Led a team in developing an LLM AI Agent platform from scratch, which can help any company build their LLM business.
 
