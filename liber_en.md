@@ -1,15 +1,14 @@
 ---
 layout: template
 title: Senior front-end Engineer (Web + Web3 dapp + LLM application) - Liber
-text: 13681698273 / gjl87910lq@gmail.com（Last modified at 2024-08-06）
+text: 13681698273 / gjl87910lq@gmail.com（Last modified at 2024-12）
 ---
-
 
 <img src="/images/liber_cv_2.png" class="cv-image" />
 
 ## Basic Info
 
-Liber Gong, Male, 1987-11-01, Shanghai  
+Liber Gong, Male, 1987-11, Shanghai  
 
 Phone: +86 13681698273  
 Email: gjl87910lq@gmail.com  
@@ -34,6 +33,16 @@ Led a team in developing an LLM AI Agent platform from scratch, which can help a
 
 Comprehensive experience in large-scale projects, deeply involved in full-stack development of a SaaS application with 53M+ subscriptions, deployed across 15+ data centers worldwide.
 
+--- 
+
+What I Can Bring:
+
+- Best practices for frontend project: best performance and lowest cost
+- AI + Web3 know-how and hands-on experience
+- Transparent and efficient management skills and capability models
+
+---
+
 Strong sense of responsibility with good taste in products, led the development of various web products and enterprise software projects (see Major Projects).
 
 Self-Driven, hands-on, and an individual developer (see Appendix 1).
@@ -46,7 +55,7 @@ I hope to grow with the company and bring us to the next level in my future care
 
 - React, NextJS (app router, react server component, server actions), TailwindCSS, react-query
 - Web3, dapp, Wagmi
-- AWS, ECS, Fargate, Docker, Nginx, Kubernetes
+- AWS, Lambda, CloudFront, API-Gateway, S3, ECS, Fargate, Docker, Nginx, Kubernetes
 - NodeJs, NestJs, Ruby, Golang, Postgres, Redis, Kafka
 - LLM, Transformer, ChatGPT, ClaudeAI, RAG, Prompting
 - Understanding of browser principles, HTTP principles, Linux operating system, and computer networks
@@ -117,18 +126,24 @@ Wondervoy’s core products include the AI Agents platform and Intelligent PMS, 
 
 ### Appendix 1 - Individual Projects Projects
 
+Latest Nextjs + Wagmi dapp demo：  
+[https://github.com/mystist/dapp](https://github.com/mystist/dapp)
+
+Latest Nextjs + React Server component todo application demo：  
+[https://github.com/mystist/todo](https://github.com/mystist/todo)
+
 In my early career, I developed the bootstrap-waterfall layout plugin. It got over 100 stars on GitHub.  
 [https://mystist.github.io/bootstrap-waterfall/](https://mystist.github.io/bootstrap-waterfall/)  
 A jQuery plugin that works with responsive layouts. Support asynchronous loading. Clean code that easy to understand. Good decoupling design.  
+
+Built and npm package: react-chatgpt, It can be embedded as an AI assistant UI in any webpage.  
+[https://github.com/mystist/react-chatgpt](https://github.com/mystist/react-chatgpt)
 
 Developed and launched a Christian web application "1050", allowing users to listen songs and view lyrics.
 
 Developed a web application of the board game "Gwent". Implemented the core logic using ReactiveX principles and abstracted a concise card implementation interface. Done a demo of how Monsters vs Monsters.
 
 Developed and launched an RSS subscription WeChat Mini Program, enabling users to subscribe to preferred RSS feeds for daily news updates.
-
-Built and npm package: react-chatgpt, It can be embedded as an AI assistant UI in any webpage.  
-[https://github.com/mystist/react-chatgpt](https://github.com/mystist/react-chatgpt)
 
 ### Appendix 2 - Capability Models
 

@@ -1,14 +1,14 @@
 ---
 layout: template
-title: 资深前端工程师 (Web + Web3 dapp + LLM应用) - 龚峻磊
-text: 13681698273 / gjl87910lq@gmail.com（最后更新时间： 2024-08-06）
+title: 资深前端工程师 (Web + Web3 dapp + LLM应用) - 龚峻磊 Liber
+text: 13681698273 / gjl87910lq@gmail.com（最后更新时间： 2024-12）
 ---
 
 <img src="/images/liber_cv_2.png" class="cv-image" />
 
 ### 基本信息
 
-龚峻磊 Liber 男 1987-11-01 现居上海  
+龚峻磊 Liber 男 1987-11 现居上海  
 
 Phone: +86 13681698273  
 Email: gjl87910lq@gmail.com  
@@ -29,6 +29,14 @@ The lifelong learner, the perfect "get things done" person.
 带领团队从0到1打造了一款LLM AI Agent平台，可以帮助各行业的企业快速落地大模型应用  
 具备完整的大型项目经验，深度参与某SaaS应用（53M+ 订阅，部署在全球15+DC）的全栈开发（前端+后端+架构演进+DevOps）  
 
+--- 
+
+我能带来什么：
+
+- 前端项目性能+成本最佳实践
+- AI + Web3 know how经验和实践经验
+- 透明高效的管理能力和模型
+
 责任心强，良好的产品taste，主导开发了多款Web产品和企业软件项目（见主要项目经验）  
 自驱力强，动手能力强，独立开发者（见附录1）  
 在管理和产品上面积累了一些经验和想法，逐渐内化成了一些能力模型（见附录2）  
@@ -38,7 +46,7 @@ The lifelong learner, the perfect "get things done" person.
 
 - React, NextJS (app router, react server component, server actions), TailwindCSS, react-query
 - Web3, dapp, Wagmi
-- AWS, ECS, Fargate, Docker, Nginx, Kubernetes
+- AWS, Lambda, CloudFront, API-Gateway, S3, ECS, Fargate, Docker, Nginx, Kubernetes
 - NodeJs, NestJs, Ruby, Golang, Postgres, Redis, Kafka
 - LLM, Transformer, ChatGPT, ClaudeAI, RAG, Prompting
 - 浏览器原理，HTTP 原理，Linux 操作系统，计算机网络
@@ -106,18 +114,24 @@ Wondervoy核心产品包括LLM AI Agent 平台和LLM 智能 PMS，它们通过AI
 
 #### 附录1 - 独立开发作品
 
-早年开发了bootstrap-waterfall瀑布流布局插件，收获了Github 100+ stars  
+基于最新Nextjs + Wagmi的dapp应用demo：  
+[https://github.com/mystist/dapp](https://github.com/mystist/dapp)
+
+基于最新Nextjs + React Server component的todo应用demo：  
+[https://github.com/mystist/todo](https://github.com/mystist/todo)
+
+早年开发了bootstrap-waterfall瀑布流布局插件，收获了Github 100+ stars：  
 [https://mystist.github.io/bootstrap-waterfall/](https://mystist.github.io/bootstrap-waterfall/)  
-支持响应式布局的jQuery瀑布流插件，支持异步加载，代码简洁，模块清晰易懂，扩展性强
+支持响应式布局的jQuery瀑布流插件，支持异步加载，代码简洁，模块清晰易懂，扩展性强。
 
-开发上线过一款基督徒赞美诗应用：1050，可以听赞美诗，查看上传歌曲歌谱
-
-开发过桌游库特牌的web版，通过ReactiveX的思想实现了整个底层逻辑，并抽象出了简洁的卡牌实现接口，实现了怪兽势力的对局Demo
-
-开发上线过一款RSS订阅微信小程序，可以订阅自己喜欢的RSS源获取每日最新资讯
-
-开发了一款聊天智能助手npm包：react-chatgpt，可以作为一个数字人UI嵌入任何网页使用  
+开发了一款聊天智能助手npm包：react-chatgpt，可以作为一个数字人UI嵌入任何网页使用：  
 [https://github.com/mystist/react-chatgpt](https://github.com/mystist/react-chatgpt)
+
+开发上线过一款基督徒赞美诗应用：1050，可以听赞美诗，查看上传歌曲歌谱。
+
+开发过桌游库特牌的web版，通过ReactiveX的思想实现了整个底层逻辑，并抽象出了简洁的卡牌实现接口，实现了怪兽势力的对局Demo。
+
+开发上线过一款RSS订阅微信小程序，可以订阅自己喜欢的RSS源获取每日最新资讯。
 
 #### 附录2 - 能力模型
 
