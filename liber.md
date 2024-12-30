@@ -1,6 +1,6 @@
 ---
 layout: template
-title: 资深前端工程师 (Web + Web3 dapp + LLM应用) - 龚峻磊 Liber
+title: 资深前端工程师 (Web + Web3 dApp + LLM应用) - 龚峻磊 Liber
 text: 13681698273 / gjl87910lq@gmail.com（最后更新时间： 2024-12）
 ---
 
