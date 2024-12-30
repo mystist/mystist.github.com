@@ -54,13 +54,16 @@ I hope to grow with the company and bring us to the next level in my future care
 ## Tech-stack
 
 - React, NextJS (app router, react server component, server actions), TailwindCSS, react-query
-- Web3, dapp, Wagmi
+- Web3, dApp, Wagmi
 - AWS, Lambda, CloudFront, API-Gateway, S3, ECS, Fargate, Docker, Nginx, Kubernetes
 - NodeJs, NestJs, Ruby, Golang, Postgres, Redis, Kafka
 - LLM, Transformer, ChatGPT, ClaudeAI, RAG, Prompting
 - Understanding of browser principles, HTTP principles, Linux operating system, and computer networks
 
 ## Major Projects
+
+Project Name：content project of a top 10 CEX  
+Responsibility：Migrate project to AWS Lambda + SSR architecture.
 
 Project Name: LLM AI Agent Platform - Agent Matrix  
 Responsibility: Core engineer, design and build the system.  

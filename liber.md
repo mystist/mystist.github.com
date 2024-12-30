@@ -45,13 +45,16 @@ The lifelong learner, the perfect "get things done" person.
 ### 技术栈
 
 - React, NextJS (app router, react server component, server actions), TailwindCSS, react-query
-- Web3, dapp, Wagmi
+- Web3, dApp, Wagmi
 - AWS, Lambda, CloudFront, API-Gateway, S3, ECS, Fargate, Docker, Nginx, Kubernetes
 - NodeJs, NestJs, Ruby, Golang, Postgres, Redis, Kafka
 - LLM, Transformer, ChatGPT, ClaudeAI, RAG, Prompting
 - 浏览器原理，HTTP 原理，Linux 操作系统，计算机网络
 
 ### 主要项目经验
+
+项目名称：Top 10某CEX内容组项目  
+我的职责：负责将现有业务迁移到新的AWS Lambda + SSR架构
 
 项目名称：LLM AI Agent 平台 - Agent Matrix  
 我的职责：担任核心工程师，负责整个产品的设计与实现。  
