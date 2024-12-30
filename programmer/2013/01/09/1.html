@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=8" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>ACM Online Judgment For Ruby</title>
+  <link rel="stylesheet" type="text/css" href="/css/github.css" />
+  <link rel="stylesheet" type="text/css" href="/css/template.css" />
+</head>
+<body>
+
+<div class="wrapper">
+
+  <div class="header shadow">
+    <div class="header-wrapper">
+      <div class="header-logo">
+        <span><a href="/">LIBER</a></span>
+      </div>
+      <div class="header-nav">
+        <ul>
+          <li><a href="/"><span>首页</span></a></li>
+          <li><a href="/programmer.html"><span>程序员</span></a></li>
+          <li><a href="/thoughts.html"><span>思考</span></a></li>
+          <li><a href="/reading.html"><span>阅读</span></a></li>
+          <li><a href="/all.html"><span>全部内容</span></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="main shadow-sides">
+
+    <div class="main-wrapper">
+
+      <div class="main-title">ACM Online Judgment For Ruby</div>
+
+      <div class="main-foot">
+        <span>Liber 2013-01-09 12:26 </span>
+      </div>
+
+      <div class="main-text">
+        <p>最近想找个支持Ruby的ACM在线系统玩玩，一方面喜欢ACM；另一方面，可以学习Ruby。</p>
+
+<p>折腾了许久，终于有了结果，感谢主！</p>
+
+<p>不敢独享，分享如下：</p>
+
+<p>例子一：</p>
+
+<p>Problem here:<br />
+<a href="https://www.spoj.com/problems/AMR10F/">https://www.spoj.com/problems/AMR10F/</a></p>
+
+<p>My solution here:</p>
+
+<div class="language-ruby highlighter-rouge"><pre class="highlight"><code><span class="no">N</span> <span class="o">=</span> <span class="nb">gets</span>
+<span class="k">while</span><span class="p">(</span> <span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="nb">gets</span><span class="p">)</span> <span class="o">!=</span><span class="kp">nil</span> <span class="p">)</span>
+	<span class="n">arr</span> <span class="o">=</span> <span class="n">data</span><span class="p">.</span><span class="nf">split</span><span class="p">(</span><span class="s1">' '</span><span class="p">)</span>
+	<span class="n">sum</span> <span class="o">=</span> <span class="mi">0</span>
+	<span class="p">(</span><span class="mi">1</span><span class="p">.</span><span class="nf">.</span><span class="p">(</span><span class="n">arr</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nf">to_i</span><span class="p">)).</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">nn</span><span class="o">|</span>
+		<span class="n">sum</span> <span class="o">+=</span> <span class="p">(</span><span class="n">arr</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="nf">to_i</span> <span class="o">+</span> <span class="n">arr</span><span class="p">[</span><span class="mi">2</span><span class="p">].</span><span class="nf">to_i</span> <span class="o">*</span> <span class="p">(</span><span class="n">nn</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span>
+	<span class="k">end</span>
+	<span class="nb">puts</span> <span class="n">sum</span>
+<span class="k">end</span>
+</code></pre>
+</div>
+
+<p>例子二：</p>
+
+<p>Problem here:<br />
+<a href="https://www.spoj.com/problems/ADDREV/">https://www.spoj.com/problems/ADDREV/</a></p>
+
+<p>My solution here:</p>
+
+<div class="language-ruby highlighter-rouge"><pre class="highlight"><code><span class="no">N</span> <span class="o">=</span> <span class="nb">gets</span>
+<span class="k">while</span><span class="p">(</span> <span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="nb">gets</span><span class="p">)</span> <span class="o">!=</span><span class="kp">nil</span> <span class="p">)</span>
+	<span class="n">arr</span> <span class="o">=</span> <span class="n">data</span><span class="p">.</span><span class="nf">split</span><span class="p">(</span><span class="s1">' '</span><span class="p">)</span>
+	<span class="n">result</span> <span class="o">=</span> <span class="n">arr</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nf">reverse</span><span class="p">.</span><span class="nf">to_i</span> <span class="o">+</span> <span class="n">arr</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="nf">reverse</span><span class="p">.</span><span class="nf">to_i</span>
+	<span class="nb">puts</span> <span class="n">result</span><span class="p">.</span><span class="nf">to_s</span><span class="p">.</span><span class="nf">reverse</span><span class="p">.</span><span class="nf">to_i</span>
+<span class="k">end</span>
+</code></pre>
+</div>
+
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="footer shadow-sides">
+    <div class="footer-wrapper">
+      <a href="https://mystist.github.io">https://mystist.github.io</a> | <span>gjl87910lq@gmail.com</span> ❤️
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>

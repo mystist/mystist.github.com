@@ -1,0 +1,176 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=8" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>AI Agent产品逻辑</title>
+  <link rel="stylesheet" type="text/css" href="/css/github.css" />
+  <link rel="stylesheet" type="text/css" href="/css/template.css" />
+</head>
+<body>
+
+<div class="wrapper">
+
+  <div class="header shadow">
+    <div class="header-wrapper">
+      <div class="header-logo">
+        <span><a href="/">LIBER</a></span>
+      </div>
+      <div class="header-nav">
+        <ul>
+          <li><a href="/"><span>首页</span></a></li>
+          <li><a href="/programmer.html"><span>程序员</span></a></li>
+          <li><a href="/thoughts.html"><span>思考</span></a></li>
+          <li><a href="/reading.html"><span>阅读</span></a></li>
+          <li><a href="/all.html"><span>全部内容</span></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="main shadow-sides">
+
+    <div class="main-wrapper">
+
+      <div class="main-title">AI Agent产品逻辑</div>
+
+      <div class="main-foot">
+        <span>Liber 2023-12-11 19:21 </span>
+      </div>
+
+      <div class="main-text">
+        <p>The Wondervoy AI Agent product</p>
+
+<h2 id="section">市场分析</h2>
+
+<ul>
+  <li>时代的开端：通用大模型 + AI Agent</li>
+  <li>两个判断：
+    <ul>
+      <li>OpenAI开启了通用大模型时代，但如何用好大模型大家都处于同一起跑线</li>
+      <li>我们认为一种可组合的设计模式，更适合B端复杂多样的需求：
+        <ol>
+          <li>单一职责的agent更契合大模型的注意力机制，可以得到质量更好、更稳定的回答以及实现更细粒度的控制</li>
+          <li>各个独立的Agent的调整互不影响，更容易测试和验证</li>
+        </ol>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="agent-matrix">Agent Matrix</h2>
+
+<p>What: A cutting-edge Agent-as-a-Service (AaaS) platform capable of building an agent matrix consisting of a set of atomic agents, that can be seamlessly integrated into your business.</p>
+
+<p>AaaS: no prompt needed for end user<br />
+Agent matrix: consists of a set of atomic agents<br />
+Atomic agent: atomic single responsibility agent, can be a general-purpose agent at the system or enterprise level (e.g., embedding agent, internet agent, etc.), or a customized one for specific cases.</p>
+
+<p>Slogan:<br />
+“The best AI boosted business run its own agent matrix”</p>
+
+<h2 id="vision">Vision</h2>
+
+<p>让企业引入AI的成本最小化（Mission），通过平台最终实现 Agent Matrix 自动化（Target），让每个企业都拥有自己的AI智能体（Vision）</p>
+
+<h2 id="section-1">核心优势</h2>
+
+<p>与竞争对手相比，我们并不盲目跟随 OpenAI，而是提出了独特的大型模型应用思路。我们自主的体系和方法论，清晰的展示了我们如何有效利用这些先进技术：</p>
+
+<p>通过 Atomic Agents + Agent Matrix可组合 的设计模式，我们能更好地满足B端复杂多变的需求。</p>
+
+<p>与OpenAI相比，由于其天然存在的一些局限性，我们在2B方向上可以做一些更深入的工作，体现在深度和实用性上如：<br />
+我们不仅在功能应用上超越了 OpenAI（例如，支持 Browse with Google / baidu / 微信公众号，而不仅限于 Bing），还更符合企业实际需求（例如，通过 RAG source integration 实现知识库分组和自动训练，无需手动上传知识库文档）。</p>
+
+<p>相较于竞争对手，我们除了迭代引入最新大模型的能力，还通过合理的顶层设计，实现了为大模型提供更丰富上下文的机制（RAG source combination，例如，将 embedding, internet 和 site 结合使用），以及拓展大模型能力边界的机制（例如，突破输出的token限制）等等。<br />
+同时，我们能将 AI 技术有机融入企业流程，如嵌入企业web系统，IM集成，发送企业邮箱（通过Actions模块的集成）等，而非仅提供割裂的 AI 入口。<br />
+最后，非常重要的一点，我们能够组合各种 Atomic Agents 形成一套解决企业特定问题的Agent Matrix。我们提供的平台，可以针对企业实际情况用可视化UI快速定制 Agent Matrix，以极低的边际成本满足客户的定制需求。</p>
+
+<h2 id="section-2">产品与功能</h2>
+
+<ul>
+  <li>browse with internet / site</li>
+  <li>embedding知识库</li>
+  <li>managed知识库 + instant tech</li>
+  <li>atomic agents: delegator, missions, etc.</li>
+  <li>universal crawler (zero configuration)</li>
+  <li>CUI生产业务集成<br />
+Conversational User Interface, conversation oriented programming</li>
+</ul>
+
+<p>产品可以组合使用表现形式：SaaS平台使用、企业web端嵌入使用、微信接入使用</p>
+
+<h2 id="section-3">定制化</h2>
+
+<p>通过agent platform平台，使用可拖拽的UI，排列组合atomic agents组成agent matrix，以实现企业复杂的业务需求</p>
+
+<h2 id="section-4">成功案例</h2>
+
+<ul>
+  <li>上海外滩34号酒店客服：衍月
+    <ul>
+      <li>managed知识库</li>
+      <li>browse with internet</li>
+      <li>instant tech</li>
+    </ul>
+  </li>
+  <li>酒店PMS系统CUI集成：创单、查单、入住、退房
+    <ul>
+      <li>CUI生产业务集成：交互</li>
+      <li>CUI生产业务集成：同步到业务数据库</li>
+    </ul>
+  </li>
+  <li>AI董秘
+    <ul>
+      <li>embedding知识库</li>
+      <li>企业web端嵌入使用</li>
+    </ul>
+  </li>
+  <li>舆情助手
+    <ul>
+      <li>universal crawler</li>
+      <li>微信接入</li>
+      <li>atomic agents:   delegator + missions</li>
+      <li>突破输出token限制</li>
+      <li>大模型的分析能力</li>
+      <li>图表集成</li>
+    </ul>
+  </li>
+  <li>党政助理
+    <ul>
+      <li>SaaS平台</li>
+      <li>Agent Dashboard</li>
+      <li>用户上传文档</li>
+      <li>结合browse in site</li>
+      <li>embedding知识库</li>
+      <li>结合browse in site</li>
+      <li>按模板生成</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="roadmap">Roadmap</h2>
+
+<ul>
+  <li>Draggable UI</li>
+  <li>Agent Actions: 飞书集成，发送邮件</li>
+  <li>Marketing website</li>
+  <li>开放平台：Agent API</li>
+</ul>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="footer shadow-sides">
+    <div class="footer-wrapper">
+      <a href="https://mystist.github.io">https://mystist.github.io</a> | <span>gjl87910lq@gmail.com</span> ❤️
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>

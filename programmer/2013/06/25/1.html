@@ -1,0 +1,179 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=8" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>关于Backbone.View.extend的理解</title>
+  <link rel="stylesheet" type="text/css" href="/css/github.css" />
+  <link rel="stylesheet" type="text/css" href="/css/template.css" />
+</head>
+<body>
+
+<div class="wrapper">
+
+  <div class="header shadow">
+    <div class="header-wrapper">
+      <div class="header-logo">
+        <span><a href="/">LIBER</a></span>
+      </div>
+      <div class="header-nav">
+        <ul>
+          <li><a href="/"><span>首页</span></a></li>
+          <li><a href="/programmer.html"><span>程序员</span></a></li>
+          <li><a href="/thoughts.html"><span>思考</span></a></li>
+          <li><a href="/reading.html"><span>阅读</span></a></li>
+          <li><a href="/all.html"><span>全部内容</span></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="main shadow-sides">
+
+    <div class="main-wrapper">
+
+      <div class="main-title">关于Backbone.View.extend的理解</div>
+
+      <div class="main-foot">
+        <span>Liber 2013-06-25 17:37 </span>
+      </div>
+
+      <div class="main-text">
+        <p>用Backbone有一段时间了，一直在用</p>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">SomeView</span> <span class="o">=</span> <span class="nx">Backbone</span><span class="p">.</span><span class="nx">View</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>
+  <span class="c1">//...</span>
+<span class="p">});</span>
+</code></pre>
+</div>
+
+<p>这样的写法，来创建一个View类。<br />
+以前忙着先学习基本用法，也没想那么多。今天，不知为何，好奇心泛滥，终于想看看它究竟都干了些什么。</p>
+
+<p>首先先说结论：
+上面的代码，可以理解成这样：</p>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">SomeView</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+
+  <span class="c1">// Default attributes</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">tagName</span> <span class="o">=</span> <span class="nx">xxx</span><span class="p">;</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">cid</span> <span class="o">=</span> <span class="nx">xxx</span><span class="p">;</span>
+  
+  <span class="c1">// Your extend attributes</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">model</span> <span class="o">=</span> <span class="nx">xxx</span><span class="p">;</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">template</span> <span class="o">=</span> <span class="nx">xxx</span><span class="p">;</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">render</span> <span class="o">=</span> <span class="nx">xxx</span><span class="p">;</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">xxx</span> <span class="o">=</span> <span class="nx">xxx</span><span class="p">;</span>
+
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p>实际上，这就是一个典型的用构造模式定义的构造函数，也就是我们通俗所说的javascript的类。<br />
+这也就是我们在使用它的时候，可以用</p>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">myView</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">SomeView</span><span class="p">()</span>
+</code></pre>
+</div>
+
+<p>的原因。</p>
+
+<p>下面我们就来进一步分析一下，为什么会是这样。<br />
+打开<a href="http://backbonejs.org/docs/backbone.html">Backbonejs官网的源代码页面</a>，在页面上搜索<code class="highlighter-rouge">BACKBONE.VIEW</code>，我们会看到这样一段代码：</p>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">View</span> <span class="o">=</span> <span class="nx">Backbone</span><span class="p">.</span><span class="nx">View</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">options</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">cid</span> <span class="o">=</span> <span class="nx">_</span><span class="p">.</span><span class="nx">uniqueId</span><span class="p">(</span><span class="s1">'view'</span><span class="p">);</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">_configure</span><span class="p">(</span><span class="nx">options</span> <span class="o">||</span> <span class="p">{});</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">_ensureElement</span><span class="p">();</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">initialize</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="nx">arguments</span><span class="p">);</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">delegateEvents</span><span class="p">();</span>
+<span class="p">};</span>
+</code></pre>
+</div>
+
+<p>这里就证实了上面说Backbone.View其实就是一个构造函数的说法。<br />
+接下来，我们在页面上搜索<code class="highlighter-rouge">HELPERS</code>，找到<code class="highlighter-rouge">extend</code>方法，我们会看到这样一段代码：</p>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">extend</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">protoProps</span><span class="p">,</span> <span class="nx">staticProps</span><span class="p">)</span> <span class="p">{</span>
+
+  <span class="kd">var</span> <span class="nx">parent</span> <span class="o">=</span> <span class="k">this</span><span class="p">;</span> <span class="c1">// 1</span>
+  <span class="kd">var</span> <span class="nx">child</span><span class="p">;</span>
+  
+  <span class="k">if</span> <span class="p">(</span><span class="nx">protoProps</span> <span class="o">&amp;&amp;</span> <span class="nx">_</span><span class="p">.</span><span class="nx">has</span><span class="p">(</span><span class="nx">protoProps</span><span class="p">,</span> <span class="s1">'constructor'</span><span class="p">))</span> <span class="p">{</span> <span class="c1">// 2</span>
+    <span class="nx">child</span> <span class="o">=</span> <span class="nx">protoProps</span><span class="p">.</span><span class="nx">constructor</span><span class="p">;</span>
+  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="nx">child</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(){</span> <span class="k">return</span> <span class="nx">parent</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="nx">arguments</span><span class="p">);</span> <span class="p">};</span> <span class="c1">// 3</span>
+  <span class="p">}</span>
+  
+  <span class="nx">_</span><span class="p">.</span><span class="nx">extend</span><span class="p">(</span><span class="nx">child</span><span class="p">,</span> <span class="nx">parent</span><span class="p">,</span> <span class="nx">staticProps</span><span class="p">);</span>
+  
+  <span class="kd">var</span> <span class="nx">Surrogate</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(){</span> <span class="k">this</span><span class="p">.</span><span class="nx">constructor</span> <span class="o">=</span> <span class="nx">child</span><span class="p">;</span> <span class="p">};</span>
+  <span class="nx">Surrogate</span><span class="p">.</span><span class="nx">prototype</span> <span class="o">=</span> <span class="nx">parent</span><span class="p">.</span><span class="nx">prototype</span><span class="p">;</span>
+  <span class="nx">child</span><span class="p">.</span><span class="nx">prototype</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Surrogate</span><span class="p">;</span>
+  
+  <span class="k">if</span> <span class="p">(</span><span class="nx">protoProps</span><span class="p">)</span> <span class="nx">_</span><span class="p">.</span><span class="nx">extend</span><span class="p">(</span><span class="nx">child</span><span class="p">.</span><span class="nx">prototype</span><span class="p">,</span> <span class="nx">protoProps</span><span class="p">);</span>
+  
+  <span class="nx">child</span><span class="p">.</span><span class="nx">__super__</span> <span class="o">=</span> <span class="nx">parent</span><span class="p">.</span><span class="nx">prototype</span><span class="p">;</span>
+
+  <span class="k">return</span> <span class="nx">child</span><span class="p">;</span>
+  
+<span class="p">};</span>
+    
+</code></pre>
+</div>
+
+<p>先看看该方法下面的一句话：</p>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">Model</span><span class="p">.</span><span class="nx">extend</span> <span class="o">=</span> <span class="nx">Collection</span><span class="p">.</span><span class="nx">extend</span> <span class="o">=</span> <span class="nx">Router</span><span class="p">.</span><span class="nx">extend</span> <span class="o">=</span> <span class="nx">View</span><span class="p">.</span><span class="nx">extend</span> <span class="o">=</span> <span class="nx">History</span><span class="p">.</span><span class="nx">extend</span> <span class="o">=</span> <span class="nx">extend</span><span class="p">;</span>
+</code></pre>
+</div>
+
+<p>所以，extend作为一个方法，实际上Model、View、Collection对其都进行了引用。<br />
+而当我们在使用</p>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">SomeView</span> <span class="o">=</span> <span class="nx">Backbone</span><span class="p">.</span><span class="nx">View</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>
+  <span class="c1">//...</span>
+<span class="p">});</span>
+</code></pre>
+</div>
+
+<p>的时候，实际上是调用了<code class="highlighter-rouge">Backbone.View</code>下面的<code class="highlighter-rouge">extend</code>方法。<br />
+然后，我们进入到这个<code class="highlighter-rouge">extend</code>方法里面看看。<br />
+1这个地方，将<code class="highlighter-rouge">this</code>赋值给一个<code class="highlighter-rouge">parent</code>变量，我们知道，在Javascript中，<a href="http://www.laruence.com/2009/09/08/1076.html">this关键字</a>永远都指向函数（方法）的所有者。<br />
+所以，当我们执行<code class="highlighter-rouge">Backbone.View.extend</code>的时候，<code class="highlighter-rouge">extend</code>里面的<code class="highlighter-rouge">this</code>就指向<code class="highlighter-rouge">View</code>这个构造函数。<br />
+接着往下看，2这个地方，由于我们一般不会传<code class="highlighter-rouge">constructor</code>这个属性，所以，执行3的语句。<br />
+3语句是这里的关键。我们把这里的语句换一种方式来写：</p>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">child</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Function</span><span class="p">(</span><span class="s2">"return parent.apply(this, arguments);"</span><span class="p">);</span>
+</code></pre>
+</div>
+
+<p>这样就能好理解一些了吧，这也就是我们所说的“函数是对象，函数名是指针”的原因了。详细可以去看《javascript高级程序设计》引用类型那一章的Function类型一节的内容。<br />
+执行这句的时候，child会自动产生一个prototype的属性，prototype中会有一个constructor的构造函数，这个构造函数就会指向child，而child就是这个匿名函数。<br />
+下面的语句干了一些其它的事情，需要注意的是，<code class="highlighter-rouge">extend</code>方法最后，返回了<code class="highlighter-rouge">child</code>。</p>
+
+<p>到这里，完成了Backbone类定义的过程。</p>
+
+<p>调用的过程：<br />
+执行<code class="highlighter-rouge">new</code>的时候，会去调用返回值<code class="highlighter-rouge">child</code>的构造函数，也就是刚才提到的那个匿名函数，匿名函数会调用<code class="highlighter-rouge">parent</code>方法，<code class="highlighter-rouge">parent</code>也就是前面提到的<code class="highlighter-rouge">View</code>，而<code class="highlighter-rouge">View</code>正好又是一个构造模型的构造函数，这就是我们都熟悉的东西了，所以就有了前面的结论，从而创建了Backbone对象。</p>
+
+<p>总结：<br />
+讲了这么一大堆，主要目的还是希望能起到抱砖引玉的作用，把大家探索本质的好奇心激发起来，这样才能真正的有所得，以至于最终有所为。</p>
+
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="footer shadow-sides">
+    <div class="footer-wrapper">
+      <a href="https://mystist.github.io">https://mystist.github.io</a> | <span>gjl87910lq@gmail.com</span> ❤️
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
